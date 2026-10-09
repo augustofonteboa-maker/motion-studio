@@ -1,0 +1,19 @@
+{
+  "name": "motion-studio",
+  "owner": {
+    "name": "Augusto Fonte"
+  },
+  "metadata": {
+    "description": "Skill de motion design com o Claude: animações em código renderizadas em MP4 16:9 e 9:16 com trilha sincronizada.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "motion-studio",
+      "description": "Vinhetas, logo animada, transições, intros, showreels e promos feitos em código e renderizados em MP4 com motion blur e trilha.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/motion-studio"]
+    }
+  ]
+}

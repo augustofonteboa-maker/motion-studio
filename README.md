@@ -1,0 +1,81 @@
+# motion-studio
+
+Skill de **motion design com o Claude**. Você pede uma vinheta, uma logo animada, uma transição, a abertura de uma aula, um showreel ou um post animado, e o Claude cria a animação em código (HTML, SVG e Canvas) e entrega o vídeo pronto em MP4, nas versões **16:9 e 9:16**, com motion blur e trilha sincronizada.
+
+![Prévia do showreel de teste feito pela skill](docs/demo.gif)
+
+Vídeos de teste feitos do zero pela skill: [16:9](docs/Demo_MotionStudio_16x9_1920x1080.mp4) · [9:16](docs/Demo_MotionStudio_9x16_1080x1920.mp4)
+
+## O que a skill sabe fazer
+
+- **Tipografia cinética:** texto subindo de dentro da máscara, cascata de letras, decodificação, datilografia, contadores, letreiros
+- **Logo:** construção por grade, partículas formando a marca, montagem por peças, morph, travamento com o nome, brilho que varre
+- **Transições:** íris em camadas, zoom através da forma, whip pan com desfoque direcional, persianas, match cut, glitch
+- **UI de produto:** cursor em arco com clique, botão que vira loader e vira card, fluxo de prompt, mockup de celular
+- **Dados, partículas, câmera e personagem:** gráficos que crescem, campo de fluxo, paralaxe, tremor de impacto, bolinha com squash & stretch
+- **Direção de arte neutra:** usa a marca do cliente ou um de 12 presets (editorial, tech noturno, luxo, brutalista, corporativo e outros)
+- **Acabamento de estúdio:** blur adaptativo (até 12 amostras nos movimentos rápidos), cor marcada em BT.709, loudness em −14 LUFS, versão transparente (ProRes 4444, WebM e fundo verde)
+- **Som:** trilha sintetizada a partir dos eventos da animação, em 6 climas (grave, épico, tech, clean, ambient, pop)
+
+## Como instalar no Claude (app ou site)
+
+1. **Baixe o arquivo da skill:** abra [`motion-studio.zip`](motion-studio.zip) aqui no repositório e clique no botão de download (ícone de seta, "Download raw file"). Não descompacte.
+2. **Ligue a execução de código:** no Claude, vá em **Settings › Capabilities** (Configurações › Capacidades) e ative **Code execution and file creation**.
+3. **Envie a skill:** vá em **Customize › Skills**, clique em **+**, depois em **+ Create skill** e escolha **Upload a skill**. Selecione o `motion-studio.zip`.
+4. **Ative:** confira se o botão ao lado de *motion-studio* está ligado na lista de skills.
+5. **Use:** abra uma conversa e peça, por exemplo:
+   - *"Faz uma vinheta de 8 segundos para a marca da minha cliente, uma clínica odontológica, com a logo em anexo."*
+   - *"Cria uma transição de 1 segundo para as aulas do meu curso, com fundo transparente."*
+   - *"Anima esse resultado: +248% de alcance em 30 dias, para Reels."*
+
+O Claude reconhece o pedido e carrega a skill sozinho. Em contas Team ou Enterprise, um administrador precisa permitir skills e execução de código para a organização.
+
+## Como instalar no Claude Code
+
+Dentro do Claude Code, rode:
+
+```text
+/plugin marketplace add augustofonteboa-maker/motion-studio
+/plugin install motion-studio@motion-studio
+```
+
+Ou copie a pasta da skill manualmente:
+
+```bash
+git clone https://github.com/augustofonteboa-maker/motion-studio.git
+mkdir -p ~/.claude/skills
+cp -r motion-studio/skills/motion-studio ~/.claude/skills/
+```
+
+## O que precisa estar instalado
+
+No Claude (app/site) o ambiente na nuvem já tem quase tudo. No seu computador, com Claude Code:
+
+- Node 18 ou mais novo
+- Playwright com Chromium: `npm i -g playwright && npx playwright install chromium`
+- ffmpeg (Mac: `brew install ffmpeg`)
+- Python 3 com numpy e scipy: `pip3 install numpy scipy`
+
+## O que tem no repositório
+
+```text
+motion-studio.zip                 skill empacotada para enviar no Claude
+skills/motion-studio/
+  SKILL.md                        instruções da skill (fluxo, direção de arte, técnicas, QA)
+  kit/motion.js                   runtime de animação (easing, molas, máscaras, morph, partículas, câmera)
+  kit/render.mjs                  renderizador: quadro a quadro, motion blur, ffmpeg em paralelo
+  kit/sound.py                    trilha sincronizada aos eventos da animação
+  kit/fonts.mjs                   baixa fontes do Google Fonts
+  kit/template.html               cena-base para começar
+  examples/demo-reel.html         o showreel de teste, completo
+.claude-plugin/marketplace.json   instalação pelo Claude Code
+docs/                             prévias e vídeos de teste
+```
+
+## Créditos
+
+Criada por [Augusto Fonte](https://www.instagram.com/_augustofonte/) com o Claude. Licença MIT: pode usar, adaptar e compartilhar, mantendo o aviso de licença.
+
+---
+
+**English:** *motion-studio* is a Claude skill for studio-grade motion design in code (HTML/SVG/Canvas rendered to MP4 in 16:9 and 9:16 with motion blur and a synced soundtrack). Install it in the Claude app by uploading `motion-studio.zip` under Customize › Skills, or in Claude Code with `/plugin marketplace add augustofonteboa-maker/motion-studio`. The skill's instructions are in Brazilian Portuguese.

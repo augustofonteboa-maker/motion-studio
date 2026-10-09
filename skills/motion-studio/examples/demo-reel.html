@@ -1,0 +1,295 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- EXEMPLO DO KIT MOTION STUDIO. Fontes: rode nesta pasta  node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"
+     Prévia: abra demo-reel.html?dev=1  ·  Render: node ../kit/render.mjs demo-reel.html --name Demo --sizes 1920x1080,1080x1920 -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--paper:#F2EFE8;--ink:#121212;--red:#E5372B;--muted:#8C8A84;--line:#CFC9BD;--dark:#151515;--card:#1F1F1F}
+html,body{margin:0;background:#000;overflow:hidden}
+#stage{position:relative;width:var(--W);height:var(--H);overflow:hidden;background:var(--paper)}
+.layer{position:absolute;inset:0;overflow:hidden}
+.disp{font-family:'Space Grotesk';font-weight:700;letter-spacing:-0.045em;line-height:.9}
+.ser{font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-0.01em;line-height:.95}
+.mono{font-family:'JetBrains Mono';font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.abs{position:absolute}
+svg{position:absolute;left:0;top:0;overflow:visible}
+</style>
+<script src="../kit/motion.js"></script>
+</head><body><div id="stage"></div>
+<script>
+/* ================= DIREÇÃO DE ARTE: "Editorial suíço" (preset neutro, não é identidade do usuário) ================= */
+const { W, H, S, V } = M, E = M.ease, CV = M.curve;
+const C = { paper: '#F2EFE8', ink: '#121212', red: '#E5372B', muted: '#8C8A84', line: '#CFC9BD', dark: '#151515', card: '#1F1F1F', white: '#FFFFFF' };
+const st = M.$('#stage'), u = x => x * S, cx = W / 2, cy = H / 2;
+const OFF = 0.55, DUR = 12.4 + OFF; // OFF: espaço extra para o card da UI ser lido
+// planos (com sobreposição para as transições)
+const P = { abre: { start: 0, end: 2.55 }, logo: { start: 2.4, end: 4.98 }, ui: { start: 4.85, end: 9.02 }, dados: { start: 9.0, end: 10.3 + OFF }, fim: { start: 9.95 + OFF, end: DUR } };
+const layer = (bg, z) => M.el('div', { class: 'layer', style: { background: bg, zIndex: z } }, st);
+
+/* ---------- cues de som (sincronia evento a evento) ---------- */
+M.cue(0.3, 'notes', { step: 0.05 }); M.cue(1.0, 'pop'); M.cue(1.42, 'tick', { note: 'D4' });
+M.cue(3.62, 'rise', { len: 1.1 }); M.cue(3.62, 'big'); M.cue(3.92, 'notes', { step: 0.06 });
+M.cue(4.86, 'whoosh', { len: 0.38 }); M.cue(4.9, 'hit', { s: 0.55 }); M.cue(5.15, 'type', { len: 1.15, rate: 17 });
+M.cue(6.6, 'click'); M.cue(7.5, 'pop'); M.cue(7.85, 'pop', { s: 0.7 });
+M.cue(9.0, 'whoosh', { len: 0.36 }); M.cue(9.0, 'hit', { s: 0.7 }); M.cue(9.05, 'notes', { step: 0.09 }); M.cue(9.5 + OFF, 'tick', { note: 'A3' });
+M.cue(10.2 + OFF, 'whoosh', { len: 0.3 }); M.cue(10.6 + OFF, 'end'); M.cue(10.82 + OFF, 'notes', { step: 0.05, s: 0.8 });
+
+/* ---------- trechos rápidos: mais amostras de motion blur (6 = moderado, 12 = muito rápido) ---------- */
+[[0.25, 0.9, 6], [0.85, 1.4, 6], [2.1, 2.55, 12], [2.9, 3.5, 6], [3.58, 3.72, 6], [3.85, 4.4, 6], [4.5, 5.0, 12], [4.95, 5.2, 6], [6.0, 6.62, 6],
+ [6.62, 7.08, 12], [7.5, 8.0, 12], [8.6, 9.0, 6], [8.95, 9.5, 6], [10.5, 10.88, 12], [10.75, 11.2, 12], [11.4, 12.0, 6]].forEach(r => M.blur(...r));
+
+/* ================= PLANO 1 — ABRE: grade + título cinético ================= */
+const L1 = layer(C.paper, 1);
+const g1 = M.el('svg', { width: W, height: H }, L1);
+const GV = Array.from({ length: V ? 4 : 6 }, (_, i) => M.el('line', { stroke: C.line, 'stroke-width': 1 }, g1));
+const GH = Array.from({ length: V ? 6 : 4 }, (_, i) => M.el('line', { stroke: C.line, 'stroke-width': 1 }, g1));
+const hud = ['MOTION STUDIO', 'SISTEMA — 01', '', V ? '9:16' : '16:9'].map((s, i) => {
+  const e = M.el('div', { class: 'mono abs', style: { fontSize: u(V ? 22 : 15) + 'px', color: C.ink, opacity: .75 } }, L1);
+  const m = u(V ? 64 : 48); Object.assign(e.style, i % 2 ? { right: m + 'px' } : { left: m + 'px' }, i < 2 ? { top: (V ? M.safe.top * 0.45 : m) + 'px' } : { bottom: (V ? M.safe.bottom * 0.5 : m) + 'px' });
+  return { e, s };
+});
+const head = M.el('div', { class: 'abs', style: { left: 0, width: W + 'px', top: '50%', textAlign: 'center', transform: 'translateY(-50%)' } }, L1);
+const h1 = M.el('div', { class: 'disp', style: { fontSize: u(V ? 178 : 232) + 'px', color: C.ink } }, head, 'Movimento');
+const h2 = M.el('div', { class: 'ser', style: { fontSize: u(V ? 168 : 214) + 'px', color: C.red, marginTop: u(6) + 'px' } }, head, 'com intenção.');
+const num = M.el('div', { class: 'ser abs', style: { fontSize: u(V ? 40 : 34) + 'px', color: C.ink, left: u(V ? 64 : 48) + 'px', top: (V ? M.safe.top * 0.45 + u(40) : u(48 + 28)) + 'px' } }, L1, 'n.º 01');
+let S1, S2, uline;
+
+/* ================= PLANO 2 — LOGO: construção + partículas + travamento ================= */
+const L2 = layer(C.paper, 2);
+const cnv = M.el('canvas', { width: W, height: H, style: { position: 'absolute', left: 0, top: 0 } }, L2), ctx = cnv.getContext('2d');
+const g2 = M.el('svg', { width: W, height: H }, L2);
+const markG = M.el('g', {}, g2), conG = M.el('g', { fill: 'none', stroke: C.ink, 'stroke-width': 1.2, 'vector-effect': 'non-scaling-stroke' }, markG);
+// marca geométrica genérica (sistema local 400x400, centro 200,200)
+const SQ = 'M110 150 H290 V330 H110 Z', CI = 'M250 60 A90 90 0 1 1 249.99 60 Z';
+const con = [M.el('circle', { cx: 200, cy: 200, r: 175, 'stroke-dasharray': '4 6', opacity: .45 }, conG), M.el('path', { d: SQ }, conG), M.el('circle', { cx: 250, cy: 150, r: 90 }, conG),
+  M.el('line', { x1: 20, y1: 380, x2: 380, y2: 20, opacity: .45 }, conG), M.el('line', { x1: 110, y1: 345, x2: 290, y2: 345 }, conG), M.el('line', { x1: 200, y1: 0, x2: 200, y2: 400, opacity: .3 }, conG)];
+const sqE = M.el('path', { d: SQ, fill: C.ink }, markG), ciE = M.el('path', { d: CI, fill: C.red }, markG);
+const ring = M.el('circle', { fill: 'none', stroke: C.red, 'stroke-width': u(3) }, g2);
+const dims = ['Ø 180', '90°', 'GRID 01'].map(s => ({ s, e: M.el('div', { class: 'mono abs', style: { fontSize: u(V ? 18 : 14) + 'px', color: C.ink, opacity: .7 } }, L2) }));
+const word = M.el('div', { class: 'abs', style: { whiteSpace: 'nowrap' } }, L2);
+const w1 = M.el('div', { class: 'disp', style: { fontSize: u(V ? 150 : 150) + 'px', color: C.ink } }, word, 'motion');
+const w2 = M.el('div', { class: 'ser', style: { fontSize: u(V ? 150 : 150) + 'px', color: C.red, marginTop: u(-8) + 'px' } }, word, 'studio');
+const iris = M.el('svg', { width: W, height: H, style: { zIndex: 5 } }, L2), irA = M.el('circle', { fill: C.red }, iris), irB = M.el('circle', { fill: C.dark }, iris);
+const MK = V ? { k: 1.0, x0: cx, y0: cy - u(40), x1: cx, y1: cy - u(260), wx: cx, wy: cy + u(120), center: true } : { k: 1.12, x0: cx, y0: cy, x1: cx - u(330), y1: cy, wx: cx - u(40), wy: cy - u(150) };
+let PTS = [];
+
+/* ================= PLANO 3 — UI: prompt -> clique -> morph -> card ================= */
+const L3 = layer(C.dark, 3);
+L3.style.backgroundImage = `radial-gradient(${M.rgba('#FFFFFF', 0.07)} ${u(1.6)}px, transparent ${u(1.8)}px)`; L3.style.backgroundSize = `${u(34)}px ${u(34)}px`;
+const BX = { w: u(V ? 940 : 1240), h: u(V ? 136 : 140) };
+const lab = M.el('div', { class: 'mono abs', style: { fontSize: u(V ? 20 : 15) + 'px', color: '#9A9A9A' } }, L3, 'Prompt');
+const box = M.el('div', { class: 'abs', style: { background: C.card, border: `${u(1.5)}px solid #333`, boxSizing: 'border-box', boxShadow: `0 ${u(30)}px ${u(80)}px rgba(0,0,0,.45)` } }, L3);
+const typed = M.el('div', { class: 'abs', style: { fontFamily: 'Space Grotesk', fontWeight: 500, fontSize: u(V ? 46 : 52) + 'px', color: '#fff', whiteSpace: 'nowrap', letterSpacing: '-0.01em' } }, L3);
+const caret = M.el('div', { class: 'abs', style: { width: u(4) + 'px', height: u(56) + 'px', background: C.red } }, L3);
+const send = M.el('div', { class: 'abs', style: { width: u(88) + 'px', height: u(88) + 'px', borderRadius: '50%', background: C.red } }, L3, `<svg viewBox="-20 -20 40 40" width="${u(88)}" height="${u(88)}" style="position:static"><path d="M0 9 V-9 M-7 -2 L0 -9 L7 -2" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`);
+const ui = M.el('svg', { width: W, height: H, style: { zIndex: 4 } }, L3);
+const loader = M.el('circle', { cx, cy, r: u(22), fill: 'none', stroke: '#fff', 'stroke-width': u(5), 'stroke-linecap': 'round' }, ui);
+const check = M.el('path', { d: `M${cx - u(20)} ${cy + u(1)} L${cx - u(6)} ${cy + u(15)} L${cx + u(22)} ${cy - u(14)}`, fill: 'none', stroke: '#fff', 'stroke-width': u(6), 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, ui);
+const ripple = M.el('circle', { fill: 'none', stroke: '#fff', 'stroke-width': u(2) }, ui);
+const card = M.el('div', { class: 'abs', style: { opacity: 0, color: '#fff' } }, L3);
+const CARD = { w: u(V ? 820 : 760), h: u(V ? 560 : 420) };
+card.innerHTML = `<div class="th" style="position:absolute;left:${u(28)}px;top:${u(28)}px;width:${CARD.w - u(56)}px;height:${CARD.h - u(190)}px;border-radius:${u(16)}px;background:${C.paper};overflow:hidden"></div>
+ <div class="mono" style="position:absolute;left:${u(28)}px;bottom:${u(104)}px;font-size:${u(V ? 24 : 20)}px;letter-spacing:.02em;text-transform:none">marca_animada.mp4</div>
+ <div class="mono" style="position:absolute;right:${u(28)}px;bottom:${u(104)}px;font-size:${u(V ? 20 : 16)}px;color:#9a9a9a">16:9 · 9:16</div>
+ <div class="bar" style="position:absolute;left:${u(28)}px;right:${u(28)}px;bottom:${u(52)}px;height:${u(10)}px;border-radius:${u(5)}px;background:#333"><div class="fill" style="height:100%;border-radius:${u(5)}px;background:${C.red};width:0"></div></div>
+ <div class="pct mono" style="position:absolute;left:${u(28)}px;bottom:${u(16)}px;font-size:${u(V ? 18 : 15)}px;color:#bbb"></div>`;
+const thumb = card.querySelector('.th'), fill = card.querySelector('.fill'), pct = card.querySelector('.pct');
+thumb.innerHTML = `<svg viewBox="0 0 400 400" width="${u(150)}" height="${u(150)}" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"><path d="${SQ}" fill="${C.ink}"/><path d="${CI}" fill="${C.red}"/></svg>`;
+const cur = M.cursor(L3, { size: u(V ? 54 : 44) });
+const blinds = Array.from({ length: 10 }, (_, i) => M.el('div', { class: 'abs', style: { left: (i * W / 10) + 'px', top: 0, width: (W / 10 + 1) + 'px', height: H + 'px', background: C.paper, transformOrigin: '50% 0', zIndex: 20 } }, L3));
+
+/* ================= PLANO 4 — DADOS: barras + linha + contador ================= */
+const L4 = layer(C.paper, 4);
+const world4 = M.el('div', { class: 'layer' }, L4);
+const CH = V ? { x0: u(90), x1: W - u(90), y0: H * 0.48, y1: H - M.safe.bottom - u(40) } : { x0: W * 0.42, x1: W - u(110), y0: u(170), y1: H - u(150) };
+const g4 = M.el('svg', { width: W, height: H }, world4);
+const VALS = [0.32, 0.45, 0.38, 0.6, 0.52, 0.78, 0.97];
+const bars = VALS.map((v, i) => M.el('rect', { fill: i === VALS.length - 1 ? C.red : C.ink, rx: u(6) }, g4));
+const base = M.el('line', { x1: CH.x0, x2: CH.x1, y1: CH.y1, y2: CH.y1, stroke: C.ink, 'stroke-width': u(2) }, g4);
+const bw = (CH.x1 - CH.x0) / VALS.length, tops = VALS.map((v, i) => [CH.x0 + i * bw + bw / 2, CH.y1 - (CH.y1 - CH.y0) * v - u(34)]);
+const lineE = M.el('path', { d: 'M' + tops.map(p => p.join(',')).join('L'), fill: 'none', stroke: C.red, 'stroke-width': u(5), 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, g4);
+const dot = M.el('circle', { r: u(11), fill: C.red, stroke: C.paper, 'stroke-width': u(4) }, g4), dotR = M.el('circle', { fill: 'none', stroke: C.red, 'stroke-width': u(2) }, g4);
+const big = M.el('div', { class: 'disp abs', style: { fontSize: u(V ? 230 : 250) + 'px', color: C.ink, left: (V ? u(84) : u(110)) + 'px', top: (V ? M.safe.top + u(30) : u(230)) + 'px', fontVariantNumeric: 'tabular-nums' } }, world4, '+0%');
+const cap = M.el('div', { class: 'ser abs', style: { fontSize: u(V ? 72 : 66) + 'px', color: C.red, left: (V ? u(90) : u(118)) + 'px', top: (V ? M.safe.top + u(270) : u(500)) + 'px' } }, world4, 'alcance em 30 dias');
+
+/* ================= PLANO 5 — FIM: marca monta + assinatura + brilho ================= */
+const L5 = layer(C.red, 5);
+const g5 = M.el('svg', { width: W, height: H }, L5);
+const FM = V ? { k: 0.95, x: cx, y: cy - u(250) } : { k: 1.0, x: cx - u(360), y: cy };
+const fmG = M.el('g', {}, g5), fSq = M.el('path', { d: SQ, fill: C.paper }, fmG), fCi = M.el('path', { d: CI, fill: C.ink }, fmG);
+const sig = M.el('div', { class: 'abs', style: { whiteSpace: 'nowrap', color: C.paper } }, L5);
+const s1 = M.el('div', { class: 'disp', style: { fontSize: u(150) + 'px' } }, sig, 'motion');
+const s2 = M.el('div', { class: 'ser', style: { fontSize: u(150) + 'px', marginTop: u(-8) + 'px', color: C.ink } }, sig, 'studio');
+const tag = M.el('div', { class: 'mono abs', style: { fontSize: u(V ? 28 : 24) + 'px', color: C.paper, opacity: .95 } }, L5);
+const TAG = 'FEITO COM CÓDIGO · 16:9 + 9:16';
+const shine = M.el('div', { class: 'abs', style: { inset: 0, pointerEvents: 'none', mixBlendMode: 'soft-light', zIndex: 3 } }, L5);
+
+/* ---------- acabamento ---------- */
+const grain = M.grain(st);
+M.vignette(st, { strength: 0.12 });
+// desfoque direcional p/ o whip pan (proporcional à velocidade)
+const fx = M.el('svg', { width: 0, height: 0, style: { position: 'absolute' } }, document.body);
+fx.innerHTML = '<filter id="hb" x="-20%" y="-5%" width="140%" height="110%"><feGaussianBlur id="hbg" stdDeviation="0 0"/></filter>';
+const hbg = fx.querySelector('#hbg');
+
+/* ================= INIT (medidas que dependem das fontes) ================= */
+async function init() {
+  S1 = M.split(h1, { mask: 'words' }); S2 = M.split(h2, { mask: 'words' });
+  [w1, w2, s1, s2].forEach(e => { e.style.overflow = 'hidden'; e.innerHTML = `<span style="display:inline-block">${e.textContent}</span>`; });
+  const r = S2.words[1].getBoundingClientRect(), sr = st.getBoundingClientRect();
+  uline = M.el('path', { d: `M${r.left - sr.left + u(6)} ${r.bottom - sr.top - u(14)} C ${r.left - sr.left + r.width * .35} ${r.bottom - sr.top - u(2)}, ${r.left - sr.left + r.width * .7} ${r.bottom - sr.top - u(22)}, ${r.right - sr.left - u(30)} ${r.bottom - sr.top - u(10)}`, fill: 'none', stroke: C.ink, 'stroke-width': u(V ? 7 : 8), 'stroke-linecap': 'round' }, g1);
+  // partículas: pontos amostrados dentro do quadrado e do círculo
+  const a = M.sampleShape({ d: SQ }, 300, { seed: 3 }), b = M.sampleShape({ d: CI }, 240, { seed: 4 }), R = M.rng(21);
+  PTS = a.map(p => ({ p, c: C.ink })).concat(b.map(p => ({ p, c: C.red }))).map((o, i) => ({ ...o, sx: R() * W, sy: R() * H, d: R() * 0.35, s: 0.7 + R() * 0.8, ph: R() * 6.28 }));
+}
+
+/* ================= RENDER (função pura do tempo) ================= */
+function render(T) {
+  let t = T;
+  grain.update(t);
+  [L1, L2, L3, L4, L5].forEach((L, i) => M.show(L, M.on(t, [P.abre, P.logo, P.ui, P.dados, P.fim][i])));
+  const dr = M.drift(t, u(4));
+
+  /* ---- 1. ABRE ---- */
+  if (M.on(t, P.abre) || M.on(t, P.logo)) {
+    const gp = M.seg(t, 0.05, 1.3), gout = M.seg(t, 3.5, 3.75);
+    GV.forEach((e, i) => { const x = W * (i + 1) / (GV.length + 1), q = E.outExpo(M.seg(gp, i * 0.06, 0.55 + i * 0.06)) * (1 - E.inCubic(gout)); M.attr(e, { x1: x, x2: x, y1: cy - cy * q, y2: cy + cy * q }); });
+    GH.forEach((e, i) => { const y = H * (i + 1) / (GH.length + 1), q = E.outExpo(M.seg(gp, 0.1 + i * 0.06, 0.65 + i * 0.06)) * (1 - E.inCubic(gout)); M.attr(e, { y1: y, y2: y, x1: cx - cx * q, x2: cx + cx * q }); });
+    // L2 usa a mesma grade (ponte entre planos): L1 fica por baixo enquanto a logo nasce
+    if (M.on(t, P.logo)) M.show(L1, true);
+  }
+  if (M.on(t, P.abre) || M.on(t, P.logo)) {
+    const out = t > 2.1;
+    S1.chars.forEach((c, i) => { const q = E.outExpo(M.seg(t, 0.25 + i * 0.035, 1.05 + i * 0.035)), o = E.inCubic(M.seg(t, 2.1 + i * 0.018, 2.45 + i * 0.018)); M.css(c, { transform: { y: (1 - q) * 110 / 100 * u(V ? 178 : 232) - o * u(V ? 210 : 270), r: (1 - q) * 8 } }); });
+    S2.words.forEach((w, i) => { const q = E.outExpo(M.seg(t, 0.85 + i * 0.1, 1.6 + i * 0.1)), o = E.inCubic(M.seg(t, 2.16 + i * 0.05, 2.5 + i * 0.05)); M.css(w.in, { transform: { y: (1 - q) * u(V ? 200 : 250) - o * u(V ? 210 : 270) } }); });
+    const ul = E.inOutCubic(M.seg(t, 1.35, 1.85)), ulo = M.seg(t, 2.05, 2.25);
+    M.draw(uline, ul * (1 - ulo), ulo * ul); uline.style.opacity = t < 2.3 ? 1 : 0;
+    const ft = M.frameT(t); hud.forEach((h, i) => { const s = i === 2 ? 'TC 00:00:' + String(Math.floor(ft)).padStart(2, '0') + ':' + String(Math.round(ft * 30) % 30).padStart(2, '0') : h.s; const q = M.seg(ft, 0.2 + i * 0.08, 0.7 + i * 0.08); h.e.textContent = s.slice(0, Math.ceil(s.length * q)); h.e.style.opacity = 0.75 * (1 - M.seg(t, 4.3, 4.6)); });
+    num.style.opacity = E.outCubic(M.seg(t, 0.4, 0.8)) * (1 - M.seg(t, 2.1, 2.3));
+    head.style.transform = `translateY(-50%) translate(${dr.x}px,${dr.y}px)`;
+  }
+
+  /* ---- 2. LOGO ---- */
+  if (M.on(t, P.logo)) {
+    L2.style.background = 'transparent';
+    const slide = E.inOutExpo(M.seg(t, 3.85, 4.3));
+    const mx = M.lerp(MK.x0, MK.x1, slide), my = M.lerp(MK.y0, MK.y1, slide);
+    const pop = 1 + 0.08 * Math.sin(Math.PI * M.seg(t, 3.6, 3.9)) * (t > 3.6 ? 1 : 0);
+    const sk = M.shake(t, 3.62, { amp: u(10), dur: 0.3 });
+    const k = MK.k * pop * S;
+    markG.setAttribute('transform', `translate(${mx + sk.x} ${my + sk.y}) rotate(${sk.r}) scale(${k}) translate(-200 -200)`);
+    // construção: traços desenham, depois somem
+    con.forEach((e, i) => { M.draw(e, E.inOutCubic(M.seg(t, 2.5 + i * 0.1, 3.2 + i * 0.1))); e.style.opacity = (i === 0 || i === 3 ? .45 : 1) * (1 - M.seg(t, 3.55, 3.8)); });
+    dims.forEach((d, i) => { const pos = [[mx + u(130) * MK.k, my + u(150) * MK.k], [mx + u(90) * MK.k, my - u(170) * MK.k], [mx - u(200) * MK.k, my + u(190) * MK.k]][i]; const q = M.seg(M.frameT(t), 2.75 + i * 0.15, 3.1 + i * 0.15); d.e.textContent = d.s.slice(0, Math.ceil(d.s.length * q)); M.css(d.e, { left: pos[0] + 'px', top: pos[1] + 'px', opacity: 0.7 * (1 - M.seg(t, 3.5, 3.7)) }); });
+    // forma cheia aparece na revelação
+    const fillA = E.outCubic(M.seg(t, 3.58, 3.72));
+    [sqE, ciE].forEach(e => e.style.opacity = fillA);
+    // partículas convergem
+    ctx.clearRect(0, 0, W, H);
+    const pa = 1 - M.seg(t, 3.6, 3.78);
+    if (pa > 0 && t > 2.4) {
+      const k0 = MK.k * S;
+      for (const o of PTS) {
+        const q = E.inOutCubic(M.seg(t, 2.55 + o.d, 3.45 + o.d));
+        const n = 18 * S * (1 - q);
+        const sx = o.sx + M.noise2(o.ph, t * 0.6) * n * 3, sy = o.sy + M.noise2(t * 0.6, o.ph) * n * 3;
+        const tx = MK.x0 + (o.p[0] - 200) * k0, ty = MK.y0 + (o.p[1] - 200) * k0;
+        ctx.globalAlpha = pa * E.outCubic(M.seg(t, 2.45, 2.8));
+        ctx.fillStyle = o.c; ctx.beginPath(); ctx.arc(M.lerp(sx, tx, q), M.lerp(sy, ty, q), u(3.1) * o.s * (1 + (1 - q) * 0.6), 0, 6.283); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    // anel de impacto
+    const rp = M.seg(t, 3.62, 4.2); M.attr(ring, { cx: MK.x0, cy: MK.y0, r: u(150) + u(330) * E.outExpo(rp), opacity: rp > 0 && rp < 1 ? (1 - rp) : 0 });
+    // assinatura sobe de dentro da máscara (lockup)
+    const wq1 = E.outExpo(M.seg(t, 3.95, 4.65)), wq2 = E.outExpo(M.seg(t, 4.05, 4.75));
+    M.css(word, { left: (MK.center ? 0 : MK.wx) + 'px', top: MK.wy + 'px', width: MK.center ? W + 'px' : 'auto', textAlign: MK.center ? 'center' : 'left' });
+    M.css(w1.firstChild, { transform: { y: (1 - wq1) * u(170) } }); M.css(w2.firstChild, { transform: { y: (1 - wq2) * u(170) } });
+    // saída: íris dupla a partir do círculo da marca (cobre o quadro)
+    const ccx = mx + (250 - 200) * k, ccy = my + (150 - 200) * k;
+    const ia = M.seg(t, 4.55, 4.86), ib = M.seg(t, 4.66, 4.97);
+    M.attr(irA, { cx: ccx, cy: ccy, r: ia > 0 ? M.expLerp(90 * k, 90 * k * M.cover(90 * k, ccx, ccy) * 1.02, E.inOutCubic(ia)) : 0 });
+    M.attr(irB, { cx: ccx, cy: ccy, r: ib > 0 ? M.expLerp(10, M.cover(1, ccx, ccy) * 1.02, E.inOutCubic(ib)) : 0 });
+  }
+
+  /* ---- 3. UI ---- */
+  if (M.on(t, P.ui)) {
+    const bIn = E.outExpo(M.seg(t, 4.95, 5.6));
+    const col = E.inOutExpo(M.seg(t, 6.65, 7.05));           // caixa colapsa em círculo
+    const exp = E.inOutExpo(M.seg(t, 7.55, 7.95));           // círculo expande em card
+    const bw2 = M.lerp(M.lerp(BX.w, BX.h, col), CARD.w, exp), bh2 = M.lerp(BX.h, CARD.h, exp);
+    const by = cy - u(V ? 40 : 0);
+    const sc = M.lerp(0.94, 1, bIn) * (1 - 0.05 * M.pulse(t, 6.62, 0.08));
+    M.css(box, { left: (cx - bw2 / 2) + 'px', top: (by - bh2 / 2) + 'px', width: bw2 + 'px', height: bh2 + 'px', borderRadius: M.lerp(bh2 / 2, u(28), exp) + 'px', opacity: bIn, transform: { s: sc }, background: M.mix(C.card, C.red, col * (1 - exp)), borderColor: col > 0.5 && exp < 0.5 ? 'transparent' : '#333' });
+    const tw = M.typewriter('Anima a minha marca.', M.frameT(t), 5.15, { cps: 17 });
+    const tx = cx - BX.w / 2 + u(46);
+    typed.textContent = tw.text; M.css(typed, { left: tx + 'px', top: (by - u(V ? 29 : 33)) + 'px', opacity: bIn * (1 - M.seg(t, 6.62, 6.75)) });
+    M.css(caret, { left: (tx + typed.offsetWidth + u(6)) + 'px', top: (by - u(28)) + 'px', opacity: bIn * tw.caret * (1 - M.seg(t, 6.6, 6.7)) });
+    M.css(lab, { left: (cx - BX.w / 2 + u(8)) + 'px', top: (by - BX.h / 2 - u(44)) + 'px', opacity: bIn * 0.9 * (1 - M.seg(t, 6.6, 6.8)) });
+    const sendX = M.lerp(cx + BX.w / 2 - u(70), cx, col);
+    M.css(send, { left: (sendX - u(44)) + 'px', top: (by - u(44)) + 'px', opacity: bIn * (1 - M.seg(t, 6.7, 6.85)), transform: { s: 1 - 0.12 * M.pulse(t, 6.6, 0.09) } });
+    // loader + check dentro do círculo
+    const la = M.seg(t, 7.02, 7.12) * (1 - M.seg(t, 7.38, 7.45));
+    M.attr(loader, { cy: by, opacity: la, transform: `rotate(${t * 520} ${cx} ${by})` }); M.drawRange(loader, 0, 0.25 + 0.2 * Math.sin(t * 9));
+    check.setAttribute('transform', `translate(0 ${by - cy})`); M.draw(check, E.outCubic(M.seg(t, 7.38, 7.58))); check.style.opacity = 1 - M.seg(t, 7.55, 7.65);
+    // cursor em arco até o botão + clique
+    const cp = M.cursorPath(t, [[5.95, [W + u(60), H + u(80)]], [6.55, [cx + BX.w / 2 - u(70), by + u(6)]], [6.7, [cx + BX.w / 2 - u(70), by + u(6)]], [7.3, [W * 0.92, H * 1.1]]], 0.22);
+    M.css(cur, { transform: { x: cp[0], y: cp[1], s: 1 - 0.15 * M.pulse(t, 6.6, 0.07) }, opacity: t > 5.95 && t < 7.3 ? 1 : 0 });
+    const rr = M.seg(t, 6.6, 7.0); M.attr(ripple, { cx: cx + BX.w / 2 - u(70), cy: by, r: u(30) + u(70) * E.outCubic(rr), opacity: rr > 0 && rr < 1 ? 0.8 * (1 - rr) : 0 });
+    // card
+    const ca = E.outCubic(M.seg(t, 7.85, 8.1));
+    M.css(card, { left: (cx - CARD.w / 2) + 'px', top: (by - CARD.h / 2) + 'px', width: CARD.w + 'px', height: CARD.h + 'px', opacity: ca * (exp > 0.98 ? 1 : 0) });
+    const pr = E.outCubic(M.seg(t, 7.95, 8.3)), prf = E.outCubic(M.seg(M.frameT(t), 7.95, 8.3)); fill.style.width = (pr * 100) + '%'; pct.textContent = prf < 1 ? 'Renderizando ' + Math.round(prf * 100) + '%' : 'Pronto ✓';
+    M.css(thumb.firstChild, { transform: `translate(-50%,-50%) scale(${0.7 + 0.3 * E.outBack(M.seg(t, 7.9, 8.3))})` });
+    // persianas (transição para os dados)
+    blinds.forEach((b, i) => { const d = M.stagger(i, 10, 0.02, 'start'), q = E.inOutCubic(M.seg(t, 8.6 + d, 8.82 + d)); M.css(b, { transform: `scaleY(${q})` }); });
+  }
+
+  /* ---- 4. DADOS ---- */
+  if (M.on(T, P.dados)) {
+    const t = T - OFF;
+    const whip = CV.swift(M.seg(t, 9.98, 10.3));
+    const vel = Math.abs(CV.swift(M.seg(t + 0.01, 9.98, 10.3)) - CV.swift(M.seg(t - 0.01, 9.98, 10.3))) / 0.02;
+    M.css(world4, { transform: { x: -W * whip + dr.x, y: dr.y }, filter: vel > 0.2 ? 'url(#hb)' : 'none' });
+    hbg.setAttribute('stdDeviation', `${Math.min(u(70), vel * u(9))} 0`);
+    VALS.forEach((v, i) => { const q = E.outExpo(M.seg(t, 8.42 + i * 0.09, 9.1 + i * 0.09)), hh = (CH.y1 - CH.y0) * v * q; M.attr(bars[i], { x: CH.x0 + i * bw + bw * 0.2, width: bw * 0.6, y: CH.y1 - hh, height: Math.max(0, hh) }); });
+    base.setAttribute('x2', M.lerp(CH.x0, CH.x1, E.outExpo(M.seg(t, 8.38, 9.0))));
+    const lp = E.inOutCubic(M.seg(t, 8.95, 9.5)); M.draw(lineE, lp);
+    const end = tops[tops.length - 1], dq = M.seg(t, 9.48, 9.6);
+    M.attr(dot, { cx: end[0], cy: end[1], opacity: dq, r: u(11) * E.outBack(dq, 3) });
+    M.attr(dotR, { cx: end[0], cy: end[1], r: u(16) + u(10) * (0.5 + 0.5 * Math.sin((t - 9.5) * 6)), opacity: t > 9.55 ? 0.5 : 0 });
+    const cv = 248 * E.outExpo(M.seg(M.frameT(T) - OFF, 8.45, 9.7)); big.textContent = M.fmt(cv, { prefix: '+', suffix: '%' });
+    M.css(big, { opacity: E.outCubic(M.seg(t, 8.4, 8.6)) }); M.css(cap, { opacity: E.outCubic(M.seg(t, 8.9, 9.3)), transform: { y: (1 - E.outExpo(M.seg(t, 8.9, 9.5))) * u(40) } });
+  }
+
+  /* ---- 5. FIM ---- */
+  if (M.on(T, P.fim)) {
+    const t = T - OFF;
+    const whip = CV.swift(M.seg(t, 9.98, 10.3));
+    const vel = Math.abs(CV.swift(M.seg(t + 0.01, 9.98, 10.3)) - CV.swift(M.seg(t - 0.01, 9.98, 10.3))) / 0.02;
+    M.css(L5, { transform: { x: W * (1 - whip) }, filter: vel > 0.2 ? 'url(#hb)' : 'none' });
+    // marca monta: quadrado gira e entra; círculo cai com mola e amassa no impacto
+    const qa = E.outExpo(M.seg(t, 10.2, 10.85));
+    const fall = M.springAt(t, 10.32, 'bouncy');
+    const land = M.pulse(t, 10.55, 0.12);
+    fSq.setAttribute('transform', `translate(200 240) rotate(${(1 - qa) * -120}) scale(${M.lerp(0.2, 1, qa)}) translate(-200 -240) translate(${(1 - qa) * -60} ${(1 - qa) * 80})`);
+    fSq.style.opacity = M.seg(t, 10.2, 10.3);
+    fCi.setAttribute('transform', `translate(0 ${(1 - fall) * -420}) translate(250 240) scale(${1 + 0.12 * land} ${1 - 0.14 * land}) translate(-250 -240)`);
+    fCi.style.opacity = t > 10.32 ? 1 : 0;
+    const slide = E.inOutExpo(M.seg(t, 10.85, 11.3)), fk = FM.k * S;
+    const fx0 = V ? cx : cx, fx1 = FM.x;
+    fmG.setAttribute('transform', `translate(${M.lerp(fx0, fx1, slide)} ${M.lerp(V ? cy - u(60) : cy, FM.y, slide)}) scale(${fk}) translate(-200 -200)`);
+    // assinatura
+    const sq1 = E.outExpo(M.seg(t, 11.0, 11.7)), sq2 = E.outExpo(M.seg(t, 11.1, 11.8));
+    M.css(sig, V ? { left: 0, width: W + 'px', textAlign: 'center', top: (cy + u(10)) + 'px' } : { left: (cx - u(110)) + 'px', top: (cy - u(150)) + 'px' });
+    M.css(s1.firstChild, { transform: { y: (1 - sq1) * u(170) } }); M.css(s2.firstChild, { transform: { y: (1 - sq2) * u(170) } });
+    const tq = M.seg(M.frameT(T) - OFF, 11.45, 11.95); tag.textContent = TAG.slice(0, Math.ceil(TAG.length * tq));
+    M.css(tag, V ? { left: 0, width: W + 'px', textAlign: 'center', top: (cy + u(330)) + 'px' } : { left: (cx - u(104)) + 'px', top: (cy + u(170)) + 'px' });
+    // brilho que varre
+    const sh = E.inOutCubic(M.seg(t, 11.7, 12.3));
+    shine.style.background = `linear-gradient(105deg, transparent ${sh * 140 - 30}%, rgba(255,255,255,.8) ${sh * 140 - 15}%, transparent ${sh * 140}%)`;
+    shine.style.opacity = sh > 0 && sh < 1 ? 1 : 0;
+  }
+}
+M.boot(render, { dur: DUR, init, poster: 3.9 });
+</script></body></html>
