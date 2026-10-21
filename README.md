@@ -20,7 +20,7 @@ Vídeos de teste feitos do zero pela skill: [16:9](docs/Demo_MotionStudio_16x9_1
 - **Som:** trilha sintetizada a partir dos eventos da animação, em 6 climas (grave, épico, tech, clean, ambient, pop)
 - **Briefing de campeão (novo na 1.1):** pedido vago vira um briefing de 6 blocos (conceito de uma linha, elemento-ponte, look travado, lista de proibidos, tempo em BPM, build e revisão) antes de qualquer código
 - **Anti-"cara de IA" (novo na 1.1):** lista de proibidos aprendida em 230 prompts reais (glow, partículas sem origem, crossfade, tempo morto, texto nos cantos...), cada item com o que fazer no lugar
-- **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts do [Prompt Motion](https://www.prompt-motion.com/) têm em comum, 11 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
+- **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts públicos têm em comum, 11 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
 
 ## Como instalar no Claude (app ou site)
 
@@ -76,7 +76,7 @@ skills/motion-studio/
   kit/fonts.mjs                   baixa fontes do Google Fonts
   kit/template.html               cena-base para começar
   examples/demo-reel.html         o showreel de teste, completo
-  references/playbook-prompt-motion.md      o que 230 prompts reais ensinam (anatomia, proibidos, renderizadores)
+  references/playbook.md      o que 230 prompts reais ensinam (anatomia, proibidos, renderizadores)
   references/templates-de-briefing.md       11 modelos de briefing prontos
   references/galeria/                       230 prompts reais por categoria (comece pelo 00_INDEX.md)
 .claude-plugin/marketplace.json   instalação pelo Claude Code
@@ -91,6 +91,6 @@ Criada por [Augusto Fonte](https://www.instagram.com/_augustofonte/) com o Claud
 
 **English / Español:** a skill também existe em inglês (`skills/motion-studio-en`, [README](README.en.md), `motion-studio-en.zip`) e em espanhol (`skills/motion-studio-es`, [README](README.es.md), `motion-studio-es.zip`).
 
-## Créditos da biblioteca de referência
+## Base de referência
 
-Os prompts em `references/galeria/` vêm do [Prompt Motion](https://www.prompt-motion.com/) (curadoria de [@p4nthera_](https://x.com/p4nthera_)) e pertencem aos criadores citados em cada entrada. Estão aqui como material de estudo para a skill; o playbook e os templates são texto próprio.
+A biblioteca em `skills/motion-studio/references/` é a base de estudo do Augusto Fonte: 230 prompts públicos de criadores, analisados e reorganizados para tornar a skill mais inteligente. Cada prompt pertence ao criador citado na entrada; o playbook e os templates são texto próprio.

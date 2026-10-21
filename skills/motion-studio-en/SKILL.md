@@ -23,7 +23,7 @@ The kit has 5 files tested together and **ships inside this skill**, in the `kit
 
 Full tested example: `examples/demo-reel.html` (13 s showreel with kinetic type, particle logo, UI flow, chart and whip pan). To run it, inside `examples/`: `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` then `node ../kit/render.mjs demo-reel.html --stills 12`. Use it as a reference for quality and code organization.
 
-**References (load on demand, not all at once):** `references/playbook-prompt-motion.md` (what 230 real prompts teach: read it before any real video), `references/briefing-templates.md` (11 ready briefing templates, A to K), `references/gallery/00_INDEX.md` (230 real prompts by category; open only the file for the requested video type).
+**References (load on demand, not all at once):** `references/playbook.md` (what 230 real prompts teach: read it before any real video), `references/briefing-templates.md` (11 ready briefing templates, A to K), `references/gallery/00_INDEX.md` (230 real prompts by category; open only the file for the requested video type).
 
 Then check the environment once: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. If Playwright is missing: `npm i -g playwright && npx playwright install chromium`. If numpy/scipy is missing: `pip3 install numpy scipy` (on Linux, `--break-system-packages`). On Mac, if ffmpeg is missing: `brew install ffmpeg`. Render wherever Node + Playwright + ffmpeg exist (Claude's cloud workspace already has them). More CPU cores make rendering faster (more workers).
 
@@ -352,7 +352,7 @@ node render.mjs overlay.html --alpha --name Client_Transition --sizes 1920x1080,
 
 ## 11. Champion brief, anti-"AI look" and the reference library
 
-Basis: analysis of 230 real prompts made in Claude. A 26-word prompt pasted 33 times gave results from 0 to 17 thousand likes: **a vague prompt leaves everything to chance**; the long ones had an 11× higher median. Details in `references/playbook-prompt-motion.md`.
+Basis: analysis of 230 real prompts made in Claude. A 26-word prompt pasted 33 times gave results from 0 to 17 thousand likes: **a vague prompt leaves everything to chance**; the long ones had an 11× higher median. Details in `references/playbook.md`.
 
 **The 6 blocks of a brief (for you to build before constructing, on a real video request):**
 1. **inputs:** what only the user knows (name, logo, accent color, exact text, track), with **defaults** if they skip. Ask once.
@@ -376,10 +376,10 @@ Basis: analysis of 230 real prompts made in Claude. A 26-word prompt pasted 33 t
 - **Invented numbers, clients, testimonials and features** → only what the user supplied or what the product really has.
 
 **How to use the reference library (without blowing up the context):**
-1. A real video (showreel, launch, promo, UI motion, explainer, typography, 3D)? Read `references/playbook-prompt-motion.md` and the closest template in `references/briefing-templates.md`.
+1. A real video (showreel, launch, promo, UI motion, explainer, typography, 3D)? Read `references/playbook.md` and the closest template in `references/briefing-templates.md`.
 2. For concrete scene ideas, open `references/gallery/00_INDEX.md`, pick the category and read only 2 to 4 prompts similar to the request (the ones at the top have more detail). Or `grep -il "word" references/gallery/*.md`.
 3. Gallery prompts were written for a flow similar to the kit's: their `seek(t)` is this kit's `render(t)`; the subframes with `tmix` are `M.blur`; the beat grid is `M.beat`; the numpy music analyzer is `sound.py`/cues. Translate the idea into the kit, **do not copy the prompt's code**.
-4. **Every gallery entry has two versions:** the creator's original prompt (often a single sentence) and the **full version**, structured (direction, structure, build, gotchas, first step). To build, start from the full version; its families (showreel, product with research, explainer with narration, silent short, music/lyric, talking-head edit, 3D/game) are summarized in `references/playbook-prompt-motion.md` (section 9) and became templates A to K in `references/briefing-templates.md`.
+4. **Every gallery entry has two versions:** the creator's original prompt (often a single sentence) and the **full version**, structured (direction, structure, build, gotchas, first step). To build, start from the full version; its families (showreel, product with research, explainer with narration, silent short, music/lyric, talking-head edit, 3D/game) are summarized in `references/playbook.md` (section 9) and became templates A to K in `references/briefing-templates.md`.
 5. If the user pastes a gallery prompt and asks "make this one": treat it as a brief, fill the missing `inputs` with its defaults, and follow the workflow in section 1.
 6. If the idea calls for **real 3D**, **React/Remotion** or **math (Manim)**, see the renderer table in the playbook (section 7) and tell the user about the tool swap before starting.
 7. The prompts belong to the creators credited: use them as a reference for structure and ideas, adapt them to the user's brief, and do not republish them as your own.

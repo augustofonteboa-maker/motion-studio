@@ -1,6 +1,6 @@
 # Playbook: o que 230 prompts reais ensinam sobre motion com IA
 
-Fonte: análise dos 233 vídeos do Prompt Motion (prompt-motion.com, curadoria de @p4nthera_) e dos artigos do blog deles, de set/out de 2026. Todos feitos no Claude Opus 5.5. A íntegra dos prompts está em `galeria/` (comece por `galeria/00_INDEX.md`). Este arquivo é a destilação: leia inteiro quando o pedido for um vídeo de verdade (showreel, launch, promo, explainer), não para um ajuste pequeno.
+Base: a biblioteca de referência do Augusto Fonte, montada a partir da análise de 233 vídeos públicos feitos com o Claude Opus 5.5 e dos prompts de cada um (set/out de 2026). A íntegra dos prompts está em `galeria/` (comece por `galeria/00_INDEX.md`). Este arquivo é a destilação: leia inteiro quando o pedido for um vídeo de verdade (showreel, launch, promo, explainer), não para um ajuste pequeno.
 
 ## 1. A lição central
 

@@ -1,6 +1,6 @@
 # Templates de briefing (preencha antes de construir)
 
-Use quando o pedido for vago ("faz um vídeo legal", "showreel", "promo do meu app"). Copie o template mais próximo, preencha o que o pedido já diz, decida o resto com bom gosto, **mostre ao usuário o conceito de uma linha + o mapa de batidas + 3 a 4 quadros** e só então construa. Estrutura e o porquê de cada bloco: `playbook-prompt-motion.md`. Exemplos reais de cada tipo: `galeria/`.
+Use quando o pedido for vago ("faz um vídeo legal", "showreel", "promo do meu app"). Copie o template mais próximo, preencha o que o pedido já diz, decida o resto com bom gosto, **mostre ao usuário o conceito de uma linha + o mapa de batidas + 3 a 4 quadros** e só então construa. Estrutura e o porquê de cada bloco: `playbook.md`. Exemplos reais de cada tipo: `galeria/`.
 
 Dois cuidados valem para todos:
 - Texto exato, nome e números vêm do usuário. Nunca invente resultado, porcentagem, cliente ou funcionalidade.

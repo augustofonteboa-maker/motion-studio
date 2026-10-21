@@ -69,7 +69,7 @@ skills/motion-studio-es/
   SKILL.md                        instrucciones de la skill (flujo, dirección de arte, técnicas, QA)
   kit/                            runtime de animación, renderizador, banda sonora, fuentes y escena base
   examples/demo-reel.html         el showreel de prueba, completo
-  references/playbook-prompt-motion.md   lo que enseñan 230 prompts reales (anatomía, prohibidos, renderizadores)
+  references/playbook.md   lo que enseñan 230 prompts reales (anatomía, prohibidos, renderizadores)
   references/briefing-templates.md       11 plantillas de brief listas (A a K)
   references/gallery/                    230 prompts reales por categoría (empieza por 00_INDEX.md)
 .claude-plugin/marketplace.json   instalación por Claude Code
@@ -82,6 +82,6 @@ La misma skill también está en portugués (`skills/motion-studio`) y en inglé
 
 Creada por [Augusto Fonte](https://www.instagram.com/_augustofonte/) con Claude. Licencia MIT: puedes usar, adaptar y compartir, manteniendo el aviso de licencia.
 
-### Créditos de la biblioteca de referencia
+### Base de referencia
 
-Los prompts de `references/gallery/` provienen de la galería [Prompt Motion](https://www.prompt-motion.com/) (curaduría de [@p4nthera_](https://x.com/p4nthera_)) y pertenecen a los creadores citados en cada entrada. Están aquí como material de estudio para la skill; el playbook y las plantillas son texto propio.
+La biblioteca de `skills/motion-studio-es/references/` es la base de estudio de Augusto Fonte: 230 prompts públicos de creadores, analizados y reorganizados para hacer la skill más inteligente. Cada prompt pertenece al creador citado en su entrada; el playbook y las plantillas son texto propio.

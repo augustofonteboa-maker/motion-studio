@@ -21,7 +21,7 @@ O kit tem 5 arquivos testados juntos e **vem dentro desta skill**, na pasta `kit
 
 Exemplo completo e testado: `examples/demo-reel.html` (showreel de 13 s com tipografia cinética, logo por partículas, fluxo de UI, gráfico e whip pan). Para rodar: dentro de `examples/`, `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` e depois `node ../kit/render.mjs demo-reel.html --stills 12`. Use como referência de qualidade e de organização de código.
 
-**Referências (carregue sob demanda, não tudo de uma vez):** `references/playbook-prompt-motion.md` (o que 230 prompts reais ensinam: leia antes de qualquer vídeo de verdade), `references/templates-de-briefing.md` (11 modelos de briefing prontos, A a K), `references/galeria/00_INDEX.md` (230 prompts reais por categoria; abra só o arquivo do tipo de vídeo pedido).
+**Referências (carregue sob demanda, não tudo de uma vez):** `references/playbook.md` (o que 230 prompts reais ensinam: leia antes de qualquer vídeo de verdade), `references/templates-de-briefing.md` (11 modelos de briefing prontos, A a K), `references/galeria/00_INDEX.md` (230 prompts reais por categoria; abra só o arquivo do tipo de vídeo pedido).
 
 Depois, confira o ambiente uma vez: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. Se faltar Playwright: `npm i -g playwright && npx playwright install chromium`. Se faltar numpy/scipy: `pip3 install numpy scipy` (no Linux, `--break-system-packages`). No Mac, se faltar ffmpeg: `brew install ffmpeg`. Renderize onde houver Node + Playwright + ffmpeg (o workspace na nuvem do Claude já tem). Num computador com mais núcleos o render fica mais rápido (mais workers).
 
@@ -350,7 +350,7 @@ node render.mjs overlay.html --alpha --name Cliente_Transicao --sizes 1920x1080,
 
 ## 11. Briefing de campeão, anti-"cara de IA" e biblioteca de referência
 
-Base: análise de 230 prompts reais feitos no Claude (Prompt Motion, set/out de 2026). Um prompt de 26 palavras colado 33 vezes deu resultados de 0 a 17 mil curtidas: **prompt vago deixa tudo ao acaso**; os longos tiveram mediana 11× maior. Detalhes em `references/playbook-prompt-motion.md`.
+Base: a biblioteca de referência do Augusto Fonte, com a análise de 230 prompts públicos de criadores feitos no Claude (set/out de 2026). Um prompt de 26 palavras colado 33 vezes deu resultados de 0 a 17 mil curtidas: **prompt vago deixa tudo ao acaso**; os longos tiveram mediana 11× maior. Detalhes em `references/playbook.md`.
 
 **Os 6 blocos de um briefing (para você montar antes de construir, em pedido de vídeo de verdade):**
 1. **inputs:** o que só o usuário sabe (nome, logo, cor de destaque, texto exato, trilha), com **padrões** se ele pular. Pergunte uma vez.
@@ -374,11 +374,11 @@ Base: análise de 230 prompts reais feitos no Claude (Prompt Motion, set/out de 
 - **Números, clientes, depoimentos e funcionalidades inventados** → só o que o usuário forneceu ou o produto realmente tem.
 
 **Como usar a biblioteca de referência (sem estourar o contexto):**
-1. Vídeo de verdade (showreel, launch, promo, UI motion, explainer, tipografia, 3D)? Leia `references/playbook-prompt-motion.md` e o template mais próximo em `references/templates-de-briefing.md`.
+1. Vídeo de verdade (showreel, launch, promo, UI motion, explainer, tipografia, 3D)? Leia `references/playbook.md` e o template mais próximo em `references/templates-de-briefing.md`.
 2. Para ideias concretas de cena, abra `references/galeria/00_INDEX.md`, escolha a categoria e leia só 2 a 4 prompts parecidos com o pedido (os do topo têm mais detalhe). Ou `grep -il "palavra" references/galeria/*.md`.
 3. Prompts da galeria foram escritos para um fluxo parecido com o do kit: o `seek(t)` deles é o `render(t)` daqui; os subquadros com `tmix` são o `M.blur`; a grade de batidas é `M.beat`; o analisador de música com numpy é o `sound.py`/cues. Traduza a ideia para o kit, **não copie o código do prompt**.
 4. Os prompts pertencem aos criadores citados: use como referência de estrutura e de ideias, adapte ao briefing do usuário, não republique como se fossem seus.
-4b. **Cada entrada da galeria tem duas versões:** o prompt original do criador (muitas vezes uma frase) e a **versão completa** estruturada (direção, estrutura, build, armadilhas, primeiro passo). Para construir, parta da versão completa; as famílias dela (showreel, produto com pesquisa, explainer com narração, curta mudo, música/lyric, edição de talking head, 3D/jogo) estão resumidas em `references/playbook-prompt-motion.md` (seção 9) e viraram os templates A a K de `references/templates-de-briefing.md`.
+4b. **Cada entrada da galeria tem duas versões:** o prompt original do criador (muitas vezes uma frase) e a **versão completa** estruturada (direção, estrutura, build, armadilhas, primeiro passo). Para construir, parta da versão completa; as famílias dela (showreel, produto com pesquisa, explainer com narração, curta mudo, música/lyric, edição de talking head, 3D/jogo) estão resumidas em `references/playbook.md` (seção 9) e viraram os templates A a K de `references/templates-de-briefing.md`.
 5. Se o usuário colar um prompt da galeria e pedir "faz esse": trate-o como briefing, preencha os `inputs` que faltam com os padrões dele, e siga o fluxo da seção 1.
 6. Se a ideia pede **3D de verdade**, **React/Remotion** ou **matemática (Manim)**, veja a tabela de renderizadores no playbook (seção 7) e avise o usuário da troca de ferramenta antes de começar.
 

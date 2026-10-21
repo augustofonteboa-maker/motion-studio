@@ -1,6 +1,6 @@
 # Galería: Gráficos (17 prompts con esta como tag principal)
 
-Prompts reales de creadores, todos hechos con Claude Opus 5.5, del más detallado al más corto. Cada entrada trae el **prompt original** del creador y, en la mayoría, la **versión completa** estructurada (dirección, estructura por pulso, build, trampas y primer paso): esa es la que se puede ejecutar de punta a punta. Cada prompt pertenece al creador citado: úsalo como **referencia de estructura y de ideas** y adáptalo al brief del usuario. Lo que tienen en común los mejores está en `../playbook-prompt-motion.md`.
+Prompts reales de creadores, todos hechos con Claude Opus 5.5, del más detallado al más corto. Cada entrada trae el **prompt original** del creador y, en la mayoría, la **versión completa** estructurada (dirección, estructura por pulso, build, trampas y primer paso): esa es la que se puede ejecutar de punta a punta. Cada prompt pertenece al creador citado: úsalo como **referencia de estructura y de ideas** y adáptalo al brief del usuario. Lo que tienen en común los mejores está en `../playbook.md`.
 
 ### Paper-style product launch film
 `ik-builds-b8bdcf` · @ik_builds · 2026-09-26 · HyperFrames + GSAP · esfuerzo Medium · One-shot · 237 palabras · tags: Gráficos, Diagramas, Música

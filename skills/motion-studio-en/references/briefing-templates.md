@@ -1,6 +1,6 @@
 # Briefing templates (fill in before building)
 
-Use when the request is vague ("make a cool video", "showreel", "promo for my app"). Copy the closest template, fill in what the request already says, decide the rest with good taste, **show the user the one-line concept + the beat map + 3 to 4 frames**, and only then build. Structure and the why of each block: `playbook-prompt-motion.md`. Real examples of each type: `gallery/`.
+Use when the request is vague ("make a cool video", "showreel", "promo for my app"). Copy the closest template, fill in what the request already says, decide the rest with good taste, **show the user the one-line concept + the beat map + 3 to 4 frames**, and only then build. Structure and the why of each block: `playbook.md`. Real examples of each type: `gallery/`.
 
 Two cautions apply to all of them:
 - Exact text, name and numbers come from the user. Never invent a result, percentage, client or feature.

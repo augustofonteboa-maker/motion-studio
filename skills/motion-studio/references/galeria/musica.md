@@ -1,6 +1,6 @@
 # Galeria: Música (2 prompts com esta como tag principal)
 
-Prompts reais de criadores, todos feitos no Claude Opus 5.5, do mais detalhado ao mais curto. Cada entrada traz o **prompt original** do criador e, na maioria, a **versão completa** estruturada (direção, estrutura por batida, build, armadilhas e primeiro passo): é essa a que dá para executar de ponta a ponta. Cada prompt pertence ao criador citado: use como **referência de estrutura e de ideias** e adapte ao briefing do usuário. O que os melhores têm em comum está em `../playbook-prompt-motion.md`.
+Prompts reais de criadores, todos feitos no Claude Opus 5.5, do mais detalhado ao mais curto. Cada entrada traz o **prompt original** do criador e, na maioria, a **versão completa** estruturada (direção, estrutura por batida, build, armadilhas e primeiro passo): é essa a que dá para executar de ponta a ponta. Cada prompt pertence ao criador citado: use como **referência de estrutura e de ideias** e adapte ao briefing do usuário. O que os melhores têm em comum está em `../playbook.md`.
 
 ### UK dubstep track with ASCII visuals
 `rames-jusso-589f80` · @Rames_Jusso · 2026-09-24 · HyperFrames · 6 palavras · tags: Música, Código

@@ -1,10 +1,10 @@
 # Prompt gallery (index)
 
-233 entries (230 with a prompt, 3 skill only; 213 also have the full version), from 216 creators, all on Claude Opus 5.5 (Sep/Oct 2026). **Do not read everything.** Open only the file for the category that matches the request, or search by word: `grep -il "liquid glass" references/gallery/*.md`.
+232 entries (229 with a prompt, 3 skill only; 213 also have the full version), from 216 creators, all on Claude Opus 5.5 (Sep/Oct 2026). **Do not read everything.** Open only the file for the category that matches the request, or search by word: `grep -il "liquid glass" references/gallery/*.md`.
 
 ## Files (each prompt is in the file of its main tag; the other tags appear on its line)
 
-- `product-ui.md`: Product UI (100)
+- `product-ui.md`: Product UI (99)
 - `kinetic-type.md`: Kinetic type (60)
 - `diagrams.md`: Diagrams (19)
 - `characters.md`: Characters (19)
@@ -24,7 +24,6 @@
 - `rossaxbt-3085b7`, 1054 words, @rossaxbt: Ora 2 image model launch film (file `product-ui.md`)
 - `twoclipping-221cab`, 930 words, @twoclipping: Photo print app launch film (file `product-ui.md`)
 - `ultimaxbt-2ddf1e`, 820 words, @ultimaxbt: Food craving launch film (file `product-ui.md`)
-- `antonio-kodheli-490109`, 706 words, @antonio_kodheli: Prompt Motion site promo (file `product-ui.md`)
 - `gdgtify-287ddf`, 664 words, @Gdgtify: Speech built as architecture (file `kinetic-type.md`)
 - `ultimaxbt-bbebf5`, 591 words, @ultimaxbt: Orange dot motion system (file `kinetic-type.md`)
 - `twoclipping-5cba86`, 492 words, @twoclipping: Shape morphing through UI states (file `product-ui.md`)

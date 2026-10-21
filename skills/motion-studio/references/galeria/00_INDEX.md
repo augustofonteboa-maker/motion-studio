@@ -1,10 +1,10 @@
 # Galeria de prompts (índice)
 
-233 entradas (230 com prompt, 3 só skill; 213 têm também a versão completa), de 216 criadores, todas no Claude Opus 5.5 (set/out de 2026). **Não leia tudo.** Abra só o arquivo da categoria que combina com o pedido, ou procure por palavra: `grep -il "liquid glass" references/galeria/*.md`.
+232 entradas (229 com prompt, 3 só skill; 213 têm também a versão completa), de 216 criadores, todas no Claude Opus 5.5 (set/out de 2026). **Não leia tudo.** Abra só o arquivo da categoria que combina com o pedido, ou procure por palavra: `grep -il "liquid glass" references/galeria/*.md`.
 
 ## Arquivos (cada prompt está no arquivo da sua tag principal; as outras tags aparecem na linha dele)
 
-- `ui-de-produto.md`: UI de produto (100)
+- `ui-de-produto.md`: UI de produto (99)
 - `tipografia-cinetica.md`: Tipografia cinética (60)
 - `diagramas.md`: Diagramas (19)
 - `personagens.md`: Personagens (19)
@@ -24,7 +24,6 @@
 - `rossaxbt-3085b7`, 1054 palavras, @rossaxbt: Ora 2 image model launch film (arquivo `ui-de-produto.md`)
 - `twoclipping-221cab`, 930 palavras, @twoclipping: Photo print app launch film (arquivo `ui-de-produto.md`)
 - `ultimaxbt-2ddf1e`, 820 palavras, @ultimaxbt: Food craving launch film (arquivo `ui-de-produto.md`)
-- `antonio-kodheli-490109`, 706 palavras, @antonio_kodheli: Prompt Motion site promo (arquivo `ui-de-produto.md`)
 - `gdgtify-287ddf`, 664 palavras, @Gdgtify: Speech built as architecture (arquivo `tipografia-cinetica.md`)
 - `ultimaxbt-bbebf5`, 591 palavras, @ultimaxbt: Orange dot motion system (arquivo `tipografia-cinetica.md`)
 - `twoclipping-5cba86`, 492 palavras, @twoclipping: Shape morphing through UI states (arquivo `ui-de-produto.md`)

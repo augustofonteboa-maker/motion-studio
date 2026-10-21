@@ -1,6 +1,6 @@
 # Plantillas de brief (complétalas antes de construir)
 
-Úsalas cuando el pedido sea vago ("haz un video chulo", "showreel", "promo de mi app"). Copia la plantilla más cercana, completa lo que el pedido ya dice, decide el resto con buen gusto, **muestra al usuario el concepto de una línea + el mapa de pulsos + 3 a 4 cuadros** y solo entonces construye. Estructura y el porqué de cada bloque: `playbook-prompt-motion.md`. Ejemplos reales de cada tipo: `gallery/`.
+Úsalas cuando el pedido sea vago ("haz un video chulo", "showreel", "promo de mi app"). Copia la plantilla más cercana, completa lo que el pedido ya dice, decide el resto con buen gusto, **muestra al usuario el concepto de una línea + el mapa de pulsos + 3 a 4 cuadros** y solo entonces construye. Estructura y el porqué de cada bloque: `playbook.md`. Ejemplos reales de cada tipo: `gallery/`.
 
 Dos cuidados valen para todas:
 - El texto exacto, el nombre y los números vienen del usuario. Nunca inventes un resultado, porcentaje, cliente o funcionalidad.
