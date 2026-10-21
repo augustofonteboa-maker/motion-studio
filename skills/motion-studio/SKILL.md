@@ -1,6 +1,6 @@
 ---
 name: motion-studio
-description: Motion design nível estúdio com código (vinhetas, logo animada, transições, intros, showreels e promos) em MP4 16:9 e 9:16 com trilha. Use ao pedirem animação, vinheta, intro ou motion.
+description: Motion design nível estúdio com código (vinhetas, logo animada, transições, intros, showreels, vídeos de lançamento, promos de produto, UI motion, tipografia cinética, explainers e loops) em MP4 16:9 e 9:16 com trilha. Traz um playbook e 230 prompts reais de referência. Use ao pedirem animação, vinheta, intro, vídeo de lançamento, showreel ou motion.
 ---
 
 # Motion Studio: motion design com código, nível estúdio
@@ -21,6 +21,8 @@ O kit tem 5 arquivos testados juntos e **vem dentro desta skill**, na pasta `kit
 
 Exemplo completo e testado: `examples/demo-reel.html` (showreel de 13 s com tipografia cinética, logo por partículas, fluxo de UI, gráfico e whip pan). Para rodar: dentro de `examples/`, `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` e depois `node ../kit/render.mjs demo-reel.html --stills 12`. Use como referência de qualidade e de organização de código.
 
+**Referências (carregue sob demanda, não tudo de uma vez):** `references/playbook-prompt-motion.md` (o que 230 prompts reais ensinam: leia antes de qualquer vídeo de verdade), `references/templates-de-briefing.md` (6 modelos de briefing prontos), `references/galeria/00_INDEX.md` (230 prompts reais por categoria; abra só o arquivo do tipo de vídeo pedido).
+
 Depois, confira o ambiente uma vez: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. Se faltar Playwright: `npm i -g playwright && npx playwright install chromium`. Se faltar numpy/scipy: `pip3 install numpy scipy` (no Linux, `--break-system-packages`). No Mac, se faltar ffmpeg: `brew install ffmpeg`. Renderize onde houver Node + Playwright + ffmpeg (o workspace na nuvem do Claude já tem). Num computador com mais núcleos o render fica mais rápido (mais workers).
 
 Estrutura de um projeto:
@@ -37,11 +39,11 @@ projeto/
 
 ## 1. Fluxo de trabalho
 
-1. **Briefing (rápido).** Pegue do pedido: objetivo, onde vai passar (Reels, YouTube, aula, site, apresentação), duração, **texto exato**, marca (logo SVG, cores, fontes), clima do som. Faltando o texto ou a marca e não dá para deduzir, pergunte uma vez. O resto você decide com bom gosto e conta o que decidiu.
+1. **Briefing (rápido).** Pegue do pedido: objetivo, onde vai passar (Reels, YouTube, aula, site, apresentação), duração, **texto exato**, marca (logo SVG, cores, fontes), clima do som. Faltando o texto ou a marca e não dá para deduzir, pergunte uma vez. O resto você decide com bom gosto e conta o que decidiu. **Pedido vago ("faz um vídeo legal", "showreel", "promo do app") não vai direto para o código:** monte o briefing de 6 blocos (seção 11) a partir do template mais próximo em `references/templates-de-briefing.md`, com um conceito de uma linha, e mostre ao usuário o conceito, a paleta, o que está banido e o mapa de batidas.
 2. **Direção de arte.** Marca do cliente ou um preset (seção 3). Defina os tokens no topo da cena.
-3. **Roteiro de batidas.** Escreva (para você) uma tabela `tempo → o que acontece → cue de som → blur`, seguindo a estrutura do formato (seção 6). Pense em **uma ideia central** e num **elemento-ponte** que liga as cenas (uma forma, uma cor, uma personagem).
+3. **Roteiro de batidas.** Escreva (para você) uma tabela `tempo → o que acontece → cue de som → blur`, seguindo a estrutura do formato (seção 6). Pense em **uma ideia central**, dita numa linha, e num **elemento-ponte** que liga as cenas (uma forma, uma cor, uma personagem). Com música ou ritmo definido, conte em **BPM e compassos** (`bpm` no `M.boot`, `M.beat(n)`), com algo acontecendo em toda batida forte, não em "dinâmico".
 4. **Cena.** Copie `template.html` → `cena.html`. Crie os elementos uma vez; no `render(t)` só atualize propriedades. Layout horizontal e vertical com `M.pick(h, v)` e as áreas seguras `M.safe`. Meça textos no `init()` (depois das fontes).
-5. **Folha de contato.** `node render.mjs cena.html --stills 12 --sizes 1920x1080,1080x1920` e **olhe as duas imagens** (Read). Corrija composição, cortes, legibilidade, contraste e áreas seguras antes de qualquer vídeo.
+5. **Folha de contato.** `node render.mjs cena.html --stills 12 --sizes 1920x1080,1080x1920` e **olhe as duas imagens** (Read). Corrija composição, cortes, legibilidade, contraste e áreas seguras antes de qualquer vídeo. Em peça com batida, tire **um quadro por batida** (`--stills` com os tempos das batidas) e corrija o que estiver fora da grade, apertado, sobreposto ou ilegível.
 6. **Determinismo.** `node render.mjs cena.html --check` precisa dar "idêntico" em tudo.
 7. **Rascunho (opcional, para ritmo).** `node render.mjs cena.html --draft` (meia resolução, sem blur, rápido).
 8. **Som.** `node render.mjs cena.html --cues cues.json` → `python3 sound.py cues.json trilha.wav --mood grave`.
@@ -252,8 +254,21 @@ M.css(bola, { transform: { x: M.lerp(xA, xB, pj), y: chao - Math.sin(Math.PI * p
 const ft = M.frameT(t); titulo.textContent = M.scramble('SISTEMA ONLINE', M.seg(ft, 1, 2.2), { tick: Math.floor(ft * 20) });
 ```
 
+**H2. Técnicas vindas da galeria de 230 prompts (use 1 ou 2 como ideia central, não todas)**
+48. **Uma forma que nunca corta.** Um único elemento vira todos os estados (botão → loader → check → player → slider → toggle → aba → gráfico → ⌘K → toast → botão): largura, altura, raio e cor interpolados, conteúdo troca com blur curto, cursor faz cliques e arrastes reais, último quadro = primeiro. Ver receita C em `templates-de-briefing.md`.
+49. **Continuous take.** "Nada faz fade, desfoca ou corta": texto sobe de uma linha de máscara, ícones nascem de zero em mola, uma forma escura inunda o quadro e se contrai na cena seguinte. Câmera estilo Screen Studio: zoom até cada momento ocupar o quadro, e o cursor escala junto.
+50. **O "drop".** Na batida forte da música, um círculo da cor de destaque cresce de um objeto (botão, wok, ponto) e inunda a tela em ~0,35 s, trocando a cena. Cue `big` no mesmo quadro.
+51. **Liquid glass.** Desfoque do fundo atrás do controle + curvar a cena na borda como vidro grosso + brilho no topo + aro claro + sombra de elevação. Em fundo branco o vidro some: ponha uma aura pastel lenta atrás.
+52. **Aura "Apple Intelligence".** Gradiente cônico desfocado girando por rosa, laranja, lima, ciano e violeta em volta do campo de entrada.
+53. **Meio-tom (halftone).** Grade de pontos cujo raio responde a um objeto (ou à distância dele); cresce além das bordas e revela o cartão final.
+54. **Palavra que se transforma por letras.** Cada letra anima sozinha (`split().chars`) para "Reduce Motion" virar "Motion", com o ponto preso ao "i" até saltar; palavras em órbita que se abrem num campo de pontos.
+55. **Tipografia com papel físico.** Cada palavra-chave vira lintel, cabo, apoio, abertura ou plataforma, nascendo das próprias letras (deformação vetorial da baseline), e a frase final fica de pé sobre o que foi construído.
+56. **Câmera que nunca corta num quadro parado.** Cada plano entra já em movimento (ease-out exponencial, ~12 a 19% da distância restante por quadro) e sai acelerando ou numa rampa de blur; um movimento de câmera por cena, sem zoom in e out em seguida.
+57. **Cursor com intenção.** Vira para onde vai, cresce no hover, afunda no clique (0,85), anel de ripple, cue `click`.
+58. **Dois lados, duas molas.** Indicador de aba e knob de toggle com as bordas em molas diferentes: a da frente estica antes da de trás (líquido). Valor que muda de alvo várias vezes = soma de uma mola por mudança, continua função pura do tempo.
+
 **I. Acabamento**
-47. **Grão** (`M.grain`, padrão 2%, troca 8×/s) contra banding em degradês e para textura. Ruído não comprime: grão forte multiplica o tamanho do arquivo (medido: de 0,3 MB para 8 MB em 3 s), então use leve, ou forte só em estética de cinema · **vinheta** suave (`M.vignette`, 0,1 a 0,3) · **glow** = cópia desfocada atrás · **HUD** (cantos, timecode real, rótulos mono) · **letterbox** · **motion blur** sempre.
+59. **Grão** (`M.grain`, padrão 2%, troca 8×/s) contra banding em degradês e para textura. Ruído não comprime: grão forte multiplica o tamanho do arquivo (medido: de 0,3 MB para 8 MB em 3 s), então use leve, ou forte só em estética de cinema · **vinheta** suave (`M.vignette`, 0,1 a 0,3) · **glow** = cópia desfocada atrás · **HUD** (cantos, timecode real, rótulos mono) · **letterbox** · **motion blur** sempre.
 
 ---
 
@@ -310,6 +325,8 @@ node render.mjs overlay.html --alpha --name Cliente_Transicao --sizes 1920x1080,
 - [ ] `ffprobe`: fps, nº de quadros, duração, bt709, faixa de áudio presente
 - [ ] Som: impactos alinhados às revelações (compare os tempos dos cues com os quadros), sem estouro
 - [ ] Ambas as proporções exportadas e salvas na pasta do projeto
+- [ ] Anti-"cara de IA" (seção 11): nenhum brilho, partícula, crossfade, tremor, texto de canto ou degradê genérico sem motivo; nenhum hold morto (> 1 s sem leitura); nenhum template óbvio
+- [ ] Nenhum número, depoimento, cliente ou funcionalidade inventados; texto do usuário idêntico
 
 ---
 
@@ -328,6 +345,41 @@ node render.mjs overlay.html --alpha --name Cliente_Transicao --sizes 1920x1080,
 | Texto pula de linha diferente no 9:16 | largura fixa → `M.pick` com tamanhos por formato e conferir na folha de contato |
 | Cor diferente no Instagram | arquivo sem tag → use a saída do `render.mjs` (já é BT.709); não reencode sem `-colorspace bt709` |
 | Transparência com borda escura | alfa não pré-multiplicado → use `--alpha` do kit (já pré-multiplica no blur) |
+
+---
+
+## 11. Briefing de campeão, anti-"cara de IA" e biblioteca de referência
+
+Base: análise de 230 prompts reais feitos no Claude (Prompt Motion, set/out de 2026). Um prompt de 26 palavras colado 33 vezes deu resultados de 0 a 17 mil curtidas: **prompt vago deixa tudo ao acaso**; os longos tiveram mediana 11× maior. Detalhes em `references/playbook-prompt-motion.md`.
+
+**Os 6 blocos de um briefing (para você montar antes de construir, em pedido de vídeo de verdade):**
+1. **inputs:** o que só o usuário sabe (nome, logo, cor de destaque, texto exato, trilha), com **padrões** se ele pular. Pergunte uma vez.
+2. **direction:** **um conceito** em uma linha + **elemento-ponte** + look travado (1 a 2 fontes, ≤ 3 cores + preto/branco, 1 destaque, uma linguagem de câmera) + **lista de proibidos**.
+3. **structure:** o tempo em **BPM e compassos**; gancho no 1º compasso, um recurso por compasso saindo do anterior, momento mais forte no penúltimo, título no fim, último quadro = primeiro quando fizer sentido.
+4. **build:** método de render explícito (aqui: kit, `render(t)` puro, blur por subquadros, trilha por cues, 60 fps se for UI fluida).
+5. **gotchas:** armadilhas conhecidas (seção 10 + as de cada template).
+6. **start:** mostrar conceito, mapa de batidas e 3 a 4 quadros antes do render final; renderizar um quadro por batida e olhar.
+
+**Lista de proibidos (padrão desta skill, salvo pedido contrário do usuário).** Em vez de só proibir, diga o que fazer no lugar:
+- **Glow/neon** → contraste, escala e cor de destaque fazem o foco.
+- **Explosão de partículas, anel de onda de choque** → só se nascer de um elemento que já está na tela e for para algum lugar (movimento sem origem é enfeite).
+- **Crossfade / blur-in** → toda cena cresce da anterior (match cut, morph, forma que inunda e contrai).
+- **Tremor de câmera, separação RGB, lens flare, piso em grade, fundo piscando** → só no impacto único que a ideia pede.
+- **Easing elástico em tudo** → molas com overshoot mínimo; `bouncy` só em estética lúdica (preset 12).
+- **Tempo morto** → nada parado > 1 s, a menos que o espectador precise ler (e aí o hold é da leitura: 0,3 s + 0,25 s por palavra).
+- **Texto nos cantos** (rótulos, marcadores de quadro, timecode decorativo) → só informação que o espectador usa.
+- **Degradê genérico, vídeo ou UI de banco, cartões de placeholder** → material real do usuário, tokens reais da marca.
+- **`Math.random`** → `M.rng(seed)`. O mesmo quadro tem que sair igual em toda renderização.
+- **"Qualquer coisa que pareça template"** → feche o briefing com esse padrão; ele vale para efeitos que você não listou.
+- **Números, clientes, depoimentos e funcionalidades inventados** → só o que o usuário forneceu ou o produto realmente tem.
+
+**Como usar a biblioteca de referência (sem estourar o contexto):**
+1. Vídeo de verdade (showreel, launch, promo, UI motion, explainer, tipografia, 3D)? Leia `references/playbook-prompt-motion.md` e o template mais próximo em `references/templates-de-briefing.md`.
+2. Para ideias concretas de cena, abra `references/galeria/00_INDEX.md`, escolha a categoria e leia só 2 a 4 prompts parecidos com o pedido (os do topo têm mais detalhe). Ou `grep -il "palavra" references/galeria/*.md`.
+3. Prompts da galeria foram escritos para um fluxo parecido com o do kit: o `seek(t)` deles é o `render(t)` daqui; os subquadros com `tmix` são o `M.blur`; a grade de batidas é `M.beat`; o analisador de música com numpy é o `sound.py`/cues. Traduza a ideia para o kit, **não copie o código do prompt**.
+4. Os prompts pertencem aos criadores citados: use como referência de estrutura e de ideias, adapte ao briefing do usuário, não republique como se fossem seus.
+5. Se o usuário colar um prompt da galeria e pedir "faz esse": trate-o como briefing, preencha os `inputs` que faltam com os padrões dele, e siga o fluxo da seção 1.
+6. Se a ideia pede **3D de verdade**, **React/Remotion** ou **matemática (Manim)**, veja a tabela de renderizadores no playbook (seção 7) e avise o usuário da troca de ferramenta antes de começar.
 
 ---
 

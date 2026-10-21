@@ -16,6 +16,9 @@ Vídeos de teste feitos do zero pela skill: [16:9](docs/Demo_MotionStudio_16x9_1
 - **Direção de arte neutra:** usa a marca do cliente ou um de 12 presets (editorial, tech noturno, luxo, brutalista, corporativo e outros)
 - **Acabamento de estúdio:** blur adaptativo (até 12 amostras nos movimentos rápidos), cor marcada em BT.709, loudness em −14 LUFS, versão transparente (ProRes 4444, WebM e fundo verde)
 - **Som:** trilha sintetizada a partir dos eventos da animação, em 6 climas (grave, épico, tech, clean, ambient, pop)
+- **Briefing de campeão (novo na 1.1):** pedido vago vira um briefing de 6 blocos (conceito de uma linha, elemento-ponte, look travado, lista de proibidos, tempo em BPM, build e revisão) antes de qualquer código
+- **Anti-"cara de IA" (novo na 1.1):** lista de proibidos aprendida em 230 prompts reais (glow, partículas sem origem, crossfade, tempo morto, texto nos cantos...), cada item com o que fazer no lugar
+- **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts do [Prompt Motion](https://www.prompt-motion.com/) têm em comum, 6 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
 
 ## Como instalar no Claude (app ou site)
 
@@ -68,6 +71,9 @@ skills/motion-studio/
   kit/fonts.mjs                   baixa fontes do Google Fonts
   kit/template.html               cena-base para começar
   examples/demo-reel.html         o showreel de teste, completo
+  references/playbook-prompt-motion.md      o que 230 prompts reais ensinam (anatomia, proibidos, renderizadores)
+  references/templates-de-briefing.md       6 modelos de briefing prontos
+  references/galeria/                       230 prompts reais por categoria (comece pelo 00_INDEX.md)
 .claude-plugin/marketplace.json   instalação pelo Claude Code
 docs/                             prévias e vídeos de teste
 ```
@@ -79,3 +85,7 @@ Criada por [Augusto Fonte](https://www.instagram.com/_augustofonte/) com o Claud
 ---
 
 **English:** *motion-studio* is a Claude skill for studio-grade motion design in code (HTML/SVG/Canvas rendered to MP4 in 16:9 and 9:16 with motion blur and a synced soundtrack). Install it in the Claude app by uploading `motion-studio.zip` under Customize › Skills, or in Claude Code with `/plugin marketplace add augustofonteboa-maker/motion-studio`. The skill's instructions are in Brazilian Portuguese.
+
+## Créditos da biblioteca de referência
+
+Os prompts em `references/galeria/` vêm do [Prompt Motion](https://www.prompt-motion.com/) (curadoria de [@p4nthera_](https://x.com/p4nthera_)) e pertencem aos criadores citados em cada entrada. Estão aqui como material de estudo para a skill; o playbook e os templates são texto próprio.
