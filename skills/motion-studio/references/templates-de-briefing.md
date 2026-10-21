@@ -148,3 +148,136 @@ Gotchas: definir shadow bias (senão listras de acne), near/far justos (senão t
 Descreva o plano-assinatura e a lista de planos em poucas linhas; depois construa e entregue o HTML e o MP4.
 </start>
 ```
+
+---
+
+## G. Vídeo de produto com pesquisa (a família mais comum: 20 a 60 s)
+
+```
+<inputs>
+Peça só o que eu não dei, com padrão: 3 a 6 telas reais da interface (padrão: capture você mesmo), logo (padrão: tire do site), cores e fonte da marca (padrão: as do próprio produto), trilha com batida clara (padrão: componha em código).
+</inputs>
+
+<direction>
+Filme de produto de {40} s para {PRODUTO}. Pesquise antes: o que faz, para quem é, interface e marca reais. Use o que achar; nunca invente telas, funções ou números.
+Escolha UM objeto-fio do próprio produto (cursor, botão-chave, a marca do logo, um dado) e faça cada cena ser uma transformação dele: começa na UI, muda de forma ou papel a cada cena, vira o logo no cartão final. Nomeie antes do storyboard.
+Reconstrua a UI real em camadas vetoriais para as partes se moverem sozinhas; nunca deslize um print chapado. Cursor guia toda interação com cliques e arrastes reais; câmera estilo Screen Studio.
+Marca: cores e fonte dela. Uma fonte, um destaque usado só no objeto-fio e na palavra-chave, muito espaço vazio.
+Regras de movimento: molas com overshoot pequeno; nada surge do nada (cresce, desdobra ou é revelado por máscara); a câmera nunca fica parada (push de 1,0 a 1,04 por cena; cada cena começa no zoom em que a anterior terminou); algo muda em toda batida.
+Proibido: partículas, glow, lens flare, tremor, separação RGB, crossfade, degradê genérico, easing elástico, holds > 0,5 s, qualquer coisa que pareça template.
+</direction>
+
+<structure>
+120 BPM. Storyboard cronometrado primeiro, batida a batida; depois construa exatamente ele.
+Gancho (1º compasso): o problema em 3 a 5 palavras, em tipo grande que o objeto-fio interrompe.
+Meio: 3 a 4 momentos do produto fazendo o que faz de melhor; cada um começa com o objeto-fio virando o próximo elemento de UI e fecha uma ideia legível.
+Payoff: o momento mais forte na maior batida; o objeto-fio vira o logo; cartão final com nome e chamada de uma linha.
+</structure>
+
+<build>
+Kit desta skill, 60 fps, trilha por cues, 16:9 e 9:16. Um quadro por batida antes do render. Posições de match cut medidas em runtime. Forma que enche o quadro escala além dos 4 cantos. Texto que sai e entra com tempos separados. Sem will-change no que a câmera escala.
+</build>
+
+<start>
+Mostre o que encontrou, o objeto-fio e o storyboard batida a batida; depois construa sem perguntar mais nada.
+</start>
+```
+
+## H. Explainer com narração (1 a 3 min)
+
+```
+<direction>
+Explainer de {3} min sobre {TEMA} para {PÚBLICO}. Pesquise antes e confira cada fato; nunca invente números ou citações.
+Toda a explicação é UM diagrama num espaço contínuo: a câmera entra numa parte para explicá-la e recua para mostrar como ela se encaixa, então o espectador sempre sabe onde está. Toda ideia ganha imagem antes de palavra; o rótulo fica sobre a coisa que nomeia, nunca em legenda lateral.
+Estilo: diagramas simples que se constroem enquanto são explicados. Narração em {IDIOMA/VOZ} com legendas sincronizadas linha a linha.
+Regras de movimento: uma coisa se move por vez e o olho sempre sabe para onde olhar; setas animam na direção real do fluxo; no máximo 7 palavras na tela de uma vez, 0,3 s por palavra.
+Proibido: paredes de texto, listas com marcadores, degradê genérico, ícones de banco, glow, crossfade, qualquer coisa que pareça template.
+</direction>
+
+<structure>
+Storyboard cronometrado primeiro. Gancho: a pergunta que o espectador já tem, feita sobre a primeira imagem. Meio: 3 a 5 passos; cada um entra numa parte do diagrama, mostra um exemplo concreto e recua enquanto a parte se encaixa. Payoff: recuo final com o diagrama completo e um resumo de uma linha.
+</structure>
+
+<build>
+1. Escreva o roteiro da narração linha a linha, marcando o que está na tela em cada uma.
+2. Gere cada linha em voz (TTS) e cronometre a animação pela duração real de cada áudio.
+3. Kit desta skill; trilha baixa sob a voz; legendas sincronizadas.
+4. Antes do render final, exporte um quadro-chave de cada seção e confira: nada apertado, sobreposto ou ilegível.
+</build>
+
+<gotchas>
+Confira todo número e nome numa fonte. Mantenha o layout do diagrama fixo para o zoom nunca reembaralhar. Texto que sai e que entra com tempos separados.
+</gotchas>
+
+<start>
+Mostre o roteiro, o diagrama e o storyboard cronometrado; depois construa sem perguntar mais nada.
+</start>
+```
+
+## I. Curta animado mudo (30 s a 2 min)
+
+```
+<direction>
+Curta animado de {45} s: {HISTÓRIA OU "uma história que você inventa"}. Estilo livre, a serviço da história, feito inteiramente em código.
+Escreva a história primeiro: o personagem principal quer uma coisa; três tentativas que falham de formas diferentes e crescentes; uma virada; um final que acerta e uma piada de último segundo depois dele.
+Mudo: sem diálogo e sem texto. O som conta o que a imagem não mostra.
+Atuação: todo personagem lê em silhueta; toda ação tem antecipação antes e follow-through depois; squash & stretch no que é mole; os olhos se movem primeiro e o corpo segue; poses-chave seguradas por ≥ 6 quadros.
+Encenação: uma ação por plano, enquadrada para ler na hora; corte na ação, casando o movimento através do corte; a cor muda com o clima.
+Proibido: glow, lens flare, degradê genérico, clip art de banco, tudo se movendo ao mesmo tempo.
+</direction>
+
+<structure>
+Lista de planos primeiro, uma ação por plano, com tempos; depois construa exatamente ela. Os planos se ligam por movimento e som, nunca por crossfade.
+</structure>
+
+<gotchas>
+Pés e mãos travados onde tocam as coisas (contato nunca desliza). Mesmas proporções do personagem em todo plano. Cada piada ganha um respiro de imobilidade antes de acontecer.
+</gotchas>
+
+<start>
+Mostre a história em poucas linhas e a lista de planos; depois construa sem perguntar mais nada.
+</start>
+```
+
+## J. Música ou lyric video (15 a 60 s)
+
+```
+<direction>
+{Visual de música de 30 s: faixa original estilo X a N BPM escrita em código, com visuais guiados por ela} OU {Lyric video de 30 s para a música anexada, com letra e animação sincronizadas à voz e à batida}.
+Escreva a faixa primeiro (bateria, sub, linha melódica, arranjo real: intro, build, drop) e guarde os tempos de nota e de golpe como dados; todo movimento visual nasce de um som (kick, caixa, wobble). Para música do usuário: grade de batidas com numpy e o tempo de cada palavra cantada (Whisper com timestamps, conferido de ouvido).
+Visual: tipografia cinética que atua cada linha; uma ideia visual que cresce com a música; formas geométricas ousadas e tipo em duas cores, atingidas pelo grave.
+Proibido: a lista padrão (SKILL, seção 11).
+</direction>
+
+<structure>
+Siga as seções da música: versos simples, refrão abre, o maior momento cai no maior momento musical (o drop numa batida forte). Intro, build que aperta, drop, saída curta.
+</structure>
+
+<start>
+Mostre o tempo da letra (ou o arranjo) e um storyboard; construa; assista com som e corrija toda palavra adiantada ou atrasada.
+</start>
+```
+
+## K. Cortar um vídeo gravado (talking head → Reels/TikTok, 30 a 60 s)
+
+```
+<direction>
+Cortar o clipe bruto em uma edição rápida e divertida de {60} s para TikTok e Reels. Manter as melhores falas e cortar toda pausa, vício de fala e falsa partida. Legendas palavra a palavra (negrito branco, 1 a 2 palavras por vez, nunca cobrindo o rosto), gráficos que ilustram os pontos-chave, música animada com licença que permita a plataforma.
+Proibido: stock aleatório, spam de emoji, zoom punch em toda frase, legenda cobrindo o rosto.
+</direction>
+
+<structure>
+Gancho nos 2 primeiros segundos com a melhor frase, mesmo que não seja a primeira. Uma ideia por vez. Termina numa frase limpa, não num fade.
+</structure>
+
+<build>
+1. Transcreva com timestamp por palavra (whisper) e monte a lista de cortes a partir do texto.
+2. Corte com ffmpeg em 1080x1920, escondendo os cortes secos com pequenas variações de zoom.
+3. Legendas e gráficos em HTML renderizados e compostos sobre o vídeo.
+4. Música abafada sob a voz, −14 LUFS. Assista em velocidade normal e conserte todo corte que corta uma palavra.
+</build>
+
+<start>
+Peça o clipe e mostre a lista de cortes com timestamps antes de editar.
+</start>
+```

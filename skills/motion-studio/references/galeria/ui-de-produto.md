@@ -1,11 +1,12 @@
 # Galeria: UI de produto (100 prompts com esta como tag principal)
 
-Prompts reais do Prompt Motion (prompt-motion.com, curadoria de @p4nthera_), todos feitos no Claude Opus 5.5, do mais detalhado ao mais curto. Cada prompt pertence ao criador citado: use como **referência de estrutura e de ideias** e adapte ao briefing do usuário. O que os melhores têm em comum está em `../playbook-prompt-motion.md`.
+Prompts reais de criadores, todos feitos no Claude Opus 5.5, do mais detalhado ao mais curto. Cada entrada traz o **prompt original** do criador e, na maioria, a **versão completa** estruturada (direção, estrutura por batida, build, armadilhas e primeiro passo): é essa a que dá para executar de ponta a ponta. Cada prompt pertence ao criador citado: use como **referência de estrutura e de ideias** e adapte ao briefing do usuário. O que os melhores têm em comum está em `../playbook-prompt-motion.md`.
 
 ### Taxtello bookkeeping app film
 `daniel-haida-8691d4` · @daniel_haida · 2026-09-27 · Remotion · A few rounds · 2100 palavras · tags: UI de produto, Gráficos
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/daniel-haida-8691d4
+
+**Prompt original do criador:**
 
 ````text
 You are the senior motion designer, product designer and Remotion engineer for Taxtello.
@@ -751,7 +752,8 @@ Make Taxtello look expensive.Show allThis prompt was taken directly from @daniel
 ### Launch video remake comparison
 `notdwd-c2037d` · @notdwd · 2026-09-28 · 1870 palavras · tags: UI de produto, Fotos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/notdwd-c2037d
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -798,7 +800,8 @@ Ask me for the inputs. Then show me 4 stills (f40 header in the window, f86 icon
 ### Frame by Frame launch video
 `notdwd-7de38a` · @notdwd · 2026-09-27 · 1849 palavras · tags: UI de produto, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/notdwd-7de38a
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -845,7 +848,8 @@ Ask me for the inputs. Then show me 4 stills (f40 header in the window, f86 icon
 ### Spotify product film
 `brainextends-e19ac3` · @brainextends · 2026-09-26 · One-shot · 1226 palavras · tags: UI de produto, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/brainextends-e19ac3
+
+**Prompt original do criador:**
 
 ````text
 Create a complete, polished Spotify-themed motion graphics video from the following brief. This prompt is self-contained: no reference video or supplied assets are required.
@@ -1014,7 +1018,8 @@ Fix visual defects before delivering the final MP4 and editable source
 ### Ora 2 image model launch film
 `rossaxbt-3085b7` · @rossaxbt · 2026-10-07 · HTML canvas + Playwright + ffmpeg · 1054 palavras · tags: UI de produto, Fotos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/rossaxbt-3085b7
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1080,7 +1085,8 @@ Ask me for the inputs, write the script, send me 4 voice takes to choose from, t
 ### Photo print app launch film
 `twoclipping-221cab` · @twoclipping · 2026-09-26 · HTML + Playwright · 930 palavras · tags: UI de produto, Celular, Fotos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/twoclipping-221cab
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1125,7 +1131,8 @@ Ask me for the inputs, then show me the beat map and 4 stills (open, glass, stag
 ### Food craving launch film
 `ultimaxbt-2ddf1e` · @ultimaxbt · 2026-10-08 · HTML · One-shot · 820 palavras · tags: UI de produto, Tipografia cinética, Fotos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/ultimaxbt-2ddf1e
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1180,7 +1187,8 @@ Ask me for the inputs, then show me the beat map and 4 stills (ask, drop, chat, 
 ### Prompt Motion site promo
 `antonio-kodheli-490109` · @antonio_kodheli · 2026-10-06 · Remotion · 706 palavras · tags: UI de produto, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/antonio-kodheli-490109
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1250,7 +1258,8 @@ On a camera push, check the last frame: the header and meta rows can drift into 
 ### Shape morphing through UI states
 `twoclipping-5cba86` · @twoclipping · 2026-09-24 · HTML + Playwright · 492 palavras · tags: UI de produto, Gráficos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/twoclipping-5cba86
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1289,7 +1298,8 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
 ### Morphing UI states loop
 `demonugc-4c5753` · @demonugc · 2026-09-25 · HTML, Playwright · 491 palavras · tags: UI de produto, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/demonugc-4c5753
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1328,7 +1338,8 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
 ### UGC ad generator promo
 `twoclipping-6dd14e` · @twoclipping · 2026-09-23 · HTML + Playwright · 462 palavras · tags: UI de produto, Celular, Fotos, Música
 Tem: lista de proibidos, grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/twoclipping-6dd14e
+
+**Prompt original do criador:**
 
 ````text
 <inputs>
@@ -1371,7 +1382,8 @@ Ask me for the inputs, then show me a storyboard with every timing on the beat g
 ### SaaS launch video
 `aschapmann-131210` · @aschapmann · 2026-09-27 · Remotion · 194 palavras · tags: UI de produto, Música
 Tem: grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/aschapmann-131210
+
+**Prompt original do criador:**
 
 ````text
 Act as a senior motion designer and build a 30-second launch video for [product] in Remotion, entirely in code so I can edit and re-render it: first read my landing page and codebase to pull the real story, copy, colors, font and logo file (trace the logo to SVG so it stays sharp and can be animated), then write the video as one story (why the market matters, why it's painful today, how [product] fixes it, what you get) in 4 to 5 scenes with one short title each, animate everything like a premium product film (kinetic typography word by word, spring easing, smooth camera pushes and pans, depth and glow, elements that build in on the beat instead of just appearing), keep each scene on screen long enough to read, add one soft sound effect for every element that appears and silence otherwise, and end on a memorable animated logo reveal with the tagline and URL, then render it, check the frames yourself and fix anything that overlaps, clips or feels rushed before showing me the result.Show allThis prompt was taken directly from @aschapmann’s post (opens in a new tab).ModelOpus 5.5StackRemotionPostedSep 27, 2026
@@ -1380,7 +1392,8 @@ Act as a senior motion designer and build a 30-second launch video for [product]
 ### Developer portfolio site showreel
 `wani-shola-16ca7a` · @wani_shola · 2026-09-26 · Remotion · 189 palavras · tags: UI de produto, Música
 Tem: grade de batidas/BPM, método de build
-Fonte: https://www.prompt-motion.com/wani-shola-16ca7a
+
+**Prompt original do criador:**
 
 ````text
 Make a showreel-style motion graphics video for my portfolio website, https://t.co/xZFGCqi73s, using Remotion. It should show what I do as a developer relations engineer, like a showreel for my résumé.
@@ -1394,51 +1407,229 @@ Make a showreel-style motion graphics video for my portfolio website, https://t.
 
 ### Sahi trading terminal reveal
 `dale-vaz-cc612a` · @dale_vaz · 2026-09-25 · JavaScript · One-shot · 129 palavras · tags: UI de produto, Celular, Gráficos, Partículas
-Fonte: https://www.prompt-motion.com/dale-vaz-cc612a
+
+**Prompt original do criador:**
 
 ````text
 create a self contained aesthetically pleasing, breathtaking animation of the Sahi Trading Terminal. it should start with a single dot on a black screen and then have multiple windows show up on the screen such as Charts, Positons , Option Chain, Watchlist. And zoom into and out at multiple scales. Finally the camera zooms out to make the desktop look like a point in space. And then it zooms back in to reveal a mobile screen in landscape mode with a chart in one half and an option chain in another. The video ends in Sjngle Screen Trading on SAHI
 use javascript for it. be detailed and accurate. it should be visually stunningShow allThis prompt was taken directly from @dale_vaz’s post (opens in a new tab).ModelOpus 5.5IterationsOne-shotStackJavaScriptPostedSep 25, 2026
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 30-second, breathtaking animation of the Sahi Trading Terminal, in JavaScript. Be detailed and accurate: real-looking data, real layouts.
+The journey: it starts as a single dot on a black screen; windows appear (Charts, Positions, Option Chain, Watchlist); the camera zooms in and out at several scales, then pulls out until the desktop is a point in space, and zooms back in to a phone in landscape with a chart in one half and an option chain in the other.
+It ends on "Single Screen Trading on SAHI".
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+100 BPM. Each window lands on a beat; each zoom spans a bar; the pull-out to a point in space is the strongest moment.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a soft hit as each window lands and a swell on the big zoom. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Show me a storyboard with every scale change, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### mdfor.dev product intro video
 `ho-ba-f3f0e9` · @HO_BA · 2026-09-26 · esforço High · 112 palavras · tags: UI de produto, Código
 Tem: lista de proibidos
-Fonte: https://www.prompt-motion.com/ho-ba-f3f0e9
+
+**Prompt original do criador:**
 
 ````text
 Make a dynamic 30-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.  Make it a video to introduce https://t.co/xdCXEdKZRq Use actual product screenshot/logo/assets Must have music and motion must match the music  Do it like a real professional production video, not like a demo or prototype. Add more animation and motion design; avoid using screenshots as raw; instead, break them down into components/icons so we can animate those too. Make the motions more juicy. Use the best motion design techniques you can.Show allThis prompt was taken directly from @HO_BA’s post (opens in a new tab).ModelOpus 5.5EffortHighPostedSep 26, 2026
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second introduction video for my product (paste the URL). Use the product screenshots and assets I attach. Never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Never show a raw screenshot: break screenshots into components and icons and animate those. Juicy motion, like a real production, not a demo.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Visual guides library launch
 `techyoutbe-945b56` · @techyoutbe · 2026-09-25 · One-shot · 104 palavras · tags: UI de produto, Diagramas, Código
-Fonte: https://www.prompt-motion.com/techyoutbe-945b56
+
+**Prompt original do criador:**
 
 ````text
 I want you to create a highly professional SaaS product launch video. Go and find some SaaS, preferably just one that people know, so it's easier to identify with it. Pick that, and then make sure to get actual assets and images and all of that stuff from the internet. Turn it into these typical, very professionally edited, motion-graphics-styled product launch videos that you see people making on Twitter when they launch new SaaS products (which are showing off the features, the benefits, and all of these things)Show allThis prompt was taken directly from @techyoutbe’s post (opens in a new tab).ModelOpus 5.5IterationsOne-shotPostedSep 25, 2026
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second launch video for a well-known SaaS of your choice. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Use its real assets and images, and edit it like the polished launch videos people post on X: features, benefits, quick cuts.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Badge unlock screen animation
 `bthreeagency-b9b8d9` · @BThreeAgency · 2026-09-26 · One-shot · 89 palavras · tags: UI de produto, Celular, Partículas
-Fonte: https://www.prompt-motion.com/bthreeagency-b9b8d9
+
+**Prompt original do criador:**
 
 ````text
 Using the linked Figma frame build a badge unlock screen. Match the design exactly. Use the file's assets, lighting, type and layout and add only the motion. Animate the badge so it feels premium and celebratory. Build its scene and then celebrate with gold particles. Treat the badge as a solid 3D object that tilts toward the
 cursor following the rules of physics. Keep it fast and smooth, it should not be bouncy.Show allThis prompt was taken directly from @BThreeAgency’s post (opens in a new tab).ModelOpus 5.5IterationsOne-shotPostedSep 26, 2026
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+Build a badge unlock screen from the Figma frame I link. Match the design exactly: use the file's assets, lighting, type and layout, and add only the motion.
+The badge unlock should feel premium and celebratory: build its scene, reveal it, then celebrate with gold particles.
+Treat the badge as a solid 3D object that tilts toward the cursor following real physics (mass, damping), fast and smooth, never bouncy.
+Banned: overshoot, wobble, glows the design doesn't have, anything that looks like a template.
+</direction>
+
+<structure>
+The scene builds in, the badge arrives and settles with weight, the celebration plays once, then the badge stays interactive.
+</structure>
+
+<build>
+1. One HTML file. Export the frame's assets from Figma and place them exactly.
+2. Drive the tilt with a critically damped spring toward the cursor, so it never overshoots.
+3. Check it at 60fps and fix any frame that stutters or doesn't match the design.
+</build>
+
+<start>
+Tell me which assets you exported and how the sequence runs, then build it without asking me anything else.
+</start>
+````
+
 ### Supademo launch video
 `jhylee95-e1152f` · @jhylee95 · 2026-09-25 · esforço Max · One-shot · 83 palavras · tags: UI de produto, Tipografia cinética, Música
 Tem: grade de batidas/BPM
-Fonte: https://www.prompt-motion.com/jhylee95-e1152f
+
+**Prompt original do criador:**
 
 ````text
 You're a world-class motion designer building a Supademo launch video. Research and land our core value and narrative. Scenes should be dynamic and confident: hook in the first second, then distinct beats for product proof and AI. Brand-accurate UI, type, color, and motion. Score the music so every cut, animation hit, and scene change lands on a beat or drop; retimed until synced. Social energy, quick cutsShow allThis prompt was taken directly from @jhylee95’s post (opens in a new tab).ModelOpus 5.5EffortMaxIterationsOne-shotPostedSep 25, 2026
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for Supademo. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Hook in the first second, then distinct beats for product proof and the AI. Social energy, quick cuts. Score the music so every cut and hit lands on a beat or drop.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### org2html product showreel
 `kyonax-on-tech-aabc1d` · @kyonax_on_tech · 2026-09-25 · One-shot · 75 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/kyonax-on-tech-aabc1d
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
@@ -1446,76 +1637,424 @@ make a dynamic 15-second motion graphics video that shows what an incredible mot
 Make sure to showcase properly the usecases, the flow, properly show everything on how it works, also the ascii logo of this is on the kyo-web-online, keep in mind also the color palette.Show allThis prompt was taken directly from @kyonax_on_tech’s post (opens in a new tab).ModelOpus 5.5IterationsOne-shotPostedSep 25, 2026
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### DistilBook product explainer
 `sudo-kiran-6609ed` · @sudo_kiran · 2026-09-26 · 64 palavras · tags: UI de produto, Diagramas
-Fonte: https://www.prompt-motion.com/sudo-kiran-6609ed
+
+**Prompt original do criador:**
 
 ````text
 create best motion graphics explainer of the (your product) with very good script and good design colors and good music make sure the video should be incredible and people should feels like watch it many times.. it has to be in 30 seconds good and very intresting, it has to be best of the best of the best of the best video
 (product link)
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second explainer for your product (add the link). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. A strong script, good colors and good music: the kind of video people watch more than once.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Portfolio motion reel
 `heyiammallik-e72d17` · @heyiammallik · 2026-09-26 · One-shot · 60 palavras · tags: UI de produto, Tipografia cinética, Partículas
-Fonte: https://www.prompt-motion.com/heyiammallik-e72d17
+
+**Prompt original do criador:**
 
 ````text
 you are a pro motion designer. analyze my portfolio and make a ~30 second video from it. check what are the recent trending techniques used for motion and sound design. question your strategy and plan, if it doesn't feel like done by a pro designer, start over. every frame matters from the first frame to the final frame. go crazy
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second portfolio film for my portfolio. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Check which motion and sound design techniques are trending now. Question your plan: if it doesn't feel like a pro made it, start over. Every frame matters.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Datagran ChatGPT ads explainer
 `charlesmendez-73b6e4` · @charlesmendez · 2026-09-23 · 53 palavras · tags: UI de produto, Celular, Gráficos
-Fonte: https://www.prompt-motion.com/charlesmendez-73b6e4
+
+**Prompt original do criador:**
 
 ````text
 I Want you to make a modern slick and punchy video for https://t.co/a3zrq7DV3N with an example of a user creating a chatgpt ads campaign, then connecting their metrics, understanding attribution, then connecting a voice agent to it, the agent responding, then doing follow up, adding humans in the loop and then providing analytics.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 45-second product walkthrough for the product at the link I give you. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on one user's journey: creating a ChatGPT ads campaign, connecting their metrics, understanding attribution, connecting a voice agent that responds and follows up, adding humans in the loop, then analytics.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Modern, slick and punchy.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Email verification tool promo
 `kmasiff-cc72cb` · @KmAsiff · 2026-09-26 · esforço High · 47 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/kmasiff-cc72cb
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 20-second motion graphics video that shows what an incredible our email verify tool is, put all the use case you can imagine. go all out'
 i want you to make it really modern and saas style. inspiration is yc videos and claude social videos
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: modern SaaS, inspired by YC launch videos and Claude's social videos), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second promo for our email verification tool. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on every use case you can think of.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: modern SaaS, inspired by YC launch videos and Claude's social videos. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### ViralGrow product promo
 `samuel-yostt-891f87` · @samuel_yostt · 2026-10-01 · esforço Max · 45 palavras · tags: UI de produto, Celular, Fotos
-Fonte: https://www.prompt-motion.com/samuel-yostt-891f87
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a resume. go all out.
 This video will be same styling as landing page. showcasing viralgrow. be creative with what you show for viralgrow
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for viralgrow. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Match the landing page's styling, and be creative with what you show.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Stock analysis app promo
 `aistocksavvy-3fb9f5` · @AIStockSavvy · 2026-09-25 · 43 palavras · tags: UI de produto, Gráficos
-Fonte: https://www.prompt-motion.com/aistocksavvy-3fb9f5
+
+**Prompt original do criador:**
 
 ````text
 Create a bold, dynamic 15-second motion graphics video that showcases your best motion design skills as if it’s the highlight of your portfolio for a dream job. Bring sharp timing, smooth transitions, and standout visuals. Push your creativity and make every second count.
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Commotion app showreel
 `amol909s-27533e` · @Amol909S · 2026-09-25 · esforço Medium · 43 palavras · tags: UI de produto, Celular, Código
-Fonte: https://www.prompt-motion.com/amol909s-27533e
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 20s motion graphics video that shows what an incredible motion designer you are, like it's your showreel for this app commotion, highlighting tiling layout, auto model classifer and other features you deem fit to be in video. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second showreel for the app Commotion. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on the tiling layout, the auto model classifier and any other features worth showing.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Database client launch video
 `iammxfschr-d68f90` · @iamMXFSCHR · 2026-09-25 · A few rounds · 41 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/iammxfschr-d68f90
+
+**Prompt original do criador:**
 
 ````text
 nice. wir brauchen ein launch video für den release. kannst du das machen? so a la anthropic like? hab da was gelesen und der prompt war ""make a modern slick and punchy video for a modern startup that works on inference"
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for our inference startup's release. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Anthropic-like: modern, slick and punchy.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Jev engineering showreel
 `polydao-7a572b` · @polydao · 2026-09-26 · esforço Max · One-shot · 37 palavras · tags: UI de produto, Tipografia cinética, Música
-Fonte: https://www.prompt-motion.com/polydao-7a572b
+
+**Prompt original do criador:**
 
 ````text
 Make a dynamic [24]-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a resume. Go all out.
@@ -1523,33 +2062,188 @@ Make a dynamic [24]-second motion graphics video that shows what an incredible m
 Only about [TOPIC]. Style: [BRAND COLORS], sound synced to the cuts.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 24-second motion design showreel that proves you are a world-class motion designer, built around your topic. Pick one visual concept from it and commit to it: name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface, a palette of your brand colors, one consistent camera language.
+Sound is synced to every cut.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Sherwood agentic hedge fund explainer
 `imthatcarlos-e04bfe` · @imthatcarlos · 2026-09-23 · Remotion · One-shot · 37 palavras · tags: UI de produto, Tipografia cinética, Fotos
-Fonte: https://www.prompt-motion.com/imthatcarlos-e04bfe
+
+**Prompt original do criador:**
 
 ````text
 make a modern slick and punchy video for sherwood protocol. feel free to take branding or components from the landing page or app. the goal is to highlight how it enables agentic hedge funds, explaining it simply
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 45-second explainer for Sherwood Protocol. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on how it enables agentic hedge funds, explained simply.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Modern, slick and punchy; take branding and components from the landing page and app.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Lidlezz app promo
 `cansincengiz-me-cf68dd` · @cansincengiz_me · 2026-09-25 · 37 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/cansincengiz-me-cf68dd
+
+**Prompt original do criador:**
 
 ````text
 merak ediyorum ne kadar iyi bir hareketli grafik tasarımcısısın. Bunu bana kanıtlamak için 15 saniye sürecek bir hareketli grafik videosu istiyorum senden. Bu video https://t.co/TdKZEIYaxO 'i tanıtacak ve x üzerinde 10.000 kişinin karşısına çıkacak. Elinden geleni yap
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for my site (paste the URL). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. 10,000 people will see it on X, so it has to stop the scroll in the first second.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Tennis game launch video
 `deifosv-04e4d3` · @deifosv · 2026-09-24 · 36 palavras · tags: UI de produto, Celular
-Fonte: https://www.prompt-motion.com/deifosv-04e4d3
+
+**Prompt original do criador:**
 
 ````text
 Create a high energy launch video, showing live stats from the website, show that users can play on desktop and mobile and multiple themes, if need, give me a prompt to generate the song using Suno
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for toptennisgame. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on live stats from the website, playing on desktop and mobile, and the multiple themes.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. High energy. If the music needs a real song, also give me a Suno prompt for it.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Dub promo video
 `steventey-0d20e4` · @steventey · 2026-09-25 · esforço High · One-shot · 35 palavras · tags: UI de produto, Gráficos
-Fonte: https://www.prompt-motion.com/steventey-0d20e4
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
@@ -1557,34 +2251,187 @@ make a dynamic 15-second motion graphics video that shows what an incredible mot
 it should be a launch saas video for https://dub.co
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second product film for Dub (https://dub.co). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. It's a SaaS launch: the product UI is the hero.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Voice agent SaaS launch
 `fractadev-149adc` · @FractaDev · 2026-09-26 · 35 palavras · tags: UI de produto, Gráficos
-Fonte: https://www.prompt-motion.com/fractadev-149adc
+
+**Prompt original do criador:**
 
 ````text
 Analyze my frontend project, use the actual components from the product, and create a dynamic motion graphics video that showcases and sells my SaaS. Make it feel like a high-end product launch. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second high-end launch film for my SaaS. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Use the actual components from the frontend.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### SaaS product launch video
 `xelandre-363f00` · @xelandre__ · 2026-09-25 · HTML/JS, Playwright, ffmpeg · One-shot · 34 palavras · tags: UI de produto
 Tem: método de build
-Fonte: https://www.prompt-motion.com/xelandre-363f00
+
+**Prompt original do criador:**
 
 ````text
 Code-driven animation: an HTML/JS page where every frame is calculated from the time, captured frame by frame with headless Chrome (Playwright), then assembled with ffmpeg into an MP4 with motion blur and code-generated sound.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer, built around your choice. Pick one visual concept from it and commit to it: name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface, a palette of at most three colors plus black and white, one consistent camera language.
+It's code-driven: an HTML/JS page where every frame is computed from time, captured with headless Chrome, assembled with ffmpeg with motion blur, and sound generated in code.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Browser automation skill launch
 `hqmank-7c61f1` · @hqmank · 2026-09-26 · 33 palavras · tags: UI de produto, Música, Código
-Fonte: https://www.prompt-motion.com/hqmank-7c61f1
+
+**Prompt original do criador:**
 
 ````text
 Make a dynamic 20-second motion graphics launch video for my open-source project jev-browser-skill ('Give a site. Write a goal. Jev clicks.'), like it's the hero video on its GitHub README. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second launch video for jev-browser-skill, an open-source project: "Give a site. Write a goal. Jev clicks.". Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. It's the hero video on the GitHub README, so it has to work silently and loop.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Product intro synced to music
 `bogdandragomir-35e024` · @BogdanDragomir · 2026-09-27 · 33 palavras · tags: UI de produto, Partículas, Música
-Fonte: https://www.prompt-motion.com/bogdandragomir-35e024
+
+**Prompt original do criador:**
 
 ````text
 Create an intro for https://t.co/wQXZTaqf1b highlighting what it does.
@@ -1594,509 +2441,2956 @@ Create the music too and make sure the video is synced with it.
 Give your best, Ultracode, as if it’s your portfolio master piece.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second intro for my site (paste the URL). Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on what it does.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Compose the music too, and sync every cut to it. Treat it as your portfolio masterpiece.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Website analyzer product promo
 `en-ra-81c6dd` · @en______ra · 2026-09-27 · One-shot · 33 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/en-ra-81c6dd
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video for RedSeed AI (Replace with your Project) that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for RedSeed AI (replace with your project). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Motion designer showreel
 `danilowm-d3720d` · @danilowm · 2026-09-26 · HyperFrames · 33 palavras · tags: UI de produto, Gráficos, Tipografia cinética
 Tem: método de build
-Fonte: https://www.prompt-motion.com/danilowm-d3720d
+
+**Prompt original do criador:**
 
 ````text
 /hyperframes make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.  use todo o contexto do projeto
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Fitters Bible app promo
 `adamdesgns-478d6d` · @Adamdesgns · 2026-09-25 · One-shot · 30 palavras · tags: UI de produto, Celular, Diagramas
-Fonte: https://www.prompt-motion.com/adamdesgns-478d6d
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out. (About the pipefitters bible)
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Amazon wholesale pitch video
 `ceowinkz-7c776b` · @ceowinkz · 2026-09-26 · One-shot · 30 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/ceowinkz-7c776b
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15 second motion graphics video pitching my Amazon wholesale company, Winkz Enterprises, to a brand. show why they should let us sell their products. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second pitch to a brand for Winkz Enterprises, my Amazon wholesale company. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on why a brand should let us sell their products.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and how to get in touch.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Chunku product promo
 `reyzostyle-b55864` · @reyzostyle · 2026-09-30 · HyperFrames · One-shot · 29 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/reyzostyle-b55864
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 10 second motion graphics video about https://t.co/Zi6zrTvzqI that shows what an incredible motion designer you are, like its your showreel for a resume. go all out
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 10-second showreel for my site (paste the URL). Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Bold Pilot SEO promo
 `utopyaszx-1b2f94` · @utopyaszx · 2026-09-28 · esforço Medium · 29 palavras · tags: UI de produto, Gráficos, Tipografia cinética
-Fonte: https://www.prompt-motion.com/utopyaszx-1b2f94
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video for Bold Pilot that shows what an incredible motion designer you are, like it's your showreel for a resume. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for Bold Pilot. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Dubz Up motion showreel
 `devius-maximus-beab45` · @Devius_Maximus · 2026-09-29 · 29 palavras · tags: UI de produto, Celular, Tipografia cinética, Personagens
-Fonte: https://www.prompt-motion.com/devius-maximus-beab45
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic motion graphics video for our project dubz up, show what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for our project, dubz up. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Motion designer showreel
 `kangaroohere-b10f8d` · @KangarooHere · 2026-09-25 · esforço Medium · 29 palavras · tags: UI de produto, Celular, Gráficos, Tipografia cinética
-Fonte: https://www.prompt-motion.com/kangaroohere-b10f8d
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 20-second motion graphics video for my newsletter that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second showreel for my newsletter. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on what the newsletter is about and why to subscribe.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and how to subscribe.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### sweetRegret app update reel
 `thilina-a-891c09` · @thilina_a · 2026-09-28 · 29 palavras · tags: UI de produto, Celular, Personagens
-Fonte: https://www.prompt-motion.com/thilina-a-891c09
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 25-second motion graphics video that shows what an incredible motion designer you are. Highlight the recent changes [1.3, 1.4] we made with the last few updates.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 25-second update video for our product. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Focus on the recent changes in versions 1.3 and 1.4.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and the version number.
+</structure>
+
+<build>
+1. One HTML file at 1080x1920. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Trezio app motion reel
 `agonaliu-466a8f` · @agonaliu_ · 2026-09-27 · One-shot · 28 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/agonaliu-466a8f
+
+**Prompt original do criador:**
 
 ````text
 Make a dynamic 15-second motion graphics video for Trezio app that shows what an incredible motion designer you are, like it's your showreel for a résumé. Get it!
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for the Trezio app. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Bento.surf product video
 `bizibeast-10f264` · @bizibeast · 2026-09-26 · One-shot · 28 palavras · tags: UI de produto, Celular
-Fonte: https://www.prompt-motion.com/bizibeast-10f264
+
+**Prompt original do criador:**
 
 ````text
 Research Bento.surf. Make a dynamic 40-second motion graphics video on Bento.surf that shows what an incredible motion designer you are. like it's your showreel - Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 40-second product film for Bento.surf. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Distilbook product video
 `ajith-io-c52e09` · @ajith_io · 2026-09-25 · One-shot · 27 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/ajith-io-c52e09
+
+**Prompt original do criador:**
 
 ````text
 Research Distilbook.Make a dynamic 40-second motion graphics video on Distilbook that shows what an incredible motion designer you are. like it's your showreel - Go all out.
+````
+
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 40-second product film for Distilbook. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
 ````
 
 ### Distilbook motion showreel
 `itisrazak-3ad902` · @itisRazak · 2026-09-25 · One-shot · 27 palavras · tags: UI de produto, Tipografia cinética, Partículas, Música
-Fonte: https://www.prompt-motion.com/itisrazak-3ad902
+
+**Prompt original do criador:**
 
 ````text
 Research Distilbook.Make a dynamic 40-second motion graphics video on Distilbook that shows what an incredible motion designer you are. like it's your showreel - Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 40-second product film for Distilbook. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Whiteboard skill tutorial
 `lemomo-ai-0d9cff` · @lemomo_ai · 2026-09-27 · One-shot · 27 palavras · tags: UI de produto, Diagramas
-Fonte: https://www.prompt-motion.com/lemomo-ai-0d9cff
+
+**Prompt original do criador:**
 
 ````text
 Create a tutorial video explaining how to create videos using Lemo-Opuscar skill (Opus 5.5) , in a [Whiteboard Explainer] style.  One prompt, one answer, then ship film.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 90-second explainer on how to create videos with the Lemo-Opuscar skill on Opus 5.5: one prompt, one answer, then ship the film for a creator trying it for the first time. Research it first and keep every fact right; never invent numbers or quotes.
+Build the whole explanation as one diagram in one continuous space: the camera zooms into a part to explain it and pulls back to show how it fits, so the viewer always knows where they are. Every idea gets a picture before it gets words, and labels sit on the thing they name, never in a legend.
+Style: a whiteboard explainer: a marker draws each step as it's explained. Narrate it with a clear synthesized voice (e.g. edge-tts en-US-AriaNeural), with subtitles synced line by line.
+Motion rules: one thing moves at a time, and the eye always knows where to look; arrows and flows animate in the direction things actually move; no more than seven words on screen at once, held for at least 0.3 seconds a word.
+Banned: walls of text, bullet lists, generic gradients, stock-looking icons, glows, crossfades, anything that looks like a template.
+</direction>
+
+<structure>
+Write a timed storyboard first, then build exactly that.
+Hook: a question the viewer already has, asked over the first picture.
+Middle: three to five steps. Each zooms into one part of the diagram, shows one concrete example, then pulls back as that part locks into place.
+Payoff: a final pull back to the whole diagram, now complete, and a one-line takeaway.
+</structure>
+
+<build>
+1. Write the narration script first, line by line, marking what's on screen for each line.
+2. Generate each line with a clear synthesized voice (e.g. edge-tts en-US-AriaNeural) and time the animation to each line's real audio length.
+3. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux in the narration, quiet music under it and subtitles.
+5. Before the full render, export a key frame from each section and check it. Fix anything crowded, overlapping or hard to read.
+</build>
+
+<gotchas>
+Check every number and name against a source. Keep the diagram's layout fixed so zooming in and out never reshuffles it. Give outgoing and incoming text separate timing so letters never overlap.
+</gotchas>
+
+<start>
+Show me the script, the diagram and a timed storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Second brain service promo
 `theviableedge-9065be` · @TheViableEdge · 2026-09-27 · Remotion · One-shot · 27 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/theviableedge-9065be
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, and can be the hero asset for the course landing page.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second hero video for my course. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on what the course gives you.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. It's the hero asset on the course landing page, so it has to work silently and loop.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and the course name.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Enxovaly baby app promo
 `gabrielbuzziv-4ff0c6` · @gabrielbuzziv · 2026-09-25 · HyperFrames · 26 palavras · tags: UI de produto, Celular
-Fonte: https://www.prompt-motion.com/gabrielbuzziv-4ff0c6
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
+````
+
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
 ````
 
 ### Travel visa service promo
 `thismacapital-dfba20` · @thismacapital · 2026-09-26 · A few rounds · 26 palavras · tags: UI de produto, Tipografia cinética, Fotos
-Fonte: https://www.prompt-motion.com/thismacapital-dfba20
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
+````
+
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
 ````
 
 ### AjustaCV Pro pricing promo
 `thayto-dev-44b911` · @thayto_dev · 2026-09-27 · HyperFrames · esforço Max · 26 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/thayto-dev-44b911
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### SuperX feature release teaser
 `robj3d3-b18fad` · @robj3d3 · 2026-10-05 · esforço Max · 26 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/robj3d3-b18fad
+
+**Prompt original do criador:**
 
 ````text
 look at my product roadmap and make a dynamic 15-second motion graphics video that teases the next feature release. go all out and hold nothing back
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second teaser for the next feature on my product roadmap. Read the roadmap I give you first and pick the feature that's next. Tease it without promising dates or details the roadmap doesn't.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and "coming soon" and the product's name.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Muse connector tracker promo
 `elliot-garreffa-f334bc` · @elliot_garreffa · 2026-09-27 · Remotion · 26 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/elliot-garreffa-f334bc
+
+**Prompt original do criador:**
 
 ````text
 make this a dynamic motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for this project. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Crux motion design showreel
 `marouanegazouzi-6071d5` · @marouanegazouzi · 2026-09-25 · esforço Max · 26 palavras · tags: UI de produto, Gráficos, Tipografia cinética, Música
-Fonte: https://www.prompt-motion.com/marouanegazouzi-6071d5
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Ondefica app motion reel
 `jesscaroline7-1ff7cb` · @jesscaroline7 · 2026-09-27 · HyperFrames · esforço Max · A few rounds · 25 palavras · tags: UI de produto, Celular, Gráficos, Tipografia cinética
-Fonte: https://www.prompt-motion.com/jesscaroline7-1ff7cb
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out
 ````
 
+**Versão completa (testada: o vídeo foi feito com ela):**
+
+````text
+<direction>
+A 15-second motion design showreel that proves you are a world-class motion designer. Concept: your pick (e.g. "ink becomes type becomes architecture"). Commit to it and name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface (Geist, Inter or a bold display face from Google Fonts), a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### FundMyCompute platform overview
 `jayscambler-3f8889` · @JayScambler · 2026-09-28 · 25 palavras · tags: UI de produto, Diagramas
-Fonte: https://www.prompt-motion.com/jayscambler-3f8889
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 20-second motion graphics video for fundmycompute that gives an overview of the platform and shows what an incredible motion designer you are
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second overview for fundmycompute. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on an overview of the platform.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Quetzal social app reel
 `miskinho-443898` · @miskinho_ · 2026-09-26 · One-shot · 25 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/miskinho-443898
+
+**Prompt original do criador:**
 
 ````text
 make  1 dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for Quetzal. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for Quetzal. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### founder.page launch video
 `ratheejaisal-1f4538` · @RatheeJaisal · 2026-09-26 · One-shot · 24 palavras · tags: UI de produto, Gráficos
-Fonte: https://www.prompt-motion.com/ratheejaisal-1f4538
+
+**Prompt original do criador:**
 
 ````text
 build me a beautiful launch video 20 seconds or under that shows all our key features, make it fast paced and fit our brand
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second launch video for our product. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on all our key features, fast paced.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Ren app launch video
 `macrohou-33959d` · @macrohou · 2026-09-25 · One-shot · 24 palavras · tags: UI de produto, Celular, Gráficos
-Fonte: https://www.prompt-motion.com/macrohou-33959d
+
+**Prompt original do criador:**
 
 ````text
 [gave access to Ren repo] Make a dynamic 30-second motion graphics video for Ren that shows off your motion and sound design. Go crazy.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second showreel for Ren. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Show off your sound design as much as your motion. Go crazy.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### QuickDesign brand promo
 `quickdesignio-dd93d0` · @quickdesignio · 2026-09-25 · 24 palavras · tags: UI de produto, Tipografia cinética, Música
-Fonte: https://www.prompt-motion.com/quickdesignio-dd93d0
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible quickdesign is! and also  shows what an incredible motion designer you are!
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for quickdesign. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### DistilBook motion explainer
 `sudo-kiran-b055de` · @sudo_kiran · 2026-09-29 · 23 palavras · tags: UI de produto, Diagramas
-Fonte: https://www.prompt-motion.com/sudo-kiran-b055de
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 30-seconds motion graphic video about the distilbook like a product explainer the video has to be very incredible (product url)
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product explainer for Distilbook (add its URL). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### DistilBook product explainer
 `sudo-kiran-4f8b59` · @sudo_kiran · 2026-09-25 · 23 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/sudo-kiran-4f8b59
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 30-seconds motion graphic video about the distilbook like a product explainer the video has to be very incredible
 (product url)
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product explainer for Distilbook (add its URL). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Gene Spectra promo
 `madebyjmayala-b9204d` · @madebyjmayala · 2026-09-25 · One-shot · 23 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/madebyjmayala-b9204d
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video promo about gene spectra, use assets from the current live site where relevant. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for Gene Spectra. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Alan agent platform promo
 `prasad-pilla-2c0cba` · @prasad_pilla · 2026-09-26 · 22 palavras · tags: UI de produto, Diagramas
-Fonte: https://www.prompt-motion.com/prasad-pilla-2c0cba
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are, for @tryAlanAI. go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for @tryAlanAI. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Tented image gen product video
 `justincooperman-e7bbc4` · @justincooperman · 2026-09-24 · Blender · One-shot · 21 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/justincooperman-e7bbc4
+
+**Prompt original do criador:**
 
 ````text
 Make an animated clip about Tented's image gen capabilities where users ask for branded images and see them added to content
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product clip for Tented. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on its image generation: users ask for branded images and see them added to their content.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Photo retouch app promo
 `oliahmed205-3e31c4` · @oliahmed205 · 2026-09-28 · 21 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/oliahmed205-3e31c4
+
+**Prompt original do criador:**
 
 ````text
 Make me a 15 sec promtional video for my product using product screenshots and assests, Be a Highly preofessional Video Editor.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for my product. Use the product screenshots and assets I attach. Never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Edit it like a highly professional video editor.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Personal skills showreel
 `ibrahimwasim240-809370` · @ibrahimwasim240 · 2026-09-26 · esforço Max · One-shot · 21 palavras · tags: UI de produto, Partículas, Personagens
-Fonte: https://www.prompt-motion.com/ibrahimwasim240-809370
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 25 second motion graphics video that shows My skills like a showreel for a resume. go all out
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 25-second motion design showreel that proves you are a world-class motion designer, built around my skills (list them). Pick one visual concept from it and commit to it: name it in one line before you start. Every shot is made out of the previous one: shapes, type and color transform into the next scene instead of cutting or fading.
+One typeface, a palette of at most three colors plus black and white, one consistent camera language.
+Show range: kinetic type, shape morphing, a 2D-to-3D moment, a data or UI moment, and an end title. Give each one an equal share of the time.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM, something happens on every beat.
+First bar: hook. Then one technique per bar, each flowing out of the last. Last full bar: the strongest moment. Final half bar: end title, and the final frame matches the first so it loops.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat, a riser into the last full bar, a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<start>
+Tell me the concept and show a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Email tool promo reel
 `melvynx-6cde6c` · @melvynx · 2026-09-26 · 19 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/melvynx-6cde6c
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are for <website url>
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for my website (paste the URL). Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Supasito launch video
 `wozu-co-242285` · @wozu_co · 2026-10-01 · 19 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/wozu-co-242285
+
+**Prompt original do criador:**
 
 ````text
 please create me a motion design / launch video for supasito dot com it should be under 15 seconds.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for supasito.com. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### GenVizu product launch
 `listudio-820c7b` · @listudio · 2026-09-28 · 19 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/listudio-820c7b
+
+**Prompt original do criador:**
 
 ````text
 Investigate my project GenVizu: https://t.co/5RaGMqn7rF Create a video for product release. Used for Hero and GTM materials on websites.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product release video for my project, GenVizu (paste the URL). Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. It's for hero sections and go-to-market materials on websites.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### MotionSites one million visitors
 `viktoroddy-98c1d8` · @viktoroddy · 2026-09-26 · 18 palavras · tags: UI de produto, Gráficos, Código
-Fonte: https://www.prompt-motion.com/viktoroddy-98c1d8
+
+**Prompt original do criador:**
 
 ````text
 Create a launch video for MotionSites AI, just hit 1 million monthly visitors after 8 months after launch.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for MotionSites AI. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on the milestone: 1 million monthly visitors, 8 months after launch.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and the milestone and a thank-you.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Tally product demo
 `visheshbaghell-3aba37` · @VisheshBaghell · 2026-09-26 · 18 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/visheshbaghell-3aba37
+
+**Prompt original do criador:**
 
 ````text
 build me a product demo for my site using /brag skill. make sure to emphasize on all features
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 45-second product demo for my site. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on every feature.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Pixelup Labs studio showreel
 `arjunsh1607-93005d` · @arjunsh1607 · 2026-09-27 · 17 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/arjunsh1607-93005d
+
+**Prompt original do criador:**
 
 ````text
 create a 15 sec motion graphics showreel for @pixeluplabs, be extremely detail oriented and go all out
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for @pixeluplabs. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Be extremely detail oriented.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Norilu product launch video
 `sachaarbonel-8f14f4` · @sachaarbonel · 2026-09-25 · 17 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/sachaarbonel-8f14f4
+
+**Prompt original do criador:**
 
 ````text
 Create a professional product launch video with motion graphics. You have access to the designs in pen
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second launch video for our product. Work from the designs I give you access to: the real screens, components, colors and type. Never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. The designs are in my design tool; use the real screens.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### AllInvestView product promo
 `rammanq-f5a90f` · @rammanq · 2026-09-26 · 17 palavras · tags: UI de produto, Celular, Gráficos
-Fonte: https://www.prompt-motion.com/rammanq-f5a90f
+
+**Prompt original do criador:**
 
 ````text
 Make a dynamic motion graphics video that shows what an incredible platform AllInvestView is. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for AllInvestView. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Design portfolio video reel
 `kikelopezdesign-7cc9e8` · @kikelopezdesign · 2026-09-25 · 16 palavras · tags: UI de produto, Celular
-Fonte: https://www.prompt-motion.com/kikelopezdesign-7cc9e8
+
+**Prompt original do criador:**
 
 ````text
 Make a 20 second video about my portfolio from scratch, using only the portfolio's own resources
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second portfolio film for my portfolio (paste the URL). Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Use only the portfolio's own resources.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### YouTube transcript product ad
 `tstfully-0aa6b4` · @tstfully · 2026-09-27 · 14 palavras · tags: UI de produto, Tipografia cinética
-Fonte: https://www.prompt-motion.com/tstfully-0aa6b4
+
+**Prompt original do criador:**
 
 ````text
 make a 15-second motion graphics product ad: paste a YouTube video, get every word.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second product ad for a tool where you paste a YouTube video and get every word. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on paste a YouTube video, get every word.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### CloudJoi search showcase
 `lester-tyy-f897f7` · @lester_tyy · 2026-09-26 · Remotion · One-shot · 14 palavras · tags: UI de produto, Fotos
 Tem: método de build
-Fonte: https://www.prompt-motion.com/lester-tyy-f897f7
+
+**Prompt original do criador:**
 
 ````text
 Study how this https://t.co/SR0AyULLNp works and use Remotion to make a product showcase video.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product showcase for the product at the link I give you. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Study how it works first.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Mascot referral program promo
 `paulo-kombucha-96431c` · @paulo_kombucha · 2026-09-28 · 13 palavras · tags: UI de produto, Personagens
-Fonte: https://www.prompt-motion.com/paulo-kombucha-96431c
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video to talk about our referral program
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for our referral program. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Focus on how the referral program works and what you get.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and how to start referring.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Five scroll-based sections
 `ercankeskinx-ec2568` · @ercankeskinx · 2026-09-24 · One-shot · 12 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/ercankeskinx-ec2568
+
+**Prompt original do criador:**
 
 ````text
 Build 5 completely different scroll-based sections, decide the context & layout yourself.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+Build 5 completely different scroll-driven sections, each on its own context and layout that you choose: your choice.
+Each one should feel like a different studio made it: its own typography, color, and way of tying motion to the scroll.
+Motion is driven by scroll position, scrubbable both ways, never by timers.
+Banned: parallax for its own sake, fade-up on everything, glows, generic gradients, anything that looks like a template.
+</direction>
+
+<structure>
+One section per screen-and-a-half of scroll, each with a clear beginning, middle and end tied to its scroll range.
+</structure>
+
+<build>
+1. One HTML file, no libraries. Every style is computed from the section's scroll progress (0 to 1).
+2. Smooth the scroll value with a critically damped spring so it settles without bounce.
+3. Check every section at 1440 and 390 wide, scrolling forward and back, and fix anything that jumps.
+</build>
+
+<start>
+List the 5 contexts and layouts you picked, then build it without asking me anything else.
+</start>
+````
+
 ### AIsa API key promo
 `0xfemyn-e114d3` · @0xfemyn · 2026-09-26 · One-shot · 12 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/0xfemyn-e114d3
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic 15-second motion graphics video for AIsa. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second promo for AIsa. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Step race app promo
 `marklaunches-3b9492` · @marklaunches · 2026-09-26 · One-shot · 11 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/marklaunches-3b9492
+
+**Prompt original do criador:**
 
 ````text
 build me an incredible video for my app. make it emotional.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second emotional film for my app. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Focus on the feeling the app gives its users.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Make it emotional: real moments, quiet type, music that swells once.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1350. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Sotto reading app explainer
 `1stnoel-c20a89` · @1stnoel_ · 2026-09-24 · 11 palavras · tags: UI de produto, Celular
-Fonte: https://www.prompt-motion.com/1stnoel-c20a89
+
+**Prompt original do criador:**
 
 ````text
 Make a 1-minute educational video about https://readsotto.app/ with synthesized voice narration.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+A 1-minute explainer on Sotto (https://readsotto.app): what it is and how to use it for someone who's never seen it. Research it first and keep every fact right; never invent numbers or quotes.
+Build the whole explanation as one diagram in one continuous space: the camera zooms into a part to explain it and pulls back to show how it fits, so the viewer always knows where they are. Every idea gets a picture before it gets words, and labels sit on the thing they name, never in a legend.
+Style: clean product motion graphics using its real screens. Narrate it with a clear synthesized voice (e.g. edge-tts en-US-AriaNeural), with subtitles synced line by line.
+Motion rules: one thing moves at a time, and the eye always knows where to look; arrows and flows animate in the direction things actually move; no more than seven words on screen at once, held for at least 0.3 seconds a word.
+Banned: walls of text, bullet lists, generic gradients, stock-looking icons, glows, crossfades, anything that looks like a template.
+</direction>
+
+<structure>
+Write a timed storyboard first, then build exactly that.
+Hook: a question the viewer already has, asked over the first picture.
+Middle: three to five steps. Each zooms into one part of the diagram, shows one concrete example, then pulls back as that part locks into place.
+Payoff: a final pull back to the whole diagram, now complete, and a one-line takeaway.
+</structure>
+
+<build>
+1. Write the narration script first, line by line, marking what's on screen for each line.
+2. Generate each line with a clear synthesized voice (e.g. edge-tts en-US-AriaNeural) and time the animation to each line's real audio length.
+3. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux in the narration, quiet music under it and subtitles.
+5. Before the full render, export a key frame from each section and check it. Fix anything crowded, overlapping or hard to read.
+</build>
+
+<gotchas>
+Check every number and name against a source. Keep the diagram's layout fixed so zooming in and out never reshuffles it. Give outgoing and incoming text separate timing so letters never overlap.
+</gotchas>
+
+<start>
+Show me the script, the diagram and a timed storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### PicTwin AI app ad
 `l3d1c-0e35a3` · @l3d1c · 2026-09-25 · 11 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/l3d1c-0e35a3
+
+**Prompt original do criador:**
 
 ````text
 create a motion design prompt for an ad for our site
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+Write a motion design prompt that I can give to Opus 5.5 to make a 15-second ad for our site (paste the URL).
+Research the site first: what it does, who it's for, its real interface, colors and type.
+The prompt you write should give real direction: one visual concept, a beat grid, the scenes in order, what's banned, and how to build and render it (one HTML file, every frame a function of time, rendered with Playwright with motion blur).
+</direction>
+
+<structure>
+Return the prompt in sections: direction, structure, build, start.
+</structure>
+
+<start>
+Show me what you found about the site, then the prompt.
+</start>
+````
+
 ### Studio website showreel
 `andginja-333d32` · @andginja · 2026-09-25 · One-shot · 10 palavras · tags: UI de produto, Fotos
-Fonte: https://www.prompt-motion.com/andginja-333d32
+
+**Prompt original do criador:**
 
 ````text
 make a 15-second showreel about my website. Go all out.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second showreel for my website (paste the URL). Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### AgentHud project motion video
 `jazzen-chen-4542ae` · @Jazzen_Chen · 2026-09-26 · esforço Max · One-shot · 10 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/jazzen-chen-4542ae
+
+**Prompt original do criador:**
 
 ````text
 make a dynamic motion graphics video about my project AgentHud.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second motion graphics video for my project, AgentHud. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### FigPad product promo
 `ai-baymax-0ef9dd` · @Ai_Baymax · 2026-09-25 · One-shot · 10 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/ai-baymax-0ef9dd
+
+**Prompt original do criador:**
 
 ````text
 make a 1-min promo for this product from the codebase.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 60-second promo for this product. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### ocrX app launch video
 `mehul4795-4a7007` · @mehul4795 · 2026-09-25 · 9 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/mehul4795-4a7007
+
+**Prompt original do criador:**
 
 ````text
 Create a product launch video for ocrX Android app.
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second launch video for the ocrX Android app. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1920. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Brieform product presentation
 `majorbaguette-fb11d7` · @MajorBaguette · 2026-09-26 · Remotion · 9 palavras · tags: UI de produto
-Fonte: https://www.prompt-motion.com/majorbaguette-fb11d7
+
+**Prompt original do criador:**
 
 ````text
 make a presentation video for Brieform, 30 seconds long
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second presentation video for Brieform. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Three.js Skyraider aircraft model
 `buildfastwithai-ed9447` · @BuildFastWithAI · 2026-09-24 · Three.js · esforço High · One-shot · 7 palavras · tags: UI de produto
 Tem: método de build
-Fonte: https://www.prompt-motion.com/buildfastwithai-ed9447
+
+**Prompt original do criador:**
 
 ````text
 Build a Douglas A-1H Skyraider in Three.js
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<direction>
+Build a Douglas A-1H Skyraider as one self-contained HTML page with three.js.
+Style: a faithful scale model: the right silhouette, the big radial engine and four-blade propeller, Navy grey over white, panel lines and rivets.
+Design the signature shot first, the one frame someone would screenshot, and build everything toward it.
+Camera: a film camera, not orbit controls. Every shot uses one named move (dolly, crane, orbit, push-in, rack focus), eased in and out, and the camera never passes through geometry.
+Light and materials: a key, fill and rim light with soft shadows, an environment map for reflections, fog for depth, physically based materials with varied roughness, ACES tone mapping. Nothing should look like a default material.
+Motion: things react to each other (what's hit moves, what's near lights up), driven by springs or simple physics, never linear tweens.
+Banned: default materials and lighting, floating text labels, glows on everything, a slowly spinning object as the whole idea, anything that looks like a tech demo.
+</direction>
+
+<structure>
+It flies a slow orbit with the propeller spinning; the camera can circle it and come in close on the engine and cockpit.
+Plan it as a shot list: an establishing wide, three to five shots that each have one camera move and one event, the signature shot, and a final wide that shows it in a new light.
+</structure>
+
+<build>
+1. One HTML file, three.js from a CDN, no build step. Model everything in code; no downloaded models or textures.
+2. Use MeshPhysicalMaterial, a PMREM environment from RoomEnvironment, soft shadows, ACES tone mapping and antialiasing. Add depth of field only on shots that need it.
+3. Hold 60fps on a laptop.
+4. Add a ?render mode where every frame is computed from time (seeded randomness, no clock), so it can be captured with Playwright into an MP4 at 1920x1080.
+5. Capture one frame per shot, look at it, and fix anything flat, aliased, clipping or hard to read.
+</build>
+
+<gotchas>
+Set shadow bias, or surfaces get striped acne. Keep near and far planes tight, or distant surfaces flicker. Seed every random number, or the render won't match the preview.
+</gotchas>
+
+<start>
+Describe the signature shot and the shot list in a few lines, then build it without asking me anything else. Give me the HTML file and a 20-second MP4 captured with the ?render mode.
+</start>
+````
+
 ### Matra caption app promo
 `gautam-mer1-2ae354` · @gautam_mer1 · 2026-09-26 · Remotion, React · One-shot · 7 palavras · tags: UI de produto, Celular, Fotos
-Fonte: https://www.prompt-motion.com/gautam-mer1-2ae354
+
+**Prompt original do criador:**
 
 ````text
 an Apple-style 30s video of my app
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second Apple-style film for my app. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. Apple keynote feel: white space, one idea per shot, the device as the hero.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1920. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Parenting app hype video
 `francoxavier33-d2dfd2` · @francoxavier33 · 2026-09-25 · Remotion · A few rounds · 7 palavras · tags: UI de produto, Celular, Tipografia cinética
-Fonte: https://www.prompt-motion.com/francoxavier33-d2dfd2
+
+**Prompt original do criador:**
 
 ````text
 make a hype demo/launch video for @momwiseai
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 20-second hype launch video for @momwiseai. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1080x1920. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Claude self-promo spot
 `slvdev-64c45a` · @slvDev · 2026-09-25 · esforço Max · One-shot · 5 palavras · tags: UI de produto, Celular, Tipografia cinética
-Fonte: https://www.prompt-motion.com/slvdev-64c45a
+
+**Prompt original do criador:**
 
 ````text
 create 15+ sec self-promotion promo
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second self-promotion promo for me and what I do. Use the live site's real assets (logo, screenshots, copy) wherever they fit. Never invent features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and where to find me.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Lism CSS 1.0 release video
 `ddryo-loos-300829` · @ddryo_loos · 2026-10-02 · 4 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/ddryo-loos-300829
+
+**Prompt original do criador:**
 
 ````text
 Lism CSS ver.1.0 をリリースする時にSNSに動画を投稿したい。あなたがどれほど素晴らしいモーションデザイナーかを示す、シンプルかつダイナミックさもある15秒のモーショングラフィックスビデオを作成してください。
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 15-second release video for Lism CSS ver.1.0. Research it first: what it does, who it's for, its real interface and its brand. Use what you find; never invent screens, features or numbers.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space. For social media: simple yet dynamic.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and the version number and where to get it.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### AI Arena product promo
 `ezshine-c90d73` · @ezshine · 2026-09-25 · One-shot · 4 palavras · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/ezshine-c90d73
+
+**Prompt original do criador:**
 
 ````text
 设计个动画，介绍本项目的各项特性，像是专业的产品介绍宣传片，最后要生成 16:9 的mp4 视频
 ````
 
+**Versão completa (estruturada a partir do original):**
+
+````text
+<inputs>
+Ask me for anything below I haven't given you. If I skip it, use the default: 3 to 6 screenshots of the real interface (default: capture them yourself), the logo (default: take it from the site), brand colors and font (default: its own colors and typeface), and a royalty-free track with a clear beat (default: compose one in code).
+</inputs>
+
+<direction>
+A 30-second product promo film for this project. Read the codebase first: what it does, its real screens and components, its colors and type. Build the scenes from the real UI; never invent features.
+Focus on each of its features.
+Pick one through-line object from the product itself (its cursor, a key button, the logo's mark, a single data point) and make every scene a transformation of it: it starts in the UI, changes shape or role in each scene, and becomes the logo on the end card. Name it before you storyboard.
+Rebuild the real UI as vector layers so its parts can move on their own; never slide a flat screenshot in. A cursor drives every interaction with real clicks and drags, and the camera zooms screen-studio style so each moment fills the frame.
+Brand: its own colors and typeface. One typeface, one accent color used only on the through-line object and the key word, lots of empty space.
+Motion rules: springs with at most a small overshoot; nothing appears from nothing (it grows, unfolds or is revealed by a mask); the camera never sits still (push from 1.0 to 1.04 across a scene, and start each scene at the zoom the last one ended on); something changes on every beat.
+Banned: particle bursts, glows, lens flares, camera shake, RGB split, crossfades, generic gradients, bouncy easing, holds longer than half a second, anything that looks like a template.
+</direction>
+
+<structure>
+120 BPM. Write a timed storyboard first, beat by beat, then build exactly that.
+Hook (first bar): the problem in three to five words, in big type that the through-line object interrupts.
+Middle: three or four moments of the product doing what it does best. Each begins with the through-line object turning into the next UI element and lands one readable idea.
+Payoff (last bars): the strongest moment on the biggest beat, then the through-line object becomes the logo and the end card: the name and a one-line call to action.
+</structure>
+
+<build>
+1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state carried between frames.
+2. Use spring and exponential easing written as functions of time. Blur follows speed and direction on fast moves.
+3. Write a soundtrack in code with the Web Audio API (OfflineAudioContext): a kick on every beat and a hit on each scene change. Render it to WAV.
+4. Render with Playwright at 60fps, 3 subframes per frame blended with ffmpeg tmix for motion blur, then mux the audio.
+5. Before the full render, render one frame per beat and look at them. Fix anything cluttered, off the beat, overlapping or hard to read.
+</build>
+
+<gotchas>
+Measure element positions at runtime for match cuts instead of hard-coding them. When a shape fills the frame, scale it past all four corners. Give outgoing and incoming text separate timing so letters never overlap. Never put will-change on anything the camera scales, or text renders blurry.
+</gotchas>
+
+<start>
+Show me what you found, the through-line object and a beat-by-beat storyboard, then build it without asking me anything else. Give me the final MP4.
+</start>
+````
+
 ### Cinetic skill launch film
 `lexnlin-6161a6` · @LexnLin · 2026-10-04 · tags: UI de produto, Código
-Fonte: https://www.prompt-motion.com/lexnlin-6161a6
 
 
 Skill de terceiro: https://github.com/Leonxlnx/cinetic
@@ -2104,7 +5398,6 @@ Instalar: `npx skills add Leonxlnx/cinetic`
 
 ### Reddit marketing tool launch video
 `anthonyriera-9b1b2a` · @anthonyriera · 2026-09-26 · Remotion · Many rounds · tags: UI de produto, Personagens
-Fonte: https://www.prompt-motion.com/anthonyriera-9b1b2a
 
 
 Skill de terceiro: https://github.com/Rieranthony/product-film-skill

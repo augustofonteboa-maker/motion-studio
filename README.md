@@ -18,7 +18,7 @@ Vídeos de teste feitos do zero pela skill: [16:9](docs/Demo_MotionStudio_16x9_1
 - **Som:** trilha sintetizada a partir dos eventos da animação, em 6 climas (grave, épico, tech, clean, ambient, pop)
 - **Briefing de campeão (novo na 1.1):** pedido vago vira um briefing de 6 blocos (conceito de uma linha, elemento-ponte, look travado, lista de proibidos, tempo em BPM, build e revisão) antes de qualquer código
 - **Anti-"cara de IA" (novo na 1.1):** lista de proibidos aprendida em 230 prompts reais (glow, partículas sem origem, crossfade, tempo morto, texto nos cantos...), cada item com o que fazer no lugar
-- **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts do [Prompt Motion](https://www.prompt-motion.com/) têm em comum, 6 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
+- **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts do [Prompt Motion](https://www.prompt-motion.com/) têm em comum, 11 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
 
 ## Como instalar no Claude (app ou site)
 
@@ -72,7 +72,7 @@ skills/motion-studio/
   kit/template.html               cena-base para começar
   examples/demo-reel.html         o showreel de teste, completo
   references/playbook-prompt-motion.md      o que 230 prompts reais ensinam (anatomia, proibidos, renderizadores)
-  references/templates-de-briefing.md       6 modelos de briefing prontos
+  references/templates-de-briefing.md       11 modelos de briefing prontos
   references/galeria/                       230 prompts reais por categoria (comece pelo 00_INDEX.md)
 .claude-plugin/marketplace.json   instalação pelo Claude Code
 docs/                             prévias e vídeos de teste

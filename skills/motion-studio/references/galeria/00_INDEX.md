@@ -1,6 +1,6 @@
 # Galeria de prompts (índice)
 
-233 entradas do Prompt Motion (230 com prompt, 3 só skill), de 216 criadores, todas no Claude Opus 5.5 (set/out de 2026). **Não leia tudo.** Abra só o arquivo da categoria que combina com o pedido, ou procure por palavra: `grep -il "liquid glass" references/galeria/*.md`.
+233 entradas (230 com prompt, 3 só skill; 213 têm também a versão completa), de 216 criadores, todas no Claude Opus 5.5 (set/out de 2026). **Não leia tudo.** Abra só o arquivo da categoria que combina com o pedido, ou procure por palavra: `grep -il "liquid glass" references/galeria/*.md`.
 
 ## Arquivos (cada prompt está no arquivo da sua tag principal; as outras tags aparecem na linha dele)
 
