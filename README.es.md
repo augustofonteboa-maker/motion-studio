@@ -20,6 +20,7 @@ Videos de prueba hechos desde cero por la skill: [16:9](docs/Demo_MotionStudio_1
 - **Sonido:** banda sonora sintetizada a partir de los eventos de la animación, en 6 climas (grave, épico, tech, clean, ambient, pop)
 - **Brief de campeón:** un pedido vago se convierte en un brief de 6 bloques (concepto de una línea, elemento puente, look cerrado, lista de prohibidos, tiempo en BPM, build y revisión) antes de cualquier código
 - **Anti-"cara de IA":** lista de prohibidos aprendida de 230 prompts reales (glow, partículas sin origen, crossfade, tiempo muerto, texto en las esquinas...), cada ítem con qué hacer en su lugar
+- **Base de inteligencia (nueva en la 1.3):** un protocolo de 9 pasos, un enrutador de 14 tipos de pedido (cualquier idioma, cualquier nivel de detalle), un catálogo de 60 escenas con recetas del kit, dirección de arte por nicho, un análisis crítico de la galería con rúbrica de autoevaluación de 100 puntos, una guía de sonido y ritmo y un banco de 120 ideas, en `skills/motion-studio-es/references/inteligencia/`
 - **Biblioteca de referencia:** un playbook con lo que tienen en común los 230 mejores prompts, 11 plantillas de brief (showreel, lanzamiento, una forma que nunca corta, tipografía, explainer, 3D, producto con investigación, explainer con narración, corto mudo, música/lyric video, edición de talking head) y la galería completa de prompts por categoría, cada uno con el prompt original del creador y la versión completa estructurada, en `skills/motion-studio-es/references/`
 
 ## Cómo instalar en Claude (app o web)
@@ -69,6 +70,7 @@ skills/motion-studio-es/
   SKILL.md                        instrucciones de la skill (flujo, dirección de arte, técnicas, QA)
   kit/                            runtime de animación, renderizador, banda sonora, fuentes y escena base
   examples/demo-reel.html         el showreel de prueba, completo
+  references/inteligencia/               protocolo, enrutador de pedidos, catálogo de escenas, nichos, análisis crítico, sonido y ritmo, banco de ideas
   references/playbook.md   lo que enseñan 230 prompts reales (anatomía, prohibidos, renderizadores)
   references/briefing-templates.md       11 plantillas de brief listas (A a K)
   references/gallery/                    230 prompts reales por categoría (empieza por 00_INDEX.md)

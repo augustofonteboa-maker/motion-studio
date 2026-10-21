@@ -20,6 +20,7 @@ Test videos made from scratch by the skill: [16:9](docs/Demo_MotionStudio_16x9_1
 - **Sound:** a soundtrack synthesized from the animation's events, in 6 moods (grave, epic, tech, clean, ambient, pop)
 - **Champion brief:** a vague request becomes a 6-block brief (a one-line concept, a bridge element, a locked look, a banned list, timing in BPM, build and review) before any code
 - **Anti-"AI look":** a banned list learned from 230 real prompts (glow, particles with no origin, crossfade, dead time, corner text...), each item with what to do instead
+- **Intelligence base (new in 1.3):** a 9-step protocol, a router for 14 request types (any language, any level of detail), a 60-scene catalog with kit recipes, art direction by niche, a critical analysis of the gallery with a 100-point self-assessment rubric, a sound and rhythm guide and a 120-idea bank, in `skills/motion-studio-en/references/intelligence/`
 - **Reference library:** a playbook on what the 230 best prompts have in common, 11 briefing templates (showreel, launch, one shape that never cuts, typography, explainer, 3D, product with research, narrated explainer, silent short, music/lyric video, talking-head edit) and the full gallery of prompts by category, each with the creator's original prompt and the structured full version, in `skills/motion-studio-en/references/`
 
 ## Install in Claude (app or web)
@@ -69,6 +70,7 @@ skills/motion-studio-en/
   SKILL.md                        the skill's instructions (workflow, art direction, techniques, QA)
   kit/                            animation runtime, renderer, soundtrack, fonts and base scene
   examples/demo-reel.html         the complete test showreel
+  references/intelligence/               protocol, request router, scene catalog, niches, critical analysis, sound and rhythm, idea bank
   references/playbook.md   what 230 real prompts teach (anatomy, banned list, renderers)
   references/briefing-templates.md       11 ready briefing templates (A to K)
   references/gallery/                    230 real prompts by category (start at 00_INDEX.md)

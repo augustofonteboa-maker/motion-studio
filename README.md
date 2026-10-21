@@ -20,6 +20,7 @@ Vídeos de teste feitos do zero pela skill: [16:9](docs/Demo_MotionStudio_16x9_1
 - **Som:** trilha sintetizada a partir dos eventos da animação, em 6 climas (grave, épico, tech, clean, ambient, pop)
 - **Briefing de campeão (novo na 1.1):** pedido vago vira um briefing de 6 blocos (conceito de uma linha, elemento-ponte, look travado, lista de proibidos, tempo em BPM, build e revisão) antes de qualquer código
 - **Anti-"cara de IA" (novo na 1.1):** lista de proibidos aprendida em 230 prompts reais (glow, partículas sem origem, crossfade, tempo morto, texto nos cantos...), cada item com o que fazer no lugar
+- **Base de inteligência (nova na 1.3):** protocolo de 9 passos, roteador de 14 tipos de pedido (em qualquer idioma e nível de detalhe), catálogo de 60 cenas com receita no kit, direção de arte por nicho, análise crítica da galeria com rubrica de 100 pontos para autoavaliação, guia de som e ritmo e banco de 120 ideias, em `skills/motion-studio/references/inteligencia/`
 - **Biblioteca de referência (nova na 1.1):** playbook com o que os 230 melhores prompts públicos têm em comum, 11 templates de briefing (showreel, lançamento, forma que nunca corta, tipografia, explainer, 3D) e a galeria completa dos prompts por categoria, em `skills/motion-studio/references/`
 
 ## Como instalar no Claude (app ou site)
@@ -76,6 +77,7 @@ skills/motion-studio/
   kit/fonts.mjs                   baixa fontes do Google Fonts
   kit/template.html               cena-base para começar
   examples/demo-reel.html         o showreel de teste, completo
+  references/inteligencia/                  protocolo, roteador de pedidos, catálogo de cenas, nichos, análise crítica, som e ritmo, banco de ideias
   references/playbook.md      o que 230 prompts reais ensinam (anatomia, proibidos, renderizadores)
   references/templates-de-briefing.md       11 modelos de briefing prontos
   references/galeria/                       230 prompts reais por categoria (comece pelo 00_INDEX.md)

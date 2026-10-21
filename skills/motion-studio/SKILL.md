@@ -1,6 +1,6 @@
 ---
 name: motion-studio
-description: Motion design nível estúdio com código (vinhetas, logo animada, transições, intros, showreels, vídeos de lançamento, promos de produto, UI motion, tipografia cinética, explainers e loops) em MP4 16:9 e 9:16 com trilha. Traz um playbook e 230 prompts reais de referência. Use ao pedirem animação, vinheta, intro, vídeo de lançamento, showreel ou motion.
+description: Motion design nível estúdio com código (vinhetas, logo animada, transições, intros, showreels, vídeos de lançamento, promos de produto, UI motion, tipografia cinética, explainers e loops) em MP4 16:9 e 9:16 com trilha. Traz uma base de inteligência (roteador de pedidos, catálogo de 60 cenas, nichos, análise crítica com rubrica, som, 120 ideias), um playbook e os prompts completos de 232 vídeos reais. Use ao pedirem animação, vinheta, intro, vídeo de lançamento, showreel ou motion.
 ---
 
 # Motion Studio: motion design com código, nível estúdio
@@ -21,6 +21,8 @@ O kit tem 5 arquivos testados juntos e **vem dentro desta skill**, na pasta `kit
 
 Exemplo completo e testado: `examples/demo-reel.html` (showreel de 13 s com tipografia cinética, logo por partículas, fluxo de UI, gráfico e whip pan). Para rodar: dentro de `examples/`, `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` e depois `node ../kit/render.mjs demo-reel.html --stills 12`. Use como referência de qualidade e de organização de código.
 
+**Inteligência (leia primeiro, em qualquer pedido de vídeo de verdade):** `references/inteligencia/00_LEIA-PRIMEIRO.md` traz o protocolo de 9 passos (classificar o pedido, medir a especificação, pesquisar, conceito de uma linha, direção de arte, mapa de batidas, construir, **autocrítica com rubrica de 100 pontos**, entregar). Dele saem, sob demanda: `01_roteador-de-pedidos.md` (14 tipos de pedido, em qualquer idioma ou nível de detalhe), `02_catalogo-de-cenas.md` (60 padrões com receita no kit), `03_nichos-e-direcao-de-arte.md`, `04_analise-critica.md` (o que os dados dizem e onde enganam, rubrica, limites do kit), `05_som-e-ritmo.md` (BPM, música, voz, legendas) e `06_banco-de-ideias.md` (120 conceitos).
+
 **Referências (carregue sob demanda, não tudo de uma vez):** `references/playbook.md` (o que 230 prompts reais ensinam: leia antes de qualquer vídeo de verdade), `references/templates-de-briefing.md` (11 modelos de briefing prontos, A a K), `references/galeria/00_INDEX.md` (230 prompts reais por categoria; abra só o arquivo do tipo de vídeo pedido).
 
 Depois, confira o ambiente uma vez: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. Se faltar Playwright: `npm i -g playwright && npx playwright install chromium`. Se faltar numpy/scipy: `pip3 install numpy scipy` (no Linux, `--break-system-packages`). No Mac, se faltar ffmpeg: `brew install ffmpeg`. Renderize onde houver Node + Playwright + ffmpeg (o workspace na nuvem do Claude já tem). Num computador com mais núcleos o render fica mais rápido (mais workers).
@@ -39,6 +41,7 @@ projeto/
 
 ## 1. Fluxo de trabalho
 
+0. **Protocolo.** Em pedido de vídeo de verdade, siga `references/inteligencia/00_LEIA-PRIMEIRO.md` (classifique o pedido no roteador, meça o nível de especificação, decida os defaults do tipo). O fluxo abaixo é a execução.
 1. **Briefing (rápido).** Pegue do pedido: objetivo, onde vai passar (Reels, YouTube, aula, site, apresentação), duração, **texto exato**, marca (logo SVG, cores, fontes), clima do som. Faltando o texto ou a marca e não dá para deduzir, pergunte uma vez. O resto você decide com bom gosto e conta o que decidiu. **Pedido vago ("faz um vídeo legal", "showreel", "promo do app") não vai direto para o código:** monte o briefing de 6 blocos (seção 11) a partir do template mais próximo em `references/templates-de-briefing.md`, com um conceito de uma linha, e mostre ao usuário o conceito, a paleta, o que está banido e o mapa de batidas.
 2. **Direção de arte.** Marca do cliente ou um preset (seção 3). Defina os tokens no topo da cena.
 3. **Roteiro de batidas.** Escreva (para você) uma tabela `tempo → o que acontece → cue de som → blur`, seguindo a estrutura do formato (seção 6). Pense em **uma ideia central**, dita numa linha, e num **elemento-ponte** que liga as cenas (uma forma, uma cor, uma personagem). Com música ou ritmo definido, conte em **BPM e compassos** (`bpm` no `M.boot`, `M.beat(n)`), com algo acontecendo em toda batida forte, não em "dinâmico".
@@ -325,6 +328,7 @@ node render.mjs overlay.html --alpha --name Cliente_Transicao --sizes 1920x1080,
 - [ ] `ffprobe`: fps, nº de quadros, duração, bt709, faixa de áudio presente
 - [ ] Som: impactos alinhados às revelações (compare os tempos dos cues com os quadros), sem estouro
 - [ ] Ambas as proporções exportadas e salvas na pasta do projeto
+- [ ] **Rubrica de 100 pontos** (`references/inteligencia/04_analise-critica.md`): pontuada, meta ≥ 85, tudo abaixo de 80% do máximo corrigido antes de entregar
 - [ ] Anti-"cara de IA" (seção 11): nenhum brilho, partícula, crossfade, tremor, texto de canto ou degradê genérico sem motivo; nenhum hold morto (> 1 s sem leitura); nenhum template óbvio
 - [ ] Nenhum número, depoimento, cliente ou funcionalidade inventados; texto do usuário idêntico
 

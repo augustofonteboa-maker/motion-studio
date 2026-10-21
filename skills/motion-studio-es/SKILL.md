@@ -1,6 +1,6 @@
 ---
 name: motion-studio-es
-description: Motion design de nivel estudio con código (viñetas, logo animado, transiciones, intros, showreels, videos de lanzamiento, promos de producto, UI motion, tipografía cinética, explainers y loops) en MP4 16:9 y 9:16 con banda sonora. Incluye un playbook y 230 prompts reales de referencia. Úsala cuando pidan una animación, viñeta, intro, video de lanzamiento, showreel o motion.
+description: Motion design de nivel estudio con código (viñetas, logo animado, transiciones, intros, showreels, videos de lanzamiento, promos de producto, UI motion, tipografía cinética, explainers y loops) en MP4 16:9 y 9:16 con banda sonora. Incluye una base de inteligencia (enrutador de pedidos, catálogo de 60 escenas, nichos, análisis crítico con rúbrica, sonido, 120 ideas), un playbook y los prompts completos de 232 videos reales. Úsala cuando pidan una animación, viñeta, intro, video de lanzamiento, showreel o motion.
 ---
 
 # Motion Studio: motion design con código, nivel estudio
@@ -23,6 +23,8 @@ El kit tiene 5 archivos probados juntos y **viene dentro de esta skill**, en la 
 
 Ejemplo completo y probado: `examples/demo-reel.html` (showreel de 13 s con tipografía cinética, logo con partículas, flujo de UI, gráfico y whip pan). Para correrlo, dentro de `examples/`: `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` y luego `node ../kit/render.mjs demo-reel.html --stills 12`. Úsalo como referencia de calidad y de organización del código.
 
+**Inteligencia (léela primero, en cualquier pedido de video de verdad):** `references/inteligencia/00_LEE-PRIMERO.md` trae el protocolo de 9 pasos (clasificar el pedido, medir la especificación, investigar, concepto de una línea, dirección de arte, mapa de pulsos, construir, **autocrítica con rúbrica de 100 puntos**, entregar). De él salen, bajo demanda: `01_enrutador-de-pedidos.md` (14 tipos de pedido, en cualquier idioma o nivel de detalle), `02_catalogo-de-escenas.md` (60 patrones con receta en el kit), `03_nichos-y-direccion-de-arte.md`, `04_analisis-critico.md` (lo que dicen los datos y dónde engañan, rúbrica, límites del kit), `05_sonido-y-ritmo.md` (BPM, música, voz, subtítulos) y `06_banco-de-ideas.md` (120 conceptos).
+
 **Referencias (cárgalas bajo demanda, no todas de una vez):** `references/playbook.md` (lo que enseñan 230 prompts reales: léelo antes de cualquier video de verdad), `references/briefing-templates.md` (11 plantillas de brief listas, de la A a la K), `references/gallery/00_INDEX.md` (230 prompts reales por categoría; abre solo el archivo del tipo de video pedido).
 
 Después, revisa el entorno una vez: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. Si falta Playwright: `npm i -g playwright && npx playwright install chromium`. Si faltan numpy/scipy: `pip3 install numpy scipy` (en Linux, `--break-system-packages`). En Mac, si falta ffmpeg: `brew install ffmpeg`. Renderiza donde haya Node + Playwright + ffmpeg (el workspace en la nube de Claude ya los tiene). Con más núcleos el render es más rápido (más workers).
@@ -41,6 +43,7 @@ proyecto/
 
 ## 1. Flujo de trabajo
 
+0. **Protocolo.** En un pedido de video de verdad, sigue `references/inteligencia/00_LEE-PRIMERO.md` (clasifica el pedido en el enrutador, mide el nivel de especificación, decide los valores por defecto del tipo). El flujo de abajo es la ejecución.
 1. **Brief (rápido).** Del pedido toma: objetivo, dónde va a salir (Reels, YouTube, clase, sitio, presentación), duración, **texto exacto**, marca (logo SVG, colores, fuentes), clima del sonido. Si falta el texto o la marca y no se puede deducir, pregunta una vez. Lo demás lo decides con buen gusto y cuentas lo que decidiste. **Un pedido vago ("haz un video chulo", "showreel", "promo de la app") no va directo al código:** arma el brief de 6 bloques (sección 11) a partir de la plantilla más cercana en `references/briefing-templates.md`, con un concepto de una línea, y muestra al usuario el concepto, la paleta, lo que está prohibido y el mapa de pulsos.
 2. **Dirección de arte.** La marca del cliente o un preset (sección 3). Define los tokens al inicio de la escena.
 3. **Mapa de pulsos.** Escribe (para ti) una tabla `tiempo → qué pasa → cue de sonido → blur`, siguiendo la estructura del formato (sección 6). Piensa en **una idea central**, dicha en una línea, y en un **elemento puente** que une las escenas (una forma, un color, un personaje). Con música o ritmo definido, cuenta en **BPM y compases** (`bpm` en `M.boot`, `M.beat(n)`), con algo pasando en cada pulso fuerte, no en "dinámico".
@@ -327,6 +330,7 @@ node render.mjs overlay.html --alpha --name Cliente_Transicion --sizes 1920x1080
 - [ ] `ffprobe`: fps, nº de cuadros, duración, bt709, pista de audio presente
 - [ ] Sonido: impactos alineados con las revelaciones (compara los tiempos de los cues con los cuadros), sin saturación
 - [ ] Ambas proporciones exportadas y guardadas en la carpeta del proyecto
+- [ ] **Rúbrica de 100 puntos** (`references/inteligencia/04_analisis-critico.md`): puntuada, meta ≥ 85, todo lo que esté por debajo del 80% del máximo corregido antes de entregar
 - [ ] Anti-"cara de IA" (sección 11): ningún brillo, partícula, crossfade, temblor, texto de esquina o degradado genérico sin motivo; ningún hold muerto (> 1 s sin lectura); ninguna plantilla obvia
 - [ ] Ningún número, testimonio, cliente o funcionalidad inventados; el texto del usuario idéntico
 

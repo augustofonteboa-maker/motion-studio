@@ -1,6 +1,6 @@
 ---
 name: motion-studio-en
-description: Studio-grade motion design in code (logo stings, animated logos, transitions, intros, showreels, launch videos, product promos, UI motion, kinetic type, explainers and loops) as MP4 in 16:9 and 9:16 with a soundtrack. Ships a playbook and 230 real reference prompts. Use when asked for an animation, sting, intro, launch video, showreel or motion.
+description: Studio-grade motion design in code (logo stings, animated logos, transitions, intros, showreels, launch videos, product promos, UI motion, kinetic type, explainers and loops) as MP4 in 16:9 and 9:16 with a soundtrack. Ships an intelligence base (request router, a 60-scene catalog, niches, a critical analysis with rubric, sound, 120 ideas), a playbook and the full prompts of 232 real videos. Use when asked for an animation, sting, intro, launch video, showreel or motion.
 ---
 
 # Motion Studio: studio-grade motion design in code
@@ -23,6 +23,8 @@ The kit has 5 files tested together and **ships inside this skill**, in the `kit
 
 Full tested example: `examples/demo-reel.html` (13 s showreel with kinetic type, particle logo, UI flow, chart and whip pan). To run it, inside `examples/`: `node ../kit/fonts.mjs "Space Grotesk:400,500,700" "Instrument Serif:400,400i" "JetBrains Mono:400,500"` then `node ../kit/render.mjs demo-reel.html --stills 12`. Use it as a reference for quality and code organization.
 
+**Intelligence (read first, on any real video request):** `references/intelligence/00_READ-FIRST.md` holds the 9-step protocol (classify the request, measure the specification, research, a one-line concept, art direction, beat map, build, **self-critique with a 100-point rubric**, deliver). From it, on demand: `01_request-router.md` (14 request types, in any language or level of detail), `02_scene-catalog.md` (60 patterns with a kit recipe), `03_niches-and-art-direction.md`, `04_critical-analysis.md` (what the data says and where it misleads, the rubric, kit limits), `05_sound-and-rhythm.md` (BPM, music, voice, subtitles) and `06_idea-bank.md` (120 concepts).
+
 **References (load on demand, not all at once):** `references/playbook.md` (what 230 real prompts teach: read it before any real video), `references/briefing-templates.md` (11 ready briefing templates, A to K), `references/gallery/00_INDEX.md` (230 real prompts by category; open only the file for the requested video type).
 
 Then check the environment once: `node -v` (≥18), `ffmpeg -version`, `python3 -c "import numpy, scipy"`. If Playwright is missing: `npm i -g playwright && npx playwright install chromium`. If numpy/scipy is missing: `pip3 install numpy scipy` (on Linux, `--break-system-packages`). On Mac, if ffmpeg is missing: `brew install ffmpeg`. Render wherever Node + Playwright + ffmpeg exist (Claude's cloud workspace already has them). More CPU cores make rendering faster (more workers).
@@ -41,6 +43,7 @@ project/
 
 ## 1. Workflow
 
+0. **Protocol.** On a real video request, follow `references/intelligence/00_READ-FIRST.md` (classify the request in the router, measure the level of specification, decide the type's defaults). The workflow below is the execution.
 1. **Brief (quick).** From the request take: goal, where it will run (Reels, YouTube, lesson, site, presentation), duration, **exact text**, brand (SVG logo, colors, fonts), sound mood. If the text or the brand is missing and cannot be deduced, ask once. Decide the rest with good taste and say what you decided. **A vague request ("make a cool video", "showreel", "app promo") does not go straight to code:** build the 6-block brief (section 11) from the closest template in `references/briefing-templates.md`, with a one-line concept, and show the user the concept, the palette, what is banned and the beat map.
 2. **Art direction.** The client's brand or a preset (section 3). Define the tokens at the top of the scene.
 3. **Beat map.** Write (for yourself) a table `time → what happens → sound cue → blur`, following the format's structure (section 6). Think of **one central idea**, stated in one line, and a **bridge element** that links the scenes (a shape, a color, a character). With music or a defined rhythm, count in **BPM and bars** (`bpm` in `M.boot`, `M.beat(n)`), with something happening on every strong beat, not in "dynamic".
@@ -327,6 +330,7 @@ node render.mjs overlay.html --alpha --name Client_Transition --sizes 1920x1080,
 - [ ] `ffprobe`: fps, frame count, duration, bt709, audio track present
 - [ ] Sound: impacts aligned with reveals (compare cue times with frames), no clipping
 - [ ] Both aspect ratios exported and saved in the project folder
+- [ ] **100-point rubric** (`references/intelligence/04_critical-analysis.md`): scored, target ≥ 85, everything below 80% of its maximum fixed before delivering
 - [ ] Anti-"AI look" (section 11): no glow, particles, crossfade, shake, corner text or generic gradient without a reason; no dead hold (> 1 s without reading); no obvious template
 - [ ] No invented numbers, testimonials, clients or features; the user's text unchanged
 
