@@ -1,5 +1,7 @@
 # motion-studio
 
+**Português** · [English](README.en.md) · [Español](README.es.md)
+
 Skill de **motion design com o Claude**. Você pede uma vinheta, uma logo animada, uma transição, a abertura de uma aula, um showreel ou um post animado, e o Claude cria a animação em código (HTML, SVG e Canvas) e entrega o vídeo pronto em MP4, nas versões **16:9 e 9:16**, com motion blur e trilha sincronizada.
 
 ![Prévia do showreel de teste feito pela skill](docs/demo.gif)
@@ -62,7 +64,10 @@ No Claude (app/site) o ambiente na nuvem já tem quase tudo. No seu computador, 
 ## O que tem no repositório
 
 ```text
-motion-studio.zip                 skill empacotada para enviar no Claude
+motion-studio.zip                 skill empacotada para enviar no Claude (português)
+motion-studio-en.zip              the same skill in English
+motion-studio-es.zip              la misma skill en español
+skills/motion-studio-en/ e skills/motion-studio-es/   a skill completa em inglês e em espanhol (SKILL.md, kit, exemplos e references traduzidos)
 skills/motion-studio/
   SKILL.md                        instruções da skill (fluxo, direção de arte, técnicas, QA)
   kit/motion.js                   runtime de animação (easing, molas, máscaras, morph, partículas, câmera)
@@ -84,7 +89,7 @@ Criada por [Augusto Fonte](https://www.instagram.com/_augustofonte/) com o Claud
 
 ---
 
-**English:** *motion-studio* is a Claude skill for studio-grade motion design in code (HTML/SVG/Canvas rendered to MP4 in 16:9 and 9:16 with motion blur and a synced soundtrack). Install it in the Claude app by uploading `motion-studio.zip` under Customize › Skills, or in Claude Code with `/plugin marketplace add augustofonteboa-maker/motion-studio`. The skill's instructions are in Brazilian Portuguese.
+**English / Español:** a skill também existe em inglês (`skills/motion-studio-en`, [README](README.en.md), `motion-studio-en.zip`) e em espanhol (`skills/motion-studio-es`, [README](README.es.md), `motion-studio-es.zip`).
 
 ## Créditos da biblioteca de referência
 

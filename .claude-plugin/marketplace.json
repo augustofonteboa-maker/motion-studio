@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Skill de motion design com o Claude: animações em código renderizadas em MP4 16:9 e 9:16 com trilha sincronizada.",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -13,7 +13,27 @@
       "description": "Vinhetas, logo animada, transições, intros, showreels, vídeos de lançamento e promos feitos em código e renderizados em MP4 com motion blur e trilha.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/motion-studio"]
+      "skills": [
+        "./skills/motion-studio"
+      ]
+    },
+    {
+      "name": "motion-studio-en",
+      "description": "Studio-grade motion design in code: stings, logo reveals, transitions, showreels, launch videos and promos rendered to MP4 with motion blur and a synced soundtrack.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/motion-studio-en"
+      ]
+    },
+    {
+      "name": "motion-studio-es",
+      "description": "Motion design de nivel estudio con código: viñetas, logos animados, transiciones, showreels, videos de lanzamiento y promos en MP4 con motion blur y banda sonora sincronizada.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/motion-studio-es"
+      ]
     }
   ]
 }
