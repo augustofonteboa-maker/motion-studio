@@ -377,18 +377,28 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 .rail figcaption span{font-size:.8125rem;color:var(--mute-d)}
 
 /* SOBRE */
-.about-g{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(40px,7vw,100px);align-items:center}
-.photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;background:var(--violet)}
-.photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);mix-blend-mode:multiply}
-.photo figcaption{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(31,12,51,.82);color:var(--paper);font-size:.8125rem;font-weight:600;backdrop-filter:blur(8px)}
-.photo figcaption svg{width:13px;height:13px;color:var(--violet)}
-.about p{color:var(--mute-l);margin-top:18px;max-width:34em}
-.quote{margin-top:30px;padding-left:20px;border-left:2px solid var(--violet);font-size:1.15rem;font-weight:600;line-height:1.4;letter-spacing:-.01em;max-width:26em}
-.quote small{display:block;font-size:.8125rem;font-weight:400;color:var(--mute-l);margin-top:8px}
-.stats{display:flex;gap:36px;margin-top:34px}
-.stats b{display:block;font-size:1.75rem;font-weight:600;letter-spacing:-.03em;line-height:1}
-.stats span{font-size:.8125rem;color:var(--mute-l)}
-.fit{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:clamp(64px,8vw,104px)}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes ang{to{--ang:360deg}}
+.about-sec{padding-block:0;min-height:720px;display:grid;align-items:center;overflow:hidden}
+.about-photo{position:absolute;left:0;top:0;bottom:0;width:50%;background:var(--night);overflow:hidden;z-index:0}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 40%;filter:grayscale(1) contrast(1.08);opacity:.92}
+.about-photo .ph-tall{display:none}
+.about-photo::before{content:"";position:absolute;inset:0;z-index:1;background:#7b2fd1;mix-blend-mode:multiply;opacity:.5}
+.about-photo::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,transparent 38%,var(--night) 96%),linear-gradient(0deg,var(--night),transparent 22%),linear-gradient(180deg,rgba(31,12,51,.55),transparent 20%)}
+.about-photo .st{position:absolute;z-index:3;left:8%;top:12%;width:64px;height:64px;color:var(--violet);animation:spin2 16s linear infinite}
+.about-photo .hi{position:absolute;z-index:3;left:10%;bottom:12%;transform:rotate(-5deg);padding:10px 16px;border-radius:14px;background:var(--violet);color:var(--night);font-weight:800;font-size:1rem;letter-spacing:-.01em;line-height:1;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);animation:bobhi 3s ease-in-out infinite}
+@keyframes bobhi{50%{transform:rotate(-5deg) translateY(-8px)}}
+.about2{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;padding-block:clamp(90px,10vw,130px)}
+.about-txt{grid-column:2;display:grid;gap:26px;align-content:start}
+.about-txt .kick{margin:0;color:var(--lilac)}
+.astats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.astats div{padding:16px;border-radius:18px}
+.astats b{display:block;font-weight:600;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.astats span{font-size:.82rem;color:var(--mute-d)}
+.sig{display:grid;gap:6px;font-weight:600;font-size:1.05rem;line-height:1.4;padding-left:18px;border-left:3px solid var(--violet)}
+.sig span{font-weight:800;font-size:1.05rem;letter-spacing:-.01em;color:var(--lilac)}
+/* PRA QUEM */
+.fit{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .fit h3{grid-column:1/-1;font-size:1.35rem;margin-bottom:10px}
 .fit div{padding:22px;border-radius:var(--r-l);background:var(--white);box-shadow:var(--sh-l)}
 .fit svg{width:28px;height:28px;margin-bottom:16px;color:var(--violet-ink)}
@@ -396,27 +406,40 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 .fit p{font-size:.875rem;color:var(--mute-l);line-height:1.5}
 .notfor{grid-column:1/-1;font-size:.875rem;color:var(--mute-l);margin-top:6px}
 
+
 /* OFERTA */
-.offer-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(40px,6vw,80px);align-items:center}
-.offer-g .h2{max-width:11em}
-.offer-g .lede{margin-top:18px}
-.exp{background:var(--night);color:var(--paper);border-radius:var(--r-xl);padding:28px;box-shadow:0 50px 90px -40px rgba(31,12,51,.75)}
-.exp-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line-d);margin-bottom:6px}
-.exp-h b{font-weight:600}
-.exp-h span{font-size:.75rem;color:var(--mute-d)}
-.exp dl{display:grid}
-.exp dl div{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-d);font-size:.875rem}
-.exp dt{color:var(--mute-d)}
-.price{padding:24px 0 20px;display:grid;gap:4px}
-.price .old{font-size:.875rem;color:var(--mute-d);text-decoration:line-through}
-.price .now{display:flex;align-items:flex-start;gap:6px;font-weight:600;letter-spacing:-.04em;line-height:1}
-.price .now small{font-size:1rem;margin-top:8px;letter-spacing:0}
-.price .now b{font-size:3.5rem;font-weight:600}
-.price .inst{font-size:.875rem;color:var(--lilac)}
+.offer-sec{overflow:hidden}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:clamp(32px,6vw,90px);align-items:center}
+.offer-txt{display:grid;gap:18px;align-content:start}
+.offer-txt .kick{margin:0}
+.offer-txt .lede{color:#2c1147}
+.price-card{position:relative;isolation:isolate;padding:clamp(26px,3vw,38px);border-radius:30px;background:var(--night);color:var(--paper);display:grid;gap:20px;box-shadow:0 60px 100px -50px rgba(31,12,51,.95)}
+.price-card::before{content:"";position:absolute;inset:-2px;border-radius:32px;padding:2px;background:conic-gradient(from var(--ang),rgba(175,94,255,.15) 0deg,rgba(175,94,255,.15) 250deg,var(--violet) 300deg,#fff 330deg,var(--lilac) 345deg,rgba(175,94,255,.15) 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:ang 3.6s linear infinite;pointer-events:none}
+.price-card::after{content:"";position:absolute;inset:-30px;z-index:-1;border-radius:50px;background:conic-gradient(from var(--ang),transparent 0 280deg,rgba(175,94,255,.55) 330deg,transparent 360deg);filter:blur(30px);animation:ang 3.6s linear infinite;pointer-events:none}
+.pc-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line-d)}
+.pc-h b{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.pc-h span{font-size:.82rem;color:var(--mute-d);white-space:nowrap}
+.violet .kick svg{color:var(--night)}
+.price-card ul{list-style:none;display:grid;gap:11px}
+.price-card li{display:grid;grid-template-columns:20px 1fr;gap:12px;font-size:.98rem;line-height:1.45}
+.price-card li::before{content:"";width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--violet) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%231f0c33' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.price{display:grid;gap:4px}
+.price .old{color:var(--mute-d);font-size:.95rem;text-decoration:line-through}
+.price .now{font-weight:800;font-size:clamp(3.2rem,7vw,4.8rem);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.price .now small{font-size:.36em;letter-spacing:0;vertical-align:1em;margin-right:6px}
+.price .inst{color:var(--lilac);font-weight:600}
 .price .soon{font-size:1.15rem;font-weight:600;color:var(--lilac)}
-.exp .btn{width:100%}
-.guar{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:.8125rem;color:var(--mute-d)}
-.guar svg{flex:none;width:16px;height:16px;color:var(--violet);margin-top:2px}
+.price-card .btn{width:100%;height:56px;font-size:1rem}
+.btn .st{width:17px;height:17px;animation:spin2 7s linear infinite}
+.safe-note{display:flex;gap:10px;align-items:center;font-size:.86rem;color:var(--mute-d)}
+.safe-note svg{flex:0 0 20px;height:20px;color:var(--violet)}
+@media (min-width:1061px){
+  .offer-sec{overflow:visible;z-index:5;padding-block:64px}
+  .offer-sec .lo{overflow:hidden}
+  .offer-sec .price-card{margin-block:-150px}
+  #portfolio{padding-bottom:calc(var(--pad) + 110px)}
+  #duvidas{padding-top:calc(var(--pad) + 110px)}
+}
 
 /* FAQ */
 .faq-g{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(40px,7vw,100px)}
@@ -527,16 +550,106 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
   .foot .wrap{flex-direction:column;align-items:flex-start}
 }
 
+/* ===== logo em contorno, com brilho correndo na borda ===== */
+.lo-clip{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
+.lo{position:absolute;aspect-ratio:1}
+.lo svg{width:100%;height:100%;overflow:visible}
+.lo path{fill:none;vector-effect:non-scaling-stroke}
+.lo .b path{stroke:var(--lo,rgba(217,179,255,.22));stroke-width:1.2}
+.lo .g path{stroke:var(--lo-g,#fff);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:7 43;filter:drop-shadow(0 0 4px var(--violet)) drop-shadow(0 0 10px var(--violet));animation:trace 9s linear infinite}
+.lo .g path:nth-child(2){animation-delay:-2s}.lo .g path:nth-child(3){animation-delay:-4s}.lo .g path:nth-child(4){animation-delay:-6s}.lo .g path:nth-child(5){animation-delay:-7.5s}
+@keyframes trace{to{stroke-dashoffset:-100}}
+.lo-hero{width:min(820px,70vw);right:-12%;top:50%;translate:0 -50%}
+.lo-serie{width:620px;right:-240px;top:-200px}
+.lo-met{width:520px;right:-120px;bottom:-160px;--lo:rgba(31,12,51,.14);--lo-g:#fff}
+.lo-offer{width:min(760px,62vw);left:-12%;top:50%;translate:0 -50%;--lo:rgba(31,12,51,.18);--lo-g:#fff}
+.lo-final{width:760px;left:50%;top:50%;translate:-50% -50%}
+.lo .g path{animation-play-state:var(--lo-run,running)}
+
+/* ===== vidro ===== */
+.glass-l{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%);box-shadow:inset 0 1px 0 rgba(255,255,255,.42),inset 0 -1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,255,255,.13),0 24px 50px -26px rgba(0,0,0,.6)}
+.glass-l.light{background:linear-gradient(135deg,rgba(255,255,255,.62),rgba(255,255,255,.28));box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 0 1px rgba(255,255,255,.55),0 30px 60px -34px rgba(31,12,51,.45)}
+.glass-l::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(160px 110px at var(--mx,22%) var(--my,0%),rgba(255,255,255,.38),transparent 70%);mix-blend-mode:soft-light;transition:background .2s}
+.glass-l.light::before{background:radial-gradient(180px 120px at var(--mx,22%) var(--my,0%),rgba(255,255,255,.9),transparent 70%);mix-blend-mode:overlay}
+html.lq .glass-l{backdrop-filter:url(#liquid) blur(10px) saturate(175%)}
+html.lq .glass-l.light{backdrop-filter:url(#liquid) blur(12px) saturate(160%)}
+.orbs{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orbs i{position:absolute;width:var(--s,320px);height:var(--s,320px);border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--c),transparent 68%);opacity:.5;filter:blur(30px);animation:orb var(--t,18s) ease-in-out infinite alternate}
+@keyframes orb{0%{transform:translate(0,0) scale(1)}50%{transform:translate(var(--x1),var(--y1)) scale(1.15)}100%{transform:translate(var(--x2),var(--y2)) scale(.92)}}
+
+/* cabeçalho em pílula de vidro */
+.top{padding-top:12px;border:0;background:none!important;backdrop-filter:none!important}
+.top .wrap.pill{height:64px;padding:0 8px 0 22px;border-radius:999px;background:linear-gradient(135deg,rgba(43,18,71,.62),rgba(31,12,51,.42))}
+.top.solid .wrap.pill{background:linear-gradient(135deg,rgba(43,18,71,.85),rgba(31,12,51,.72))}
+.hero{padding-top:clamp(130px,14vw,180px)}
+
+/* palco de vidro */
+.win.glass-l{background:linear-gradient(180deg,rgba(42,18,69,.55),rgba(20,7,33,.72));box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 0 0 1px rgba(255,255,255,.08),0 60px 120px -50px rgba(0,0,0,.9),var(--sh-d)}
+.reel button{background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.02));-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+
+/* método em vidro */
+.role.glass-l.light{background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(255,255,255,.3))}
+.role.mid.glass-l{background:linear-gradient(135deg,rgba(43,18,71,.9),rgba(31,12,51,.75));box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 30px 60px -30px rgba(31,12,51,.6)}
+.req.glass-l.light{background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(255,255,255,.22))}
+.flowline{display:none}
+
+/* aulas: painel de prévia com lado em vidro */
+.lp-side{background:linear-gradient(160deg,var(--mist),#e6d4fb)}
+
+/* pra quem em vidro */
+.fit-sec .fit{margin-top:0}
+.fit div.glass-l{background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.35));box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(255,255,255,.6),0 30px 60px -34px rgba(31,12,51,.4)}
+.fit div.glass-l:hover{box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(175,94,255,.5),0 30px 60px -30px rgba(175,94,255,.5)}
+.astats div.glass-l{background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.02))}
+
+/* botões: brilho girando na borda */
+.btn{position:relative;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:-3px;border-radius:inherit;padding:3px;background:conic-gradient(from var(--ang),transparent 0deg,transparent 200deg,rgba(255,255,255,.95) 280deg,var(--lilac) 310deg,var(--violet) 340deg,transparent 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:ang 2.6s linear infinite;pointer-events:none;z-index:-1}
+.btn-g::before,.lp-nav button::before{display:none}
+.violet .btn::before{background:conic-gradient(from var(--ang),transparent 0deg,transparent 200deg,var(--night) 270deg,var(--violet-ink) 310deg,#fff 340deg,transparent 360deg)}
+.price-card .btn::before{background:conic-gradient(from var(--ang),transparent 0deg,transparent 200deg,rgba(255,255,255,.95) 280deg,var(--lilac) 310deg,var(--violet) 340deg,transparent 360deg)}
+.btn-p:hover{background:var(--paper);color:var(--night)}
+
+@media (max-width:1060px){
+  .about-sec{display:block;min-height:0;padding-top:72px}
+  .about-photo{position:relative;width:auto;height:auto;aspect-ratio:4/5;max-width:420px;margin:0 auto;border-radius:28px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+  .about-photo .ph-wide{display:none}
+  .about-photo .ph-tall{display:block;object-position:50% 30%}
+  .about-photo::after{background:linear-gradient(0deg,rgba(31,12,51,.85),transparent 35%)}
+  .about-photo .st{width:48px;height:48px;left:auto;right:7%;top:7%}
+  .about-photo .hi{left:7%;bottom:7%;font-size:.92rem}
+  .about2{grid-template-columns:1fr;padding-block:40px 80px}
+  .about-txt{grid-column:1}
+  .offer{grid-template-columns:1fr}
+  .price-card{max-width:480px}
+}
+@media (max-width:760px){
+  .about-photo{margin-inline:var(--gut)}
+  .astats{gap:6px}
+  .astats div{padding:12px 8px;text-align:center}
+  .astats b{font-size:1.25rem}
+  .astats span{font-size:.7rem;line-height:1.25;display:block}
+  .price-card{padding:24px 20px}
+  .pc-h{flex-direction:column;align-items:flex-start;gap:6px}
+  .top{padding-top:8px}
+  .top .wrap.pill{height:56px;padding:0 6px 0 16px}
+  .lo{opacity:.6}
+  .lo-hero{width:120vw;right:-55%;top:82%}
+  .lo-serie{width:380px;right:-200px;top:-140px}
+  .lo-offer{width:120vw;left:-45%;top:78%}
+  .lo-final{width:130vw;top:80%}
+}
+
 [hidden]{display:none!important}
 
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 456.21 456.21"><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol>
-<symbol id="logo" viewBox="0 0 1200.45 456.21"><path fill="currentColor" d="M566.09,152.04c5.96-4.48,13.89-7.01,23.77-7.58l8.69-.34c7.72-.23,13.23-.74,16.53-1.53,3.29-.79,4.88-2.73,4.77-5.79-.11-3.86-1.42-6.99-3.92-9.37-2.5-2.38-7.21-3.58-14.14-3.58s-12.04,1.22-14.99,3.66c-2.95,2.44-4.77,5.76-5.45,9.97h-21.47c1.48-10.67,6.19-18.57,14.14-23.68,7.95-5.11,17.43-7.67,28.45-7.67,12.04,0,21.58,2.96,28.62,8.86,7.04,5.91,10.56,16.81,10.56,32.71v49.75h-21.81v-6.3c0-3.41.85-6.7,2.56-9.88.45-1.13.68-1.98.68-2.55,0-.68-.29-1.13-.85-1.36l-.68-.17c-.68,0-1.19.31-1.53.94-.34.63-.51,1-.51,1.11-5.34,13.06-15.67,19.59-31.01,19.59-5.57,0-10.76-1.14-15.59-3.41-4.83-2.27-8.66-5.39-11.5-9.37-2.84-3.98-4.26-8.4-4.26-13.29,0-9.31,2.98-16.21,8.94-20.7ZM610.9,156.3c-3.69.97-9.45,1.85-17.29,2.64-4.88.57-8.55,1.85-10.99,3.83-2.44,1.99-3.66,4.91-3.66,8.77,0,3.3,1.28,5.96,3.83,8.01,2.55,2.04,5.88,3.07,9.97,3.07,1.47,0,2.61-.05,3.41-.17,6.7-.91,12.29-3.8,16.78-8.69,4.49-4.88,6.79-12.44,6.9-22.66-2.27,2.5-5.25,4.23-8.94,5.2Z"/><path fill="currentColor" d="M665.33,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M758.35,128.19c3.29-6.76,7.92-12.12,13.89-16.1,5.96-3.97,12.75-5.96,20.36-5.96,12.27,0,21.75,5.45,28.45,16.36.79,1.7,1.7,2.33,2.73,1.87.57-.11.85-.57.85-1.36,0-.57-.4-1.64-1.19-3.24-1.25-2.39-1.88-5.11-1.88-8.18v-4.09h21.81v80.41c0,14.2-3.92,25.01-11.76,32.45-7.84,7.44-18.74,11.16-32.71,11.16s-23.54-3.04-30.75-9.11c-7.21-6.08-11.22-13.72-12.01-22.91h21.47c1.25,9.54,8.23,14.31,20.96,14.31,15.33,0,23-8.35,23-25.04,0-2.95.62-5.62,1.88-8.01.79-1.59,1.19-2.61,1.19-3.07,0-.57-.29-.96-.85-1.19l-.68-.17c-.68,0-1.19.25-1.53.77-.34.51-.51.82-.51.94-6.47,11.13-15.96,16.7-28.45,16.7-7.61,0-14.4-1.99-20.36-5.96-5.96-3.98-10.59-9.34-13.89-16.1-3.3-6.76-4.94-14.17-4.94-22.23s1.64-15.47,4.94-22.23ZM810.14,171.63c3.63-2.22,6.44-5.2,8.43-8.94,1.99-3.75,2.98-7.84,2.98-12.27s-.99-8.52-2.98-12.27c-1.99-3.75-4.8-6.73-8.43-8.94-3.64-2.22-7.78-3.32-12.44-3.32-7.27,0-12.84,2.33-16.7,6.99-3.86,4.66-5.79,10.51-5.79,17.55s1.93,12.89,5.79,17.55c3.86,4.66,9.43,6.99,16.7,6.99,4.66,0,8.8-1.11,12.44-3.32Z"/><path fill="currentColor" d="M867.04,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M981.27,177.51c3.01,2.84,8.09,4.26,15.25,4.26,6.59,0,11.33-.96,14.23-2.9,2.89-1.93,4.34-4.54,4.34-7.84,0-2.16-.94-3.8-2.81-4.94-1.87-1.13-4.46-2.01-7.75-2.64-3.3-.62-8.46-1.33-15.5-2.13-12.27-1.48-20.53-4.8-24.79-9.97-4.26-5.16-6.39-11.1-6.39-17.8,0-5,1.48-9.57,4.43-13.72,2.95-4.14,7.33-7.46,13.12-9.97,5.79-2.5,12.78-3.75,20.95-3.75,11.47,0,20.5,2.7,27.09,8.09,6.59,5.4,10.16,12.35,10.73,20.87h-21.47c-.34-3.41-1.79-6.25-4.34-8.52s-6.73-3.41-12.52-3.41c-10.79,0-16.18,3.07-16.18,9.2,0,1.7.43,3.13,1.28,4.26.85,1.14,2.7,2.16,5.54,3.07,2.84.91,7.04,1.65,12.61,2.22,11.93,1.25,21.21,4,27.86,8.26s9.97,10.65,9.97,19.17c0,9.43-3.55,16.7-10.65,21.81-7.1,5.11-17.24,7.67-30.41,7.67s-22.57-2.81-29.56-8.43c-6.99-5.62-10.71-13.37-11.16-23.25h21.47c.11,4.09,1.67,7.55,4.68,10.39Z"/><path fill="currentColor" d="M1079.15,126.57v41.06c0,3.64.14,6.13.43,7.5.28,1.36,1.02,2.24,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.43-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M1179.32,112.26c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.04,23.85,6.13ZM1172.42,171.46c4.14-5.05,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.06,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M592.5,268.9c-1.19.4-1.93,1.25-2.22,2.55-.29,1.31-.43,3.78-.43,7.41v3.06h24.53v19.08h-24.53v70.87h-21.81v-70.87h-13.63v-19.08h13.63v-5.11c0-7.16.94-12.72,2.81-16.7,1.88-3.97,4.74-6.79,8.6-8.43,3.86-1.65,8.92-2.47,15.16-2.47h19.76v19.08h-15.16c-3.29,0-5.54.2-6.73.6Z"/><path fill="currentColor" d="M687.31,286.71c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.05,23.85,6.13ZM680.41,345.91c4.14-5.06,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.05,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M795.15,290.28c5.79,6.48,8.69,15.96,8.69,28.45v53.15h-21.81v-45.66c0-9.77-1.31-16.53-3.92-20.27-2.61-3.75-6.87-5.62-12.78-5.62-4.2,0-8.15,1.48-11.84,4.43-3.69,2.95-6.67,7.1-8.94,12.44-2.27,5.34-3.41,11.36-3.41,18.06v36.63h-21.81v-89.95h21.81v5.62c0,2.62-.23,4.83-.68,6.64-.46,1.82-1.14,3.69-2.04,5.62-.57,1.36-.85,2.28-.85,2.73,0,1.02.45,1.59,1.36,1.7h.51c.79,0,1.48-.68,2.04-2.04,2.5-5.56,6.36-10.57,11.58-14.99,5.22-4.43,11.36-6.65,18.4-6.65,9.99,0,17.89,3.24,23.68,9.71Z"/><path fill="currentColor" d="M848.82,301.02v41.06c0,3.63.14,6.13.43,7.49.28,1.36,1.02,2.25,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.44-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M966.88,332.37h-65.42c.79,6.81,3.29,12.15,7.5,16.01,4.2,3.86,9.71,5.79,16.53,5.79,9.2,0,15.28-4.54,18.23-13.63h22.15c-2.04,9.88-6.45,17.8-13.2,23.76-6.76,5.96-15.87,8.94-27.34,8.94-9.43,0-17.55-1.98-24.36-5.96-6.81-3.98-11.98-9.46-15.5-16.44-3.52-6.99-5.28-14.96-5.28-23.94s1.82-17.46,5.45-24.45c3.63-6.99,8.83-12.38,15.59-16.18,6.76-3.81,14.68-5.71,23.76-5.71,7.38,0,14.28,1.56,20.7,4.68,6.42,3.13,11.64,8.07,15.67,14.82,4.03,6.76,6.05,15.3,6.05,25.64,0,1.82-.17,4.03-.51,6.64ZM945.58,317.37c-.45-5.68-2.38-10.28-5.79-13.8-3.41-3.52-8.12-5.28-14.14-5.28-12.95,0-20.73,6.36-23.34,19.08h43.27Z"/><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol></svg>
+<symbol id="logo" viewBox="0 0 1200.45 456.21"><path fill="currentColor" d="M566.09,152.04c5.96-4.48,13.89-7.01,23.77-7.58l8.69-.34c7.72-.23,13.23-.74,16.53-1.53,3.29-.79,4.88-2.73,4.77-5.79-.11-3.86-1.42-6.99-3.92-9.37-2.5-2.38-7.21-3.58-14.14-3.58s-12.04,1.22-14.99,3.66c-2.95,2.44-4.77,5.76-5.45,9.97h-21.47c1.48-10.67,6.19-18.57,14.14-23.68,7.95-5.11,17.43-7.67,28.45-7.67,12.04,0,21.58,2.96,28.62,8.86,7.04,5.91,10.56,16.81,10.56,32.71v49.75h-21.81v-6.3c0-3.41.85-6.7,2.56-9.88.45-1.13.68-1.98.68-2.55,0-.68-.29-1.13-.85-1.36l-.68-.17c-.68,0-1.19.31-1.53.94-.34.63-.51,1-.51,1.11-5.34,13.06-15.67,19.59-31.01,19.59-5.57,0-10.76-1.14-15.59-3.41-4.83-2.27-8.66-5.39-11.5-9.37-2.84-3.98-4.26-8.4-4.26-13.29,0-9.31,2.98-16.21,8.94-20.7ZM610.9,156.3c-3.69.97-9.45,1.85-17.29,2.64-4.88.57-8.55,1.85-10.99,3.83-2.44,1.99-3.66,4.91-3.66,8.77,0,3.3,1.28,5.96,3.83,8.01,2.55,2.04,5.88,3.07,9.97,3.07,1.47,0,2.61-.05,3.41-.17,6.7-.91,12.29-3.8,16.78-8.69,4.49-4.88,6.79-12.44,6.9-22.66-2.27,2.5-5.25,4.23-8.94,5.2Z"/><path fill="currentColor" d="M665.33,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M758.35,128.19c3.29-6.76,7.92-12.12,13.89-16.1,5.96-3.97,12.75-5.96,20.36-5.96,12.27,0,21.75,5.45,28.45,16.36.79,1.7,1.7,2.33,2.73,1.87.57-.11.85-.57.85-1.36,0-.57-.4-1.64-1.19-3.24-1.25-2.39-1.88-5.11-1.88-8.18v-4.09h21.81v80.41c0,14.2-3.92,25.01-11.76,32.45-7.84,7.44-18.74,11.16-32.71,11.16s-23.54-3.04-30.75-9.11c-7.21-6.08-11.22-13.72-12.01-22.91h21.47c1.25,9.54,8.23,14.31,20.96,14.31,15.33,0,23-8.35,23-25.04,0-2.95.62-5.62,1.88-8.01.79-1.59,1.19-2.61,1.19-3.07,0-.57-.29-.96-.85-1.19l-.68-.17c-.68,0-1.19.25-1.53.77-.34.51-.51.82-.51.94-6.47,11.13-15.96,16.7-28.45,16.7-7.61,0-14.4-1.99-20.36-5.96-5.96-3.98-10.59-9.34-13.89-16.1-3.3-6.76-4.94-14.17-4.94-22.23s1.64-15.47,4.94-22.23ZM810.14,171.63c3.63-2.22,6.44-5.2,8.43-8.94,1.99-3.75,2.98-7.84,2.98-12.27s-.99-8.52-2.98-12.27c-1.99-3.75-4.8-6.73-8.43-8.94-3.64-2.22-7.78-3.32-12.44-3.32-7.27,0-12.84,2.33-16.7,6.99-3.86,4.66-5.79,10.51-5.79,17.55s1.93,12.89,5.79,17.55c3.86,4.66,9.43,6.99,16.7,6.99,4.66,0,8.8-1.11,12.44-3.32Z"/><path fill="currentColor" d="M867.04,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M981.27,177.51c3.01,2.84,8.09,4.26,15.25,4.26,6.59,0,11.33-.96,14.23-2.9,2.89-1.93,4.34-4.54,4.34-7.84,0-2.16-.94-3.8-2.81-4.94-1.87-1.13-4.46-2.01-7.75-2.64-3.3-.62-8.46-1.33-15.5-2.13-12.27-1.48-20.53-4.8-24.79-9.97-4.26-5.16-6.39-11.1-6.39-17.8,0-5,1.48-9.57,4.43-13.72,2.95-4.14,7.33-7.46,13.12-9.97,5.79-2.5,12.78-3.75,20.95-3.75,11.47,0,20.5,2.7,27.09,8.09,6.59,5.4,10.16,12.35,10.73,20.87h-21.47c-.34-3.41-1.79-6.25-4.34-8.52s-6.73-3.41-12.52-3.41c-10.79,0-16.18,3.07-16.18,9.2,0,1.7.43,3.13,1.28,4.26.85,1.14,2.7,2.16,5.54,3.07,2.84.91,7.04,1.65,12.61,2.22,11.93,1.25,21.21,4,27.86,8.26s9.97,10.65,9.97,19.17c0,9.43-3.55,16.7-10.65,21.81-7.1,5.11-17.24,7.67-30.41,7.67s-22.57-2.81-29.56-8.43c-6.99-5.62-10.71-13.37-11.16-23.25h21.47c.11,4.09,1.67,7.55,4.68,10.39Z"/><path fill="currentColor" d="M1079.15,126.57v41.06c0,3.64.14,6.13.43,7.5.28,1.36,1.02,2.24,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.43-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M1179.32,112.26c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.04,23.85,6.13ZM1172.42,171.46c4.14-5.05,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.06,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M592.5,268.9c-1.19.4-1.93,1.25-2.22,2.55-.29,1.31-.43,3.78-.43,7.41v3.06h24.53v19.08h-24.53v70.87h-21.81v-70.87h-13.63v-19.08h13.63v-5.11c0-7.16.94-12.72,2.81-16.7,1.88-3.97,4.74-6.79,8.6-8.43,3.86-1.65,8.92-2.47,15.16-2.47h19.76v19.08h-15.16c-3.29,0-5.54.2-6.73.6Z"/><path fill="currentColor" d="M687.31,286.71c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.05,23.85,6.13ZM680.41,345.91c4.14-5.06,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.05,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M795.15,290.28c5.79,6.48,8.69,15.96,8.69,28.45v53.15h-21.81v-45.66c0-9.77-1.31-16.53-3.92-20.27-2.61-3.75-6.87-5.62-12.78-5.62-4.2,0-8.15,1.48-11.84,4.43-3.69,2.95-6.67,7.1-8.94,12.44-2.27,5.34-3.41,11.36-3.41,18.06v36.63h-21.81v-89.95h21.81v5.62c0,2.62-.23,4.83-.68,6.64-.46,1.82-1.14,3.69-2.04,5.62-.57,1.36-.85,2.28-.85,2.73,0,1.02.45,1.59,1.36,1.7h.51c.79,0,1.48-.68,2.04-2.04,2.5-5.56,6.36-10.57,11.58-14.99,5.22-4.43,11.36-6.65,18.4-6.65,9.99,0,17.89,3.24,23.68,9.71Z"/><path fill="currentColor" d="M848.82,301.02v41.06c0,3.63.14,6.13.43,7.49.28,1.36,1.02,2.25,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.44-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M966.88,332.37h-65.42c.79,6.81,3.29,12.15,7.5,16.01,4.2,3.86,9.71,5.79,16.53,5.79,9.2,0,15.28-4.54,18.23-13.63h22.15c-2.04,9.88-6.45,17.8-13.2,23.76-6.76,5.96-15.87,8.94-27.34,8.94-9.43,0-17.55-1.98-24.36-5.96-6.81-3.98-11.98-9.46-15.5-16.44-3.52-6.99-5.28-14.96-5.28-23.94s1.82-17.46,5.45-24.45c3.63-6.99,8.83-12.38,15.59-16.18,6.76-3.81,14.68-5.71,23.76-5.71,7.38,0,14.28,1.56,20.7,4.68,6.42,3.13,11.64,8.07,15.67,14.82,4.03,6.76,6.05,15.3,6.05,25.64,0,1.82-.17,4.03-.51,6.64ZM945.58,317.37c-.45-5.68-2.38-10.28-5.79-13.8-3.41-3.52-8.12-5.28-14.14-5.28-12.95,0-20.73,6.36-23.34,19.08h43.27Z"/><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol><filter id="liquid" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.006 0.011" numOctaves="2" seed="11" result="n"/><feGaussianBlur in="n" stdDeviation="2.5" result="nb"/><feDisplacementMap in="SourceGraphic" in2="nb" scale="42" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
 
 <header class="top" id="top">
-  <div class="wrap">
+  <div class="wrap pill glass-l">
     <a class="brand" href="#inicio" aria-label="Augusto Fonte, início"><svg class="lg" viewBox="0 0 1200.45 456.21" aria-hidden="true"><use href="#logo"/></svg><span class="with">com Claude</span></a>
     <nav class="nav" aria-label="Seções"><a href="#serie">Motions</a><a href="#metodo">Método</a><a href="#aulas">Aulas</a><a href="#portfolio">Portfólio</a><a href="#duvidas">Dúvidas</a></nav>
     <a class="btn btn-p js-buy" href="#oferta">Quero o curso</a>
@@ -546,7 +659,8 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 <main>
 <!-- HERO -->
 <section class="band hero" id="inicio" aria-labelledby="h1">
-  <svg class="hero-bg" viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg>
+  <div class="orbs" aria-hidden="true"><i style="--c:#af5eff;--s:420px;left:58%;top:8%;--x1:-80px;--y1:60px;--x2:40px;--y2:-30px;--t:16s"></i><i style="--c:#7a2fd1;--s:360px;left:-6%;top:55%;--x1:90px;--y1:-40px;--x2:-20px;--y2:30px;--t:20s"></i></div>
+  <div class="lo-clip" aria-hidden="true"><div class="lo lo-hero"></div></div>
   <div class="wrap hero-g">
     <div>
       <p class="kick in"><svg aria-hidden="true"><use href="#star"/></svg>Curso online de Augusto Fonte</p>
@@ -557,7 +671,7 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
     </div>
 
     <div class="stage in" id="stage" aria-label="Demonstração: um pedido ao Claude vira um motion">
-      <div class="win">
+      <div class="win glass-l">
         <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-t">Projeto Jardineiro</span><span class="model" id="sgModel"><svg aria-hidden="true"><use href="#star"/></svg><span>Opus 5.5</span></span></div>
         <div class="win-body">
           <p class="msg-me" id="sgMe" aria-live="polite"></p>
@@ -623,6 +737,7 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 
 <!-- SÉRIE -->
 <section class="band dark" id="serie" aria-labelledby="h-serie">
+  <div class="lo-clip" aria-hidden="true"><div class="lo lo-serie"></div></div>
   <div class="wrap">
     <div class="serie-head">
       <div class="sec-head">
@@ -640,6 +755,8 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 
 <!-- MÉTODO -->
 <section class="band lilac" id="metodo" aria-labelledby="h-met">
+  <div class="orbs" aria-hidden="true"><i style="--c:#af5eff;--s:460px;left:62%;top:-10%;--x1:-120px;--y1:80px;--x2:30px;--y2:20px;--t:18s"></i><i style="--c:#faf5ff;--s:380px;left:4%;top:50%;--x1:120px;--y1:-60px;--x2:-30px;--y2:20px;--t:22s"></i></div>
+  <div class="lo-clip" aria-hidden="true"><div class="lo lo-met"></div></div>
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2" id="h-met">Dois modelos, uma skill e a sua direção.</h2>
@@ -647,11 +764,11 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
     </div>
     <div class="roles">
       <span class="flowline" aria-hidden="true"></span>
-      <article class="role"><span class="ord">1</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></span><h3>Opus 5.5</h3><p class="who">O diretor</p><p>Lê a marca e as referências, decide a arte e acerta a peça-mãe. Fica com ele até você aprovar a animação.</p></article>
-      <article class="role mid"><span class="ord">2</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 456.21 456.21"><use href="#star"/></svg></span><h3>Skill motion-studio</h3><p class="who">O manual</p><p>Guarda o meu jeito de fazer motion: direção de arte, timing, trilha e entrega. Você chama com /motion-studio.</p></article>
-      <article class="role"><span class="ord">3</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Sonnet 5.5</h3><p class="who">O produtor</p><p>Com a peça-mãe aprovada, faz as próximas no mesmo padrão: variações, formatos e a série inteira.</p></article>
+      <article class="role glass-l light"><span class="ord">1</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></span><h3>Opus 5.5</h3><p class="who">O diretor</p><p>Lê a marca e as referências, decide a arte e acerta a peça-mãe. Fica com ele até você aprovar a animação.</p></article>
+      <article class="role mid glass-l"><span class="ord">2</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 456.21 456.21"><use href="#star"/></svg></span><h3>Skill motion-studio</h3><p class="who">O manual</p><p>Guarda o meu jeito de fazer motion: direção de arte, timing, trilha e entrega. Você chama com /motion-studio.</p></article>
+      <article class="role glass-l light"><span class="ord">3</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Sonnet 5.5</h3><p class="who">O produtor</p><p>Com a peça-mãe aprovada, faz as próximas no mesmo padrão: variações, formatos e a série inteira.</p></article>
     </div>
-    <div class="req"><span class="pro">Claude Pro</span><p><b>Pra acompanhar, você só precisa do plano Pro e do app do Claude no computador,</b> Mac ou Windows. É no app que você conecta as pastas do projeto.</p></div>
+    <div class="req glass-l light"><span class="pro">Claude Pro</span><p><b>Pra acompanhar, você só precisa do plano Pro e do app do Claude no computador,</b> Mac ou Windows. É no app que você conecta as pastas do projeto.</p></div>
   </div>
 </section>
 
@@ -834,6 +951,47 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
   </div>
 </section>
 
+<!-- SOBRE -->
+<section class="band dark about-sec" aria-labelledby="h-sobre">
+  <div class="about-photo">
+    <img class="ph-wide" src="img/ph-wide.jpg" alt="Augusto Fonte sentado num banco em estúdio, foto em preto e branco" width="896" height="1080" loading="lazy"><img class="ph-tall" src="img/ph-tall.jpg" alt="" width="640" height="800" loading="lazy">
+    <svg class="st" viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg>
+    <span class="hi" aria-hidden="true">muito prazer!</span>
+  </div>
+  <div class="wrap about2">
+    <div class="about-txt">
+      <p class="kick"><svg aria-hidden="true"><use href="#star"/></svg>Quem está do outro lado da tela</p>
+      <h2 class="h2" id="h-sobre">Faço criativo desde quando o Facebook barrava anúncio com mais de 20% de texto.</h2>
+      <p class="lede">Eu sou o Augusto, designer e diretor criativo. Trabalho com branding, identidade visual, criativos, sites e motion, e hoje também produzo conteúdo com IA. Comecei numa agência de marketing digital fazendo criativo todo dia. Foi ali que nasceu o olhar que hoje dirige o Claude nos meus motions.</p>
+      <div class="astats">
+        <div class="glass-l"><b>7 anos</b><span>de mercado</span></div>
+        <div class="glass-l"><b data-count="300" data-prefix="+">+300</b><span>anúncios pra Orayon</span></div>
+        <div class="glass-l"><b data-count="2000" data-prefix="+">+2.000</b><span>peças em 10 meses</span></div>
+      </div>
+      <p class="sig">Sem fórmula mágica. Só o processo real que eu uso todo dia com clientes.<span>Augusto Fonte</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM -->
+<section class="band light fit-sec" aria-labelledby="h-fit">
+  <div class="orbs" aria-hidden="true"><i style="--c:#d9b3ff;--s:420px;left:8%;top:10%;--x1:120px;--y1:40px;--x2:-20px;--y2:-30px;--t:18s"></i><i style="--c:#af5eff;--s:340px;left:70%;top:40%;--x1:-100px;--y1:-40px;--x2:20px;--y2:30px;--t:21s"></i></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="h-fit">Pra quem quer motion sem complicação.</h2>
+      <p class="lede">Se você já pensa como designer ou vende com conteúdo, o curso encaixa no que você faz hoje.</p>
+    </div>
+    <div class="fit">
+      
+      <div class="glass-l light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg><b>Designers e diretores de arte</b><p>Motion no portfólio sem aprender mais um programa pesado.</p></div>
+      <div class="glass-l light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><b>Social medias</b><p>Reels, Stories e Status na identidade de cada cliente, toda semana.</p></div>
+      <div class="glass-l light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg><b>Donos de negócio</b><p>Promo de produto ou serviço com cara profissional, sem depender de produtora.</p></div>
+      <div class="glass-l light"><svg viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg><b>Quem já usa IA</b><p>Um processo que se repete, com o modelo certo e a skill, em vez de pedir no escuro.</p></div>
+      <p class="notfor">Não é pra você se procura VFX de cinema, um curso de After Effects ou só assistir sem praticar.</p>
+    </div>
+  </div>
+</section>
+
 <!-- PORTFÓLIO -->
 <section class="band dark" id="portfolio" aria-labelledby="h-pf">
   <div class="wrap pf-head">
@@ -854,53 +1012,26 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 <figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/transicao.jpg" data-src="videos/transicao.mp4" aria-label="Transição de 1 segundo"></video></div><figcaption><b>Transição de 1 segundo</b><span>Transição</span></figcaption></figure></div>
 </section>
 
-<!-- SOBRE -->
-<section class="band light" aria-labelledby="h-sobre">
-  <div class="wrap">
-    <div class="about-g">
-      <figure class="photo"><img src="img/ph-tall.jpg" alt="Augusto Fonte sentado num banco, em estúdio" width="640" height="800" loading="lazy"><figcaption><svg aria-hidden="true"><use href="#star"/></svg>Augusto Fonte</figcaption></figure>
-      <div class="about">
-        <h2 class="h2" id="h-sobre">Designer primeiro. Motion com IA depois.</h2>
-        <p>Sou designer e diretor criativo. Trabalho com branding, identidade visual, criativos, sites, personagens 3D e motion graphics.</p>
-        <p>Comecei numa agência, criando criativo todo dia. Hoje uso o Claude como estúdio de motion, sem perder o olhar de designer: é ele que decide o que vale.</p>
-        <blockquote class="quote">Não estou te ensinando um programa. Estou te ensinando o meu jeito de fazer motion.<small>Augusto Fonte</small></blockquote>
-        <div class="stats"><div><b class="num">7 anos</b><span>de mercado</span></div><div><b class="num">13</b><span>motions na galeria</span></div><div><b>1 skill</b><span>pública no GitHub</span></div></div>
-      </div>
-    </div>
-    <div class="fit">
-      <h3>Pra quem é</h3>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg><b>Designers e diretores de arte</b><p>Motion no portfólio sem aprender mais um programa pesado.</p></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><b>Social medias</b><p>Reels, Stories e Status na identidade de cada cliente, toda semana.</p></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg><b>Donos de negócio</b><p>Promo de produto ou serviço com cara profissional, sem depender de produtora.</p></div>
-      <div><svg viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg><b>Quem já usa IA</b><p>Um processo que se repete, com o modelo certo e a skill, em vez de pedir no escuro.</p></div>
-      <p class="notfor">Não é pra você se procura VFX de cinema, um curso de After Effects ou só assistir sem praticar.</p>
-    </div>
-  </div>
-</section>
-
 <!-- OFERTA -->
-<section class="band violet" id="oferta" aria-labelledby="h-oferta">
-  <div class="wrap offer-g">
-    <div>
+<section class="band violet offer-sec" id="oferta" aria-labelledby="h-oferta">
+  <div class="lo-clip" aria-hidden="true"><div class="lo lo-offer"></div></div>
+  <div class="wrap offer">
+    <div class="offer-txt">
+      <p class="kick"><svg aria-hidden="true"><use href="#star"/></svg>Comece hoje</p>
       <h2 class="h2" id="h-oferta">Termine o primeiro motion e melhore no próximo.</h2>
       <p class="lede">Separe uma marca real, monte a pasta e saia das aulas com um motion seu, nos dois formatos.</p>
     </div>
-    <div class="exp">
-      <div class="exp-h"><b>Motion Graphics com Claude</b><span>com Augusto Fonte</span></div>
-      <dl>
-        <div><dt>Aulas</dt><dd>14 em vídeo, em 5 módulos</dd></div>
-        <div><dt>PDFs</dt><dd>19: um por aula e um por módulo</dd></div>
-        <div><dt>Skill</dt><dd>motion-studio, da instalação ao uso</dd></div>
-        <div><dt>Entrega</dt><dd>MP4 em 16:9 e 9:16, com trilha</dd></div>
-      </dl>
-      <div class="price">
-        <span class="old" id="priceOld" hidden></span>
-        <div class="now" hidden><small>R$</small><b id="priceNow"></b></div>
-        <span class="inst" id="priceInst" hidden></span>
-        <span class="soon" id="priceSoon">Valor de lançamento em breve</span>
-      </div>
-      <a class="btn btn-p js-buy" href="#oferta">Quero o curso agora</a>
-      <p class="guar" id="guaranteeWrap" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span id="guarantee"></span></p>
+    <div class="price-card">
+      <div class="pc-h"><b>Motion Graphics com Claude</b><span>com Augusto Fonte</span></div>
+      <ul>
+        <li>14 aulas em vídeo, em 5 módulos</li>
+        <li>19 PDFs complementares, um por aula e um por módulo</li>
+        <li>Skill motion-studio, da instalação ao uso</li>
+        <li>Processo completo, do briefing ao MP4 em 16:9 e 9:16</li>
+      </ul>
+      <div class="price"><span class="old" id="priceOld"></span><span class="now"><small>R$</small><span id="priceNow"></span></span><span class="inst" id="priceInst"></span><span class="soon" id="priceSoon" hidden>Valor de lançamento em breve</span></div>
+      <a class="btn btn-p js-buy" href="#oferta"><svg class="st" aria-hidden="true"><use href="#star"/></svg>Quero o curso agora</a>
+      <p class="safe-note" id="guaranteeWrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><span id="guarantee"></span></p>
     </div>
   </div>
 </section>
@@ -927,6 +1058,7 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 
 <!-- FINAL -->
 <section class="band dark final" aria-labelledby="h-final">
+  <div class="lo-clip" aria-hidden="true"><div class="lo lo-final"></div></div>
   <div class="wrap">
     <svg class="f-star" viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg>
     <h2 class="h2" id="h-final">O próximo motion começa numa mensagem.</h2>
@@ -949,9 +1081,9 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:ba
 const OFERTA = {
   checkout: "#oferta",          // link do checkout (Hotmart, Kiwify etc.)
   precoDe: "",                   // ex.: "R$ 297"  (deixe vazio pra esconder)
-  preco: "",                     // ex.: "197"  (vazio mostra "Valor de lançamento em breve")
-  parcelas: "",                  // ex.: "ou 12x de R$ 19,70"
-  garantia: ""                   // ex.: "7 dias de garantia: se não for pra você, devolvemos o valor."
+  preco: "297",                  // vazio mostra "Valor de lançamento em breve"
+  parcelas: "ou 12x de R$ 29,70",
+  garantia: "7 dias de garantia: se não for pra você, devolvemos o valor."
 };
 /* ============================================== */
 
@@ -984,7 +1116,46 @@ $$("video[data-src]").forEach(v => VIO && VIO.observe(v));
   if (OFERTA.checkout && OFERTA.checkout !== "#oferta") $$(".js-buy").forEach(a => { a.href = OFERTA.checkout; a.target = "_blank"; a.rel = "noopener"; });
 })();
 
-/* topo e botão flutuante */
+/* logo em contorno: copia o desenho da estrela e põe um brilho correndo na borda */
+(() => {
+  const star = document.getElementById("star"); if (!star) return;
+  const paths = star.innerHTML;
+  $$(".lo").forEach(el => {
+    el.innerHTML = `<svg viewBox="-4 -4 464.21 464.21"><g class="b">${paths}</g><g class="g">${paths}</g></svg>`;
+    $$(".g path", el).forEach(p => p.setAttribute("pathLength", "100"));
+    if ("IntersectionObserver" in window) new IntersectionObserver(es => el.style.setProperty("--lo-run", es[0].isIntersecting ? "running" : "paused")).observe(el.parentElement);
+  });
+})();
+
+/* vidro: reflexo segue o cursor; liquid glass só em Chromium */
+(() => {
+  const ch = navigator.userAgentData?.brands?.some(b => /Chromium|Google Chrome|Microsoft Edge/.test(b.brand));
+  if (ch) document.documentElement.classList.add("lq");
+  let raf = 0, ev;
+  addEventListener("pointermove", e => {
+    ev = e; if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0; const g = ev.target.closest && ev.target.closest(".glass-l"); if (!g) return;
+      const r = g.getBoundingClientRect();
+      g.style.setProperty("--mx", ((ev.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+      g.style.setProperty("--my", ((ev.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+    });
+  }, { passive: true });
+})();
+
+/* contadores */
+(() => {
+  if (RM || !("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; io.unobserve(e.target);
+    const el = e.target, end = +el.dataset.count, pre = el.dataset.prefix || "", t0 = performance.now();
+    const st = t => { const p = Math.min(1, (t - t0) / 1400); el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("pt-BR"); if (p < 1) requestAnimationFrame(st); };
+    requestAnimationFrame(st);
+  }), { threshold: .6 });
+  $$("[data-count]").forEach(el => io.observe(el));
+})();
+
+/* topo */
 (() => {
   const top = $("#top");
   const upd = () => top.classList.toggle("solid", scrollY > 30);
