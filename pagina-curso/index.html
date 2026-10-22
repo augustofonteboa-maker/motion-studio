@@ -5,577 +5,677 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Motion Graphics com Claude</title>
 <meta name="description" content="Curso online de Augusto Fonte: como fazer motion graphics conversando com o Claude. 14 aulas, 5 módulos, a skill motion-studio e vídeos prontos em 16:9 e 9:16.">
-<meta property="og:title" content="Motion Graphics com Claude — Augusto Fonte">
-<meta property="og:description" content="Motion bom não nasce no After Effects. Nasce numa conversa. 14 aulas, da marca ao MP4 pronto.">
-<meta name="theme-color" content="#af5eff">
-<link rel="preload" href="fonts/polysans-800.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:title" content="Motion Graphics com Claude, por Augusto Fonte">
+<meta property="og:description" content="Motion bom nasce numa conversa. 14 aulas, da marca ao MP4 pronto.">
+<meta name="theme-color" content="#1f0c33">
+<link rel="preload" href="fonts/polysans-600.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:"PolySans";src:url(fonts/polysans-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"PolySans";src:url(fonts/polysans-600.woff2) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"PolySans";src:url(fonts/polysans-800.woff2) format("woff2");font-weight:800;font-display:swap}
-:root{--blue:#af5eff;--ink:#1f0c33;--yellow:#5be3b5;--pink:#ff6fae;--orange:#d9b3ff;--pale:#faf5ff;--white:#fff;--lilac:#d9b3ff;--vtext:#7a2fd1;
-  --disp:"PolySans","Helvetica Neue",Arial,sans-serif;--body:"PolySans","Helvetica Neue",Arial,sans-serif;
-  --ease:cubic-bezier(.7,0,.2,1);--w:1200px;--g:clamp(20px,4vw,40px)}
-*,*::before,*::after{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
-body{font:400 1.0625rem/1.55 var(--body);color:var(--ink);background:var(--pale);-webkit-font-smoothing:antialiased;overflow-x:clip}
+
+:root{
+  --night:#1f0c33;--night-2:#160824;--night-3:#2a1245;
+  --violet:#af5eff;--violet-ink:#7a2fd1;--lilac:#d9b3ff;--paper:#faf5ff;--white:#fff;
+  --mist:#f1e7fc;
+  --mute-d:rgba(250,245,255,.68);--mute-l:#66567a;
+  --line-d:rgba(217,179,255,.14);--line-l:rgba(31,12,51,.1);
+  --r-xl:28px;--r-l:20px;--r-m:14px;--r-s:10px;
+  --sh-l:0 1px 0 rgba(31,12,51,.04),0 24px 60px -30px rgba(31,12,51,.32);
+  --sh-d:0 40px 90px -40px rgba(175,94,255,.55);
+  --ease:cubic-bezier(.7,0,.2,1);--out:cubic-bezier(.2,.8,.2,1);
+  --wrap:1180px;--gut:24px;
+  --pad:clamp(84px,10vw,136px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"PolySans",system-ui,sans-serif;font-size:1rem;line-height:1.6;color:var(--night);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,video,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 a{color:inherit}
-button{font:inherit;color:inherit}
-:focus-visible{outline:4px solid var(--orange);outline-offset:3px}
-.wrap{width:min(var(--w),100% - 2 * var(--g));margin-inline:auto}
-.band{padding:clamp(72px,10vw,136px) 0;position:relative}
-.on-blue{background:var(--blue);color:var(--ink)}
-.on-ink{background:var(--ink);color:#fff}
-.on-pale{background:var(--pale)}
-.on-yellow{background:var(--lilac)}
-.on-pink{background:var(--yellow)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(var(--wrap),100% - var(--gut)*2);margin-inline:auto}
 
 /* tipografia */
-.d1,.d2,.d3{font-family:var(--disp);font-weight:800;text-wrap:balance}
-.d1{font-size:clamp(2.4rem,5.6vw,5rem);line-height:.96;letter-spacing:-.03em}
-.d2{font-size:clamp(2rem,4.4vw,3.5rem);line-height:1.02;letter-spacing:-.025em}
-.d3{font-size:clamp(1.35rem,2.2vw,1.8rem);line-height:1.05}
-.lede{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:54ch;line-height:1.5}
-.sec-h{display:grid;gap:20px;margin-bottom:clamp(36px,5vw,64px);max-width:860px}
-.sec-h .lede{opacity:.86}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.h1{font-size:clamp(2.3rem,1.5rem + 2.3vw,3.3rem);letter-spacing:-.035em;line-height:1.02}
+.h2{font-size:clamp(1.85rem,1.35rem + 1.5vw,2.6rem);letter-spacing:-.03em}
+.h3{font-size:1.2rem;line-height:1.25}
+.lede{font-size:clamp(1.02rem,.98rem + .2vw,1.125rem);line-height:1.6;max-width:34em}
+.small{font-size:.875rem}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:.875rem;font-weight:600;margin-bottom:18px}
+.kick svg{width:14px;height:14px;color:var(--violet)}
+.num{font-variant-numeric:tabular-nums}
+
+/* faixas */
+.band{position:relative;padding-block:var(--pad);isolation:isolate}
+.dark{background:var(--night);color:var(--paper)}
+.dark .mute,.dark .lede{color:var(--mute-d)}
+.light{background:var(--paper)}
+.light .mute,.light .lede{color:var(--mute-l)}
+.lilac{background:var(--lilac)}
+.lilac .lede,.lilac .mute{color:#4a3263}
+.violet{background:var(--violet)}
+.violet .lede{color:#2c1147}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(40px,5vw,64px);max-width:640px}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
 
 /* botões */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border:3px solid var(--ink);border-radius:12px;background:var(--yellow);color:var(--ink);font:600 1rem/1 var(--body);text-decoration:none;box-shadow:5px 5px 0 var(--ink);transition:transform .16s var(--ease),box-shadow .16s var(--ease);cursor:pointer}
-.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
-.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
-.btn svg{width:20px;height:20px}
-.btn.line{background:transparent;color:inherit;border-color:currentColor;box-shadow:5px 5px 0 currentColor}
-.btn.dark{background:var(--ink);color:#fff;box-shadow:5px 5px 0 var(--blue)}
-.btn.sm{padding:11px 18px;font-size:.95rem;box-shadow:4px 4px 0 var(--ink)}
-.btn[disabled]{opacity:.5;pointer-events:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .35s var(--out),background .25s,box-shadow .35s;white-space:nowrap}
+.btn svg{width:16px;height:16px}
+.btn-p{background:var(--violet);color:var(--night);box-shadow:0 10px 30px -10px rgba(175,94,255,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(175,94,255,.85),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-g{border:1px solid var(--line-d);color:var(--paper)}
+.btn-g:hover{background:rgba(217,179,255,.08)}
+.btn-n{background:var(--night);color:var(--paper)}
+.btn-n:hover{transform:translateY(-2px)}
 
 /* topo */
-.top{position:fixed;inset:0 0 auto;z-index:50;color:var(--ink);transition:background-color .25s,color .25s,box-shadow .25s}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.top.solid{background:var(--white);color:var(--ink);box-shadow:0 3px 0 var(--ink)}
-.lockup{display:flex;align-items:center;gap:14px;text-decoration:none;font:800 1.05rem var(--disp);}
-.lockup .logo{height:26px;width:auto;aspect-ratio:1200.45/456.21;fill:currentColor}
-.lockup .x{display:flex;align-items:center;gap:8px}
-.lockup .x svg{width:20px;height:20px}
-.lockup i{width:3px;height:22px;background:currentColor;opacity:.4}
-.top nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);font-weight:600;font-size:.96rem}
-.top nav a:not(.btn){text-decoration:none;padding:6px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 3px no-repeat;transition:background-size .25s var(--ease)}
-.top nav a:not(.btn):hover{background-size:100% 3px}
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(31,12,51,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line-d)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;color:var(--paper);text-decoration:none}
+.brand .lg{height:26px;width:auto;color:var(--violet)}
+.brand .with{font-size:.8125rem;color:var(--mute-d);padding-left:14px;border-left:1px solid var(--line-d)}
+.nav{display:flex;gap:28px;font-size:.875rem;color:var(--mute-d)}
+.nav a{text-decoration:none;transition:color .2s}.nav a:hover{color:var(--paper)}
+.top .btn{height:40px;padding:0 18px;font-size:.85rem}
 
-/* hero */
-.hero{padding-top:clamp(112px,13vw,160px);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(36px,6vw,80px);align-items:center}
-.hero h1{margin-bottom:28px}
-.hero .lede{margin-bottom:34px}
-.cta-row{display:flex;flex-wrap:wrap;gap:18px 22px;align-items:center}
-.facts{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:44px;padding-top:22px;border-top:3px solid rgba(31,12,51,.3);font-weight:600}
-.facts span{display:flex;gap:8px;align-items:baseline}
-.facts b{font:800 1.5rem/1 var(--disp);color:var(--ink)}
-.hero h1 .w{display:inline-block;animation:wd 1.3s var(--ease) both}
-@keyframes wd{from{letter-spacing:.02em;opacity:.0}to{letter-spacing:-.012em;opacity:1}}
+/* HERO */
+.hero{background:var(--night);color:var(--paper);padding-top:clamp(120px,13vw,170px);padding-bottom:clamp(70px,8vw,110px);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:900px;height:900px;background:radial-gradient(closest-side,rgba(175,94,255,.32),transparent 70%);z-index:-1;pointer-events:none}
+.hero::after{content:"";position:absolute;left:-200px;bottom:-300px;width:700px;height:700px;background:radial-gradient(closest-side,rgba(122,47,209,.28),transparent 70%);z-index:-1}
+.hero-bg{position:absolute;right:-140px;top:50%;width:760px;height:760px;transform:translateY(-50%);color:rgba(217,179,255,.05);z-index:-1;animation:spin 120s linear infinite}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+.hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:clamp(40px,6vw,88px);align-items:center}
+.hero .kick{color:var(--lilac)}
+.hero h1{margin-bottom:22px;max-width:9.5em}
+.hero .lede{margin-bottom:34px;max-width:30em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;gap:clamp(20px,3vw,40px);margin-top:48px;padding-top:26px;border-top:1px solid var(--line-d);max-width:30em}
+.facts div{display:grid;gap:2px}
+.facts b{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.facts span{font-size:.8125rem;color:var(--mute-d)}
+
+/* palco: conversa que vira motion */
+.stage{position:relative}
+.win{background:linear-gradient(180deg,rgba(42,18,69,.92),rgba(26,10,42,.96));border:1px solid var(--line-d);border-radius:var(--r-xl);box-shadow:var(--sh-d),inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line-d);font-size:.8125rem;color:var(--mute-d)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:rgba(217,179,255,.18)}
+.win-t{flex:1}
+.model{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(175,94,255,.14);color:var(--lilac);font-weight:600;font-size:.75rem;transition:background .4s}
+.model svg{width:11px;height:11px}
+.model.sn{background:rgba(250,245,255,.1);color:var(--paper)}
+.win-body{padding:20px;display:grid;gap:16px;min-height:466px;align-content:start}
+.msg-me{justify-self:end;max-width:88%;background:var(--violet);color:var(--night);padding:12px 16px;border-radius:18px 18px 6px 18px;font-size:.9rem;line-height:1.45;min-height:46px}
+.msg-me .sl{color:var(--night);font-weight:600;background:rgba(31,12,51,.16);padding:1px 7px;border-radius:6px;margin-right:2px}
+.msg-me .cur{display:inline-block;width:2px;height:1em;background:var(--night);vertical-align:-2px;margin-left:1px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.msg-ai{display:grid;grid-template-columns:auto 1fr;gap:12px}
+.av{width:30px;height:30px;border-radius:50%;background:var(--paper);color:var(--violet-ink);display:grid;place-items:center}
+.av svg{width:16px;height:16px}
+.ai-c{display:grid;grid-template-columns:182px 1fr;gap:18px;align-items:start}
+.r-vid{position:relative;aspect-ratio:9/16;border-radius:var(--r-m);overflow:hidden;background:var(--night-2);border:1px solid var(--line-d)}
+.r-vid video{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.r-vid.ok video{opacity:1}
+.r-load{position:absolute;inset:auto 14px 14px;display:grid;gap:8px;font-size:.75rem;color:var(--mute-d);transition:opacity .4s}
+.r-vid.ok .r-load{opacity:0}
+.r-load i{display:block;height:4px;border-radius:4px;background:rgba(217,179,255,.14);overflow:hidden}
+.r-load i b{display:block;height:100%;width:0;background:var(--violet);border-radius:4px}
+.r-side{display:grid;gap:14px;font-size:.85rem}
+.r-side p{color:var(--mute-d);line-height:1.45}
+.steps{list-style:none;display:grid;gap:9px}
+.steps li{display:flex;gap:10px;align-items:flex-start;color:rgba(250,245,255,.4);transition:color .35s}
+.steps li::before{content:"";flex:none;width:16px;height:16px;margin-top:2px;border-radius:50%;border:1.5px solid currentColor;transition:all .35s}
+.steps li.on{color:var(--paper)}
+.steps li.on::before{border-color:var(--violet);background:var(--violet) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.2 2.2L11.5 5.7' fill='none' stroke='%231f0c33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.file{display:grid;gap:2px;padding:12px 14px;border-radius:var(--r-s);background:rgba(250,245,255,.05);border:1px solid var(--line-d);opacity:0;transition:opacity .4s}
+.file.on{opacity:1}
+.file b{font-size:.85rem;font-weight:600}
+.file span{font-size:.75rem;color:var(--mute-d)}
+.reel{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.reel button{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;text-align:left;padding:8px;border-radius:var(--r-m);border:1px solid var(--line-d);background:rgba(31,12,51,.5);transition:background .3s,border-color .3s;position:relative;overflow:hidden}
+.reel button:hover{background:rgba(217,179,255,.06)}
+.reel button[aria-current="true"]{border-color:rgba(175,94,255,.55);background:rgba(175,94,255,.1)}
+.reel img{width:34px;height:46px;object-fit:cover;border-radius:6px}
+.reel b{display:block;font-size:.75rem;font-weight:600;line-height:1.25}
+.reel small{display:block;font-size:.6875rem;color:var(--mute-d)}
+.reel .pg{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--violet);transform-origin:left;transform:scaleX(0)}
+
+/* PROBLEMA */
+.prob-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:clamp(40px,6vw,88px);align-items:start}
+.habits{list-style:none;display:grid;gap:0;margin-top:36px;border-top:1px solid var(--line-l)}
+.habits li{display:grid;grid-template-columns:40px 1fr auto;gap:16px;padding:20px 0;border-bottom:1px solid var(--line-l);align-items:start}
+.habits .ic{width:40px;height:40px;border-radius:12px;background:var(--mist);display:grid;place-items:center;color:var(--violet-ink)}
+.habits .ic svg{width:18px;height:18px}
+.habits h3{font-size:1rem;font-weight:600;letter-spacing:-.01em;margin-bottom:4px}
+.habits p{font-size:.9rem;color:var(--mute-l);line-height:1.5}
+.habits .tag{font-size:.75rem;font-weight:600;color:var(--violet-ink);background:var(--mist);padding:4px 10px;border-radius:999px;white-space:nowrap;margin-top:2px}
 
 /* editor de curva */
-.stage{background:var(--ink);color:#fff;border-radius:22px;padding:20px 20px 18px;box-shadow:12px 12px 0 var(--yellow);display:grid;gap:14px;min-width:0}
-.st-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600;font-size:.95rem}
-.st-top code{font:600 .82rem ui-monospace,Menlo,Consolas,monospace;color:var(--yellow);white-space:nowrap}
-.st-lane{position:relative;height:150px;border-block:2px dashed rgba(255,255,255,.22)}
-.st-lane::before,.st-lane::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.22)}
-.st-lane::before{left:17px}.st-lane::after{right:17px}
-.st-lane .sh{position:absolute;left:0;width:34px;height:34px;will-change:transform}
-.st-lane .c{top:10px;background:var(--yellow);border-radius:50%}
-.st-lane .s{top:58px;background:var(--pink)}
-.st-lane .t{top:106px;background:#fff;clip-path:polygon(50% 4%,100% 96%,0 96%)}
-.st-curve{width:100%;height:auto;touch-action:none;overflow:visible}
-.st-curve text{font:600 10px var(--body);fill:rgba(255,255,255,.55)}
-.st-curve .grid{stroke:rgba(255,255,255,.2);stroke-width:1;stroke-dasharray:3 4}
-.st-curve .path{fill:none;stroke:var(--yellow);stroke-width:4;stroke-linecap:round}
-.st-curve .guide{stroke:rgba(255,255,255,.55);stroke-width:2}
-.st-curve .hd{fill:var(--pink);stroke:var(--ink);stroke-width:3;cursor:grab}
-.st-curve .hd:active{cursor:grabbing}
-.st-curve .hd:focus-visible{outline:none;stroke:#fff;stroke-width:4}
-.st-pre{display:flex;flex-wrap:wrap;gap:8px}
-.st-pre button{padding:8px 14px;border:2px solid rgba(255,255,255,.5);border-radius:12px;background:transparent;font-weight:600;font-size:.9rem;cursor:pointer;transition:background-color .15s,color .15s}
-.st-pre button:hover{border-color:#fff}
-.st-pre button[aria-pressed=true]{background:#fff;color:var(--ink);border-color:#fff}
-.st-cap{font-size:.95rem;line-height:1.4;min-height:2.8em;color:#d9dcff}
-.st-hint{font-size:.85rem;color:rgba(255,255,255,.6)}
+.ez{position:sticky;top:100px;background:var(--night);color:var(--paper);border-radius:var(--r-xl);padding:24px;box-shadow:0 40px 80px -40px rgba(31,12,51,.6)}
+.ez-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;font-size:.875rem}
+.ez-top b{font-weight:600}
+.ez-top code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.75rem;color:var(--lilac);background:rgba(217,179,255,.08);padding:4px 10px;border-radius:999px}
+.lanes{display:grid;gap:10px;margin-bottom:18px}
+.lane{position:relative;height:46px;border-radius:12px;background:rgba(250,245,255,.04);border:1px solid var(--line-d)}
+.lane .lb{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.6875rem;color:var(--mute-d)}
+.lane i{position:absolute;left:8px;top:8px;width:28px;height:28px;border-radius:50%;background:rgba(250,245,255,.35)}
+.lane.you i{background:var(--violet);box-shadow:0 0 24px rgba(175,94,255,.7)}
+.ez-svg{width:100%;max-width:300px;margin:0 auto;touch-action:none}
+.ez-svg .grid{stroke:rgba(217,179,255,.15);stroke-dasharray:3 4}
+.ez-svg text{fill:var(--mute-d);font-size:10px;font-family:inherit}
+.ez-svg .guide{stroke:rgba(217,179,255,.45);stroke-width:1.5}
+.ez-svg .path{fill:none;stroke:var(--violet);stroke-width:4;stroke-linecap:round}
+.ez-svg .hd{fill:var(--paper);stroke:var(--violet);stroke-width:3;cursor:grab}
+.ez-svg .hd:focus-visible{outline:none;stroke:var(--lilac);stroke-width:5}
+.pre{display:flex;gap:6px;justify-content:center;margin:16px 0 12px;flex-wrap:wrap}
+.pre button,.seg button{padding:8px 14px;border-radius:999px;font-size:.8125rem;font-weight:600;transition:background .25s,color .25s}
+.pre button{background:rgba(250,245,255,.06);color:var(--mute-d)}
+.pre button[aria-pressed="true"]{background:var(--paper);color:var(--night)}
+.ez-cap{text-align:center;font-size:.875rem;min-height:2.8em}
+.ez-hint{text-align:center;font-size:.75rem;color:var(--mute-d);margin-top:4px}
 
-/* dores */
-.pair{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,80px);align-items:start}
-.lanes{background:#fff;border:3px solid var(--ink);border-radius:18px;padding:18px 20px;box-shadow:8px 8px 0 var(--ink)}
-.lanes .lb{display:flex;justify-content:space-between;gap:10px;font-weight:600;font-size:.92rem;margin-top:10px}
-.lanes .lb:first-child{margin-top:0}
-.lanes .lb span:last-child{font-weight:500;color:rgba(31,12,51,.65)}
-.lane{position:relative;height:48px;border-bottom:2px dashed rgba(31,12,51,.18)}
-.lane:last-of-type{border:0}
-.lane i{position:absolute;top:50%;left:0;width:30px;height:30px;margin-top:-15px;border-radius:50%;animation:run 1.7s infinite alternate}
-.lane.a i{background:#9aa0bd;animation-timing-function:linear}
-.lane.b i{background:var(--blue);animation-timing-function:var(--ease)}
-@keyframes run{to{left:calc(100% - 30px)}}
-.lanes p{font-size:.92rem;margin-top:14px;color:rgba(31,12,51,.72)}
-.errs details,.faq details{border-top:3px solid var(--ink)}
-.errs details:last-child,.faq details:last-child{border-bottom:3px solid var(--ink)}
-.errs summary,.faq summary{display:flex;align-items:center;gap:18px;padding:22px 0;cursor:pointer;list-style:none;font:600 clamp(1.1rem,1.8vw,1.35rem)/1.2 var(--body)}
-.errs summary::-webkit-details-marker,.faq summary::-webkit-details-marker{display:none}
-.errs summary::after,.faq summary::after{content:"";margin-left:auto;flex:none;width:22px;height:22px;background:linear-gradient(var(--ink),var(--ink)) 50% 50%/100% 3px no-repeat,linear-gradient(var(--ink),var(--ink)) 50% 50%/3px 100% no-repeat;transition:transform .3s var(--ease)}
-.errs details[open] summary::after,.faq details[open] summary::after{transform:rotate(135deg)}
-.errs summary svg{width:36px;height:36px;flex:none}
-.errs summary:hover,.faq summary:hover{color:var(--vtext)}
-.errs details p,.faq details p{padding:0 0 24px 54px;max-width:58ch}
-.faq details p{padding-left:0}
-.errs .tag{display:inline-block;margin-left:10px;padding:2px 9px;border:2px solid var(--ink);border-radius:5px;font-weight:600;font-size:.82rem;background:var(--yellow);white-space:nowrap}
+/* SÉRIE */
+.serie-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px}
+.serie-head .sec-head{margin:0}
+.fan{display:flex;gap:12px;height:clamp(420px,46vw,600px)}
+.fan figure{position:relative;flex:1;min-width:0;border-radius:var(--r-l);overflow:hidden;background:var(--night-2);cursor:pointer;transition:flex .8s var(--ease);border:1px solid var(--line-d)}
+.fan figure.on{flex:2.6;cursor:default}
+.fan video{width:100%;height:100%;object-fit:cover}
+.fan figcaption{position:absolute;inset:auto 0 0;padding:60px 18px 18px;background:linear-gradient(transparent,rgba(22,8,36,.92));display:grid;gap:2px}
+.fan figcaption b{font-weight:600;font-size:1rem}
+.fan figcaption span{font-size:.8125rem;color:var(--mute-d)}
+.fan figure:not(.on) figcaption b{font-size:.875rem}
+.fan figure:not(.on) figcaption span{display:none}
+.fan figure:not(.on) video{filter:saturate(.6) brightness(.7);transition:filter .6s}
+.fan figure.on video{filter:none}
+.fmt{display:flex;align-items:center;gap:14px;margin-top:22px;font-size:.875rem;color:var(--mute-d)}
+.seg{display:inline-flex;gap:2px;padding:4px;border-radius:999px;background:rgba(250,245,255,.06)}
+.dark .seg button{color:var(--mute-d)}
+.dark .seg button[aria-pressed="true"]{background:var(--paper);color:var(--night)}
 
-/* motions: bin */
-.bin{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,80px);align-items:center}
-.bin .sec-h{margin-bottom:28px}
-.clips{display:grid;gap:12px;list-style:none;padding:0}
-.clips button{width:100%;display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:center;text-align:left;padding:10px;border:3px solid rgba(255,255,255,.28);border-radius:14px;background:transparent;cursor:pointer;transition:border-color .2s,background-color .2s,transform .2s var(--ease)}
-.clips button:hover{border-color:#fff;transform:translateX(6px)}
-.clips button[aria-pressed=true]{background:var(--yellow);border-color:var(--yellow);color:var(--ink);transform:translateX(12px)}
-.clips img{width:54px;height:96px;object-fit:cover;border-radius:4px;background:#000}
-.clips b{display:block;font:800 1.2rem/1.1 var(--disp);}
-.clips small{font-size:.88rem;opacity:.75}
-.fmt{margin-top:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-weight:600}
-.fmt .seg{border-color:#fff;background:transparent}
-.fmt .seg button{color:#fff;border-color:#fff}
-.fmt .seg button[aria-pressed=true]{background:#fff;color:var(--ink)}
-.bin-v{justify-self:center;position:relative}
-.bin-v video{height:min(74vh,660px);aspect-ratio:9/16;max-width:100%;object-fit:cover;background:#000;border:3px solid #fff;border-radius:18px;box-shadow:14px 14px 0 var(--orange);transition:aspect-ratio .4s var(--ease)}
-.bin-v.r45 video{aspect-ratio:4/5}
-.bin-v .badge{position:absolute;left:14px;top:14px;padding:5px 10px;background:var(--ink);color:#fff;border-radius:5px;font:600 .85rem var(--body)}
+/* MÉTODO */
+.roles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;position:relative}
+.role{background:var(--paper);border-radius:var(--r-l);padding:28px 26px;position:relative;box-shadow:0 24px 50px -30px rgba(31,12,51,.35)}
+.role.mid{background:var(--night);color:var(--paper)}
+.role .badge{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--mist);color:var(--violet-ink);margin-bottom:22px}
+.role.mid .badge{background:var(--violet);color:var(--night)}
+.role .badge svg{width:22px;height:22px}
+.role h3{font-size:1.3rem;margin-bottom:6px}
+.role .who{font-size:.875rem;color:var(--violet-ink);font-weight:600;margin-bottom:14px}
+.role.mid .who{color:var(--lilac)}
+.role p{font-size:.9rem;color:var(--mute-l);line-height:1.55}
+.role.mid p{color:var(--mute-d)}
+.role .ord{position:absolute;top:26px;right:26px;font-size:.8125rem;font-weight:600;color:rgba(31,12,51,.35)}
+.role.mid .ord{color:rgba(250,245,255,.4)}
+.flowline{position:absolute;top:52px;left:12%;right:12%;height:2px;z-index:-1;background:repeating-linear-gradient(90deg,var(--night) 0 6px,transparent 6px 14px);opacity:.25}
+.req{display:flex;gap:18px;align-items:center;margin-top:28px;padding:20px 24px;border-radius:var(--r-l);background:rgba(250,245,255,.5);font-size:.9375rem}
+.req b{font-weight:600}
+.req .pro{flex:none;display:grid;place-items:center;height:40px;padding:0 16px;border-radius:999px;background:var(--night);color:var(--paper);font-weight:600;font-size:.875rem}
 
-/* timeline do curso */
-.tl-scroll{overflow-x:auto;padding:0 0 22px;margin-inline:calc(var(--g) * -1);padding-inline:var(--g);scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
-.tl-in{position:relative;display:flex;width:max-content;min-width:100%;padding-top:14px}
-.mg{display:flex;flex-direction:column}
-.mg-l{min-height:3.1em;padding:0 8px 8px 12px;font-size:.84rem;line-height:1.2;max-width:100%}
-.mg-l b{display:block;font:800 .95rem var(--disp)}
-.mg-l span{opacity:.75}
-.mg-c{display:flex}
-.clip{position:relative;flex:0 0 64px;height:150px;margin-left:-3px;padding:12px 10px;border:3px solid var(--ink);background:var(--c);color:var(--f);text-align:left;cursor:pointer;overflow:hidden;transition:flex-basis .6s var(--ease),transform .2s var(--ease)}
-.mg:first-child .clip:first-child{margin-left:0}
-.clip b{display:block;font:800 1.5rem/1 var(--disp);}
-.clip span{position:absolute;left:12px;right:12px;bottom:12px;font:600 1.15rem/1.1 var(--body);opacity:0;transform:translateY(8px);transition:opacity .3s,transform .4s var(--ease)}
-.clip:hover{transform:translateY(-5px)}
-.clip[aria-selected=true]{flex-basis:310px;z-index:2}
-.clip[aria-selected=true] span{opacity:1;transform:none;transition-delay:.25s}
-.ph{position:absolute;top:0;bottom:0;width:0;z-index:5;pointer-events:none}
-.ph::before{content:"";position:absolute;left:-2px;top:12px;bottom:-6px;width:4px;background:var(--ink)}
-.ph i{position:absolute;left:-9px;top:0;width:18px;height:14px;background:var(--ink);clip-path:polygon(0 0,100% 0,50% 100%)}
-.lp{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);border:3px solid var(--ink);border-radius:18px;overflow:hidden;background:#fff;box-shadow:10px 10px 0 var(--ink);margin-top:14px}
-.lp-l{background:var(--c);color:var(--f);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;transition:background-color .4s,color .4s}
-.lp-n{font:800 clamp(4rem,8vw,6.5rem)/.85 var(--disp);letter-spacing:-.04em}
-.lp-m{font-weight:600;font-size:.92rem;opacity:.85}
-.lp-l h3{font:800 clamp(1.6rem,2.6vw,2.15rem)/1.02 var(--disp);}
-.lp-q{font-size:1.02rem;max-width:34ch}
-.lp-pdf{margin-top:auto;display:inline-flex;align-self:flex-start;align-items:center;gap:8px;padding:8px 12px;border:2px solid currentColor;border-radius:12px;font-weight:600;font-size:.88rem}
-.lp-pdf svg{width:18px;height:18px}
-.lp-r{padding:clamp(22px,3vw,36px);min-width:0;min-height:430px}
+/* AULAS */
+.tl{background:var(--night);color:var(--paper);border-radius:var(--r-xl);padding:26px 26px 22px;box-shadow:0 40px 80px -46px rgba(31,12,51,.7);position:relative}
+.tl-top{display:flex;justify-content:space-between;align-items:center;font-size:.8125rem;color:var(--mute-d);margin-bottom:14px}
+.tl-top b{color:var(--paper);font-weight:600}
+.tl-scroll{overflow-x:auto;scrollbar-width:none;margin:0 -6px;padding:0 6px}
+.tl-scroll::-webkit-scrollbar{display:none}
+.tl-in{position:relative;min-width:760px}
+.ruler{display:grid;grid-template-columns:150px repeat(14,1fr);font-size:.6875rem;color:rgba(250,245,255,.38);padding-bottom:8px;border-bottom:1px solid var(--line-d);margin-bottom:8px}
+.ruler span{padding-left:4px;border-left:1px solid var(--line-d)}
+.trk{display:grid;grid-template-columns:150px repeat(14,1fr);align-items:center;height:46px;border-bottom:1px solid rgba(217,179,255,.06)}
+.trk .tn{font-size:.8125rem;font-weight:600;line-height:1.2;padding-right:10px}
+.trk .tn small{display:block;font-weight:400;font-size:.6875rem;color:var(--mute-d)}
+.clip{height:34px;margin:0 2px;border-radius:9px;font-size:.75rem;font-weight:600;display:flex;align-items:center;justify-content:center;transition:transform .3s var(--out),background .3s,color .3s,box-shadow .3s;background:rgba(175,94,255,.2);color:var(--lilac);border:1px solid rgba(175,94,255,.3)}
+.clip:hover{transform:translateY(-2px);background:rgba(175,94,255,.32)}
+.clip[aria-selected="true"]{background:var(--violet);color:var(--night);border-color:var(--violet);box-shadow:0 8px 26px -8px rgba(175,94,255,.9)}
+.ph{position:absolute;top:22px;bottom:0;width:2px;background:var(--paper);left:0;transition:left .7s var(--ease);pointer-events:none;border-radius:2px}
+.ph::before{content:"";position:absolute;top:-6px;left:-5px;width:12px;height:12px;border-radius:3px 3px 6px 6px;background:var(--paper)}
+.lp{display:grid;grid-template-columns:300px minmax(0,1fr);margin-top:20px;background:var(--white);border-radius:var(--r-xl);box-shadow:var(--sh-l);overflow:hidden;min-height:440px}
+.lp-side{background:var(--mist);padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.lp-ico{width:72px;height:72px;color:var(--violet-ink)}
+.lp-ico .ico{width:100%;height:100%}
+.lp-n{font-size:.8125rem;font-weight:600;color:var(--violet-ink)}
+.lp-side h3{font-size:1.5rem;letter-spacing:-.025em}
+.lp-side p{font-size:.9rem;color:var(--mute-l);line-height:1.5}
+.lp-pdf{margin-top:auto;display:flex;align-items:center;gap:10px;font-size:.8125rem;font-weight:600;color:var(--night)}
+.lp-pdf svg{width:18px;height:18px;color:var(--violet-ink)}
+.lp-nav{display:flex;gap:8px}
+.lp-nav button{width:40px;height:40px;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 1px 0 rgba(31,12,51,.06)}
+.lp-nav button:hover{background:var(--paper)}
+.lp-nav svg{width:16px;height:16px}
+.lp-main{padding:30px 32px;min-width:0}
+.ico .a-bob{animation:bob 3s ease-in-out infinite}.ico .a-bob2{animation:bob 3s ease-in-out .6s infinite}
+.ico .a-spin{animation:spin2 8s linear infinite}.ico .a-orbit{animation:spin2 10s linear infinite}
+.ico .a-ring{stroke-dasharray:280;animation:ring 3s var(--ease) infinite}
+@keyframes bob{50%{transform:translateY(-5px)}}@keyframes spin2{to{transform:rotate(360deg)}}@keyframes ring{0%{stroke-dashoffset:280}60%,100%{stroke-dashoffset:0}}
 
-/* painéis (demos) */
-.pane{display:grid;gap:22px;align-content:start}
-.pane[hidden]{display:none}
-.pane-head{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
-.pane .q{font:600 1.15rem/1.25 var(--body)}
-.seg{display:inline-flex;flex-wrap:wrap;border:3px solid var(--ink);border-radius:12px;overflow:hidden;background:#fff}
-.seg button{padding:8px 14px;border:0;border-right:2px solid var(--ink);background:transparent;font-weight:600;font-size:.92rem;cursor:pointer}
-.seg button:last-child{border-right:0}
-.seg button:hover:not([aria-pressed=true]){background:var(--yellow)}
-.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
-.note{font-size:.95rem;color:rgba(31,12,51,.74);max-width:58ch}
-.tp-grid{display:grid;grid-template-columns:190px minmax(0,1fr);gap:26px;align-items:center}
-.tp-vid{aspect-ratio:9/16;border:3px solid var(--ink);border-radius:14px;overflow:hidden;background:var(--ink)}
-.tp-vid video{width:100%;height:100%;object-fit:cover}
-.tp-grid.wide{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+/* panes (prévias) */
+.pane-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.pane .q{font-weight:600;font-size:1rem}
+.lp .seg{background:var(--mist)}
+.lp .seg button{color:var(--mute-l)}
+.lp .seg button[aria-pressed="true"]{background:var(--night);color:var(--paper)}
+.note{font-size:.85rem;color:var(--mute-l);margin-top:16px;line-height:1.5}
+.tp-grid{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:start}
+.tp-grid.wide{grid-template-columns:300px 1fr}
+.tp-vid{aspect-ratio:9/16;border-radius:var(--r-m);overflow:hidden;background:var(--night)}
 .tp-grid.wide .tp-vid{aspect-ratio:16/9}
-.tp-txt{display:grid;gap:14px}
-.tp-txt h4{font:800 1.6rem/1.05 var(--disp);}
-.tp-txt ul{list-style:none;padding:0;display:grid;gap:8px}
-.tp-txt li{padding-left:24px;position:relative}
-.tp-txt li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;background:var(--blue)}
-.ficha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.ficha div{border-top:3px solid var(--ink);padding-top:10px}
-.ficha dt{font-weight:600;font-size:.85rem;color:var(--vtext)}
-.ficha dd{font-weight:600}
-.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:stretch}
-.tool{border:3px solid var(--ink);border-radius:14px;padding:16px;background:#fff;display:grid;gap:8px;align-content:start}
-.tool.or{background:var(--yellow)}
-.tool .ic svg{width:28px;height:28px}
-.tool h4{font:800 1.3rem/1 var(--disp);}
-.tool dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.92rem}
-.tool dt{font-weight:600;opacity:.6}
-.tool dd{font-weight:600}
-.pipe{display:flex;align-items:center}
-.pipe i{display:block;width:26px;height:4px;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 10px);background-size:10px 4px;animation:flow .8s linear infinite}
-@keyframes flow{to{background-position:10px 0}}
-.chk{display:grid;gap:10px}
-.chk label{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:center;padding:12px 14px;border:3px solid var(--ink);border-radius:14px;cursor:pointer;background:#fff;transition:background-color .2s,transform .15s}
-.chk label:hover{transform:translateX(4px)}
+.mv{width:100%;height:100%;object-fit:cover}
+.tp-txt h4{font-size:1.125rem;margin-bottom:10px}
+.tp-txt ul,.lp-main ul{list-style:none;display:grid;gap:6px}
+.tp-txt li{padding-left:18px;position:relative;font-size:.9rem}
+.tp-txt li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:2px;background:var(--violet)}
+.ficha{display:grid;gap:0;border-top:1px solid var(--line-l)}
+.ficha div{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line-l)}
+.ficha dt{font-size:.85rem;color:var(--mute-l)}
+.ficha dd{font-weight:600;font-size:.95rem}
+.flow{display:grid;grid-template-columns:1fr 26px 1fr 26px 1fr;align-items:center;gap:6px}
+.tool{border:1px solid var(--line-l);border-radius:var(--r-m);padding:16px;background:var(--white)}
+.tool.or{background:var(--night);color:var(--paper);border-color:var(--night)}
+.tool .ic{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--mist);color:var(--violet-ink);margin-bottom:12px}
+.tool.or .ic{background:var(--violet);color:var(--night)}
+.tool .ic svg{width:18px;height:18px}
+.tool h4{font-size:1rem;margin-bottom:8px}
+.tool dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.8125rem}
+.tool dt{color:var(--mute-l)}.tool.or dt{color:var(--mute-d)}
+.pipe{height:2px;background:var(--line-l);position:relative;overflow:hidden;border-radius:2px}
+.pipe i{position:absolute;top:0;left:-40%;width:40%;height:100%;background:var(--violet);animation:pipe 1.8s var(--ease) infinite}
+@keyframes pipe{to{left:100%}}
+.chk{display:grid;gap:8px}
+.chk label{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line-l);border-radius:12px;cursor:pointer;transition:background .2s,border-color .2s}
+.chk label:hover{background:var(--paper)}
 .chk input{position:absolute;opacity:0;pointer-events:none}
-.chk .box{width:28px;height:28px;border:3px solid var(--ink);border-radius:5px;display:grid;place-items:center;background:#fff;transition:background-color .2s}
-.chk .box svg{width:18px;height:18px;opacity:0;transform:scale(.4);transition:opacity .15s,transform .25s var(--ease)}
-.chk input:checked + .box{background:var(--yellow)}
-.chk input:checked + .box svg{opacity:1;transform:none}
-.chk label:has(input:checked){background:var(--pale)}
-.chk input:focus-visible + .box{outline:4px solid var(--orange);outline-offset:2px}
-.chk strong{display:block;font-weight:600}
-.chk .d{display:block;font-size:.9rem;color:rgba(31,12,51,.7)}
-.meter{display:flex;align-items:center;gap:14px;font-weight:600;font-size:.92rem}
-.meter .bar{flex:1;height:12px;border:3px solid var(--ink);border-radius:99px;overflow:hidden;background:#fff}
-.meter .chk-bar{display:block;height:100%;width:0;background:var(--blue);transition:width .35s var(--ease)}
-.out{background:var(--ink);color:#fff;border-radius:14px;overflow:hidden}
-.oh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:2px solid rgba(255,255,255,.16);font-size:.86rem;color:#c9ccff}
-.out pre{padding:16px;font:500 .9rem/1.65 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word;color:#fff}
-.out .hl{color:var(--yellow)}
-.cp{padding:5px 11px;border:2px solid #fff;border-radius:5px;background:transparent;color:#fff;font-weight:600;font-size:.82rem;cursor:pointer}
-.cp:hover{background:#fff;color:var(--ink)}
-.bf{display:grid;gap:12px}
-.bf-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
-.bf-row > span{font-weight:600}
-.asks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.asks div{border-top:3px solid var(--ink);padding-top:8px;font-size:.9rem}
-.asks b{display:block;font-size:.98rem}
-.sk{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:start}
-.sk ol{list-style:none;padding:0;display:grid;gap:12px;counter-reset:s}
-.sk li{counter-increment:s;position:relative;min-height:60px;padding:12px 12px 12px 60px;border:3px solid var(--ink);border-radius:14px;font-size:.96rem}
-.sk li::before{content:counter(s);position:absolute;left:12px;top:12px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font:800 1rem var(--disp)}
-.sk-ui{border:3px solid var(--ink);border-radius:18px;padding:18px;display:grid;gap:12px;background:var(--pale)}
-.sk-ui h5{font:800 1.1rem var(--disp)}
-.sk-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:3px solid var(--ink);border-radius:14px;background:#fff;font-weight:600}
-.sw{width:56px;height:32px;border:3px solid var(--ink);border-radius:99px;background:#fff;padding:0;position:relative;cursor:pointer;transition:background-color .25s}
-.sw i{position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:var(--ink);transition:transform .3s var(--ease)}
-.sw[aria-pressed=true]{background:var(--blue)}
-.sw[aria-pressed=true] i{transform:translateX(24px);background:var(--yellow)}
-.sk-ui p{font-size:.9rem;min-height:3.2em}
-.st-card{border:3px solid var(--ink);border-radius:18px;padding:22px;background:var(--pale);display:grid;gap:8px}
-.st-card code{font:600 .85rem ui-monospace,Menlo,Consolas,monospace;color:var(--vtext)}
-.st-card h4{font:800 1.7rem/1.05 var(--disp);}
-.chip-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:3px solid var(--ink);border-radius:12px;background:var(--yellow);font-weight:600;font-size:.92rem;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
-.chip-btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
-.chip-btn[disabled]{opacity:.5;pointer-events:none}
-.chip-btn svg{width:16px;height:16px}
-.cmd-steps{display:flex;flex-wrap:wrap;gap:8px}
-.cmd-steps span{padding:6px 12px;border:2px solid var(--ink);border-radius:12px;font-weight:600;font-size:.88rem;transition:background-color .2s}
-.cmd-steps span.on{background:var(--yellow)}
-.cmd-wrap{position:relative;padding-top:70px}
-.cmd-pop{position:absolute;left:0;top:0;min-width:240px;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:6px;box-shadow:5px 5px 0 var(--ink)}
-.cmd-it{display:flex;justify-content:space-between;gap:20px;padding:9px 12px;border-radius:5px;font:600 .95rem ui-monospace,Menlo,monospace}
-.cmd-it.on{background:var(--ink);color:#fff}
-.cmd-it small{font:500 .8rem var(--body);opacity:.8}
-.cmd-box{background:var(--ink);color:#fff;border-radius:14px;padding:18px;font:500 .95rem/1.6 ui-monospace,Menlo,Consolas,monospace;min-height:84px;word-break:break-word}
-.cmd-box .sl{color:var(--yellow);font-weight:600}
-.caret{display:inline-block;width:2px;height:1.1em;margin-left:2px;background:currentColor;vertical-align:-.18em;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
+.chk .box{flex:none;width:22px;height:22px;border-radius:7px;border:1.5px solid rgba(31,12,51,.25);display:grid;place-items:center;transition:all .25s;margin-top:1px}
+.chk .box svg{width:14px;opacity:0;transform:scale(.6);transition:all .25s var(--out)}
+.chk input:checked+.box{background:var(--violet);border-color:var(--violet)}
+.chk input:checked+.box svg{opacity:1;transform:none}
+.chk input:focus-visible+.box{outline:2px solid var(--violet);outline-offset:2px}
+.chk strong{display:block;font-weight:600;font-size:.9rem}
+.chk .d{display:block;font-size:.8125rem;color:var(--mute-l)}
+.meter{display:flex;align-items:center;gap:14px;margin-top:16px;font-size:.8125rem;color:var(--mute-l)}
+.meter .bar{flex:1;height:6px;border-radius:6px;background:var(--mist);overflow:hidden}
+.chk-bar{display:block;height:100%;width:0;background:var(--violet);border-radius:6px;transition:width .5s var(--out)}
+.out{background:var(--night);color:#eadcff;border-radius:var(--r-m);overflow:hidden}
+.oh{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line-d);font-size:.75rem;color:var(--mute-d)}
+.out pre{padding:16px 18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8125rem;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.hl{color:var(--lilac);font-weight:600}
+.cp{padding:5px 12px;border-radius:999px;background:rgba(250,245,255,.1);color:var(--paper);font-size:.75rem;font-weight:600}
+.bf{display:grid;gap:10px;margin-bottom:16px}
+.bf-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:.875rem}
+.asks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.asks div{padding:12px;border-radius:12px;background:var(--paper);font-size:.75rem;color:var(--mute-l);line-height:1.4}
+.asks b{display:block;color:var(--night);font-size:.8125rem;margin-bottom:2px}
+.sk{display:grid;grid-template-columns:1fr 240px;gap:24px;align-items:start}
+.sk ol{list-style:none;counter-reset:s;display:grid;gap:12px}
+.sk li{counter-increment:s;position:relative;padding-left:38px;font-size:.9rem;line-height:1.5}
+.sk li::before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--mist);color:var(--violet-ink);font-size:.75rem;font-weight:600;display:grid;place-items:center}
+.sk-ui{border:1px solid var(--line-l);border-radius:var(--r-m);padding:16px}
+.sk-ui h5{font-size:.8125rem;color:var(--mute-l);font-weight:600;margin-bottom:10px}
+.sk-row{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.9rem}
+.sw{width:46px;height:28px;border-radius:999px;background:rgba(31,12,51,.18);position:relative;transition:background .3s}
+.sw i{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .35s var(--out);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.sw[aria-pressed="true"]{background:var(--violet)}
+.sw[aria-pressed="true"] i{transform:translateX(18px)}
+#skMsg{font-size:.8125rem;color:var(--mute-l);margin-top:12px;line-height:1.45}
+.st-card{border:1px solid var(--line-l);border-radius:var(--r-m);padding:20px}
+.st-card code{font-family:ui-monospace,Menlo,monospace;font-size:.75rem;color:var(--violet-ink)}
+.st-card h4{font-size:1.15rem;margin:8px 0 6px}
+.st-card p{font-size:.9rem;color:var(--mute-l)}
+.chip-btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:999px;background:var(--night);color:var(--paper);font-size:.8125rem;font-weight:600}
+.chip-btn svg{width:13px;height:13px;color:var(--violet)}
+.chip-btn:disabled{opacity:.5}
+.cmd-steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:60px}
+.cmd-steps span{font-size:.75rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line-l);color:var(--mute-l);transition:all .3s}
+.cmd-steps span.on{background:var(--night);color:var(--paper);border-color:var(--night)}
+.cmd-wrap{position:relative}
+.cmd-box{border:1.5px solid var(--line-l);border-radius:var(--r-m);padding:16px 18px;min-height:60px;font-size:.9rem;line-height:1.5}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--violet);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+.cmd-pop{position:absolute;bottom:calc(100% + 8px);left:12px;background:var(--white);border-radius:12px;padding:6px;box-shadow:0 18px 40px -16px rgba(31,12,51,.4);border:1px solid var(--line-l)}
+.cmd-it{padding:8px 14px;border-radius:8px;background:var(--mist);font-weight:600;font-size:.875rem}
+.cmd-it small{font-weight:400;color:var(--mute-l);margin-left:10px}
+.sl{color:var(--violet-ink);font-weight:600}
 .nr{display:grid;gap:10px}
-.nr textarea{width:100%;min-height:110px;padding:14px;border:3px solid var(--ink);border-radius:14px;font:500 1rem/1.5 var(--body);resize:vertical;background:#fff;color:var(--ink)}
-.nr-meter{display:flex;justify-content:space-between;gap:10px;font-weight:600;font-size:.92rem}
-.nr-meter b{color:var(--vtext)}
-.nr-meter b.over{color:#c2310a}
-.voices{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem;font-weight:600}
-.voices span{padding:5px 11px;border:2px solid var(--ink);border-radius:99px}
-.voices span:first-child{border:0;padding-left:0}
-.gen{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:22px;align-items:start}
-.gen ol{list-style:none;padding:0;display:grid;gap:10px}
-.gen li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;padding:10px 12px;border:3px solid var(--ink);border-radius:14px;transition:background-color .25s,transform .25s var(--ease)}
-.gen li i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:3px solid var(--ink);font:800 .95rem var(--disp);font-style:normal;transition:background-color .25s,color .25s}
-.gen li small{display:block;font-size:.85rem;opacity:.7}
-.gen li span{font-weight:600}
-.gen li.on{background:var(--yellow);transform:translateX(6px)}
-.gen li.done i{background:var(--blue);color:#fff;border-color:var(--blue)}
-.gen-ph{position:relative;aspect-ratio:9/16;border:3px solid var(--ink);border-radius:14px;overflow:hidden;background:repeating-linear-gradient(135deg,var(--pale) 0 12px,#fff 12px 24px)}
-.gen-ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
-.gen-ph.ok video{opacity:1}
+.nr textarea{width:100%;min-height:96px;border:1.5px solid var(--line-l);border-radius:var(--r-m);padding:14px 16px;font:inherit;font-size:.9rem;resize:vertical;color:var(--night)}
+.nr textarea:focus{outline:none;border-color:var(--violet)}
+.nr-meter{display:flex;justify-content:space-between;font-size:.8125rem;color:var(--mute-l)}
+.nr-meter b{color:#0c7a4f}.nr-meter b.over{color:#b4235a}
+.voices{display:flex;gap:8px;flex-wrap:wrap}
+.voices span{font-size:.75rem;padding:6px 12px;border-radius:999px;background:var(--mist)}
+.gen{display:grid;grid-template-columns:1fr 160px;gap:24px;align-items:start}
+.gen ol{list-style:none;display:grid;gap:4px}
+.gen li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;color:var(--mute-l);transition:color .3s}
+.gen li i{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line-l);display:grid;place-items:center;font-style:normal;font-size:.75rem;font-weight:600;transition:all .3s}
+.gen li span{font-size:.9rem;font-weight:600}
+.gen li small{display:block;font-weight:400;font-size:.8125rem}
+.gen li.on,.gen li.done{color:var(--night)}
+.gen li.on i{background:var(--violet);border-color:var(--violet);color:var(--night);box-shadow:0 0 0 5px rgba(175,94,255,.2)}
+.gen li.done i{background:var(--night);border-color:var(--night);color:var(--paper)}
+.gen-ph{aspect-ratio:9/16;border-radius:var(--r-m);overflow:hidden;background:var(--mist);position:relative}
+.gen-ph::after{content:"aguardando o pedido";position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:12px;font-size:.75rem;color:var(--mute-l)}
+.gen-ph video{opacity:0;transition:opacity .6s}
+.gen-ph.ok::after{display:none}.gen-ph.ok video{opacity:1}
 
-/* portfólio */
-.rail{display:flex;gap:30px;align-items:flex-end;overflow-x:auto;scroll-snap-type:x proximity;padding:8px max(var(--g),calc((100vw - var(--w)) / 2)) 30px;scroll-padding-inline:max(var(--g),calc((100vw - var(--w)) / 2));scrollbar-width:none;cursor:grab}
+/* PORTFÓLIO */
+.pf-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px}
+.pf-head .sec-head{margin:0}
+.arrows{display:flex;gap:8px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-d);display:grid;place-items:center;color:var(--paper);transition:background .25s}
+.arrows button:hover{background:rgba(217,179,255,.1)}
+.arrows svg{width:18px;height:18px}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-inline:max(var(--gut),(100vw - var(--wrap))/2);scroll-padding-inline:max(var(--gut),(100vw - var(--wrap))/2);cursor:grab}
 .rail::-webkit-scrollbar{display:none}
 .rail.drag{cursor:grabbing;scroll-snap-type:none}
 .rail figure{flex:none;scroll-snap-align:start}
-.rail video{height:min(60vh,430px);width:auto;max-width:none;object-fit:cover;background:var(--ink);border:3px solid var(--ink);border-radius:14px;box-shadow:8px 8px 0 var(--ink);pointer-events:none}
-.rail .v video{aspect-ratio:9/16}
-.rail .w video{aspect-ratio:16/9}
-.rail figcaption{margin-top:18px;display:grid;gap:2px}
-.rail figcaption b{font:800 1.25rem/1.1 var(--disp);}
-.rail figcaption span{font-size:.9rem;font-weight:600;opacity:.75}
-.ctrl{display:flex;align-items:center;gap:16px;margin-top:6px}
-.ctrl button{width:52px;height:52px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:12px;background:var(--ink);color:#fff;cursor:pointer;transition:transform .15s var(--ease),background-color .15s}
-.ctrl button:hover{background:var(--vtext);transform:translateY(-3px)}
-.ctrl svg{width:24px;height:24px}
-.ctrl span{font-weight:600}
+.rail .v{width:clamp(220px,22vw,268px)}
+.rail .w{width:clamp(520px,52vw,700px)}
+.rail .fr{height:clamp(390px,39vw,476px);border-radius:var(--r-l);overflow:hidden;background:var(--night-2);border:1px solid var(--line-d)}
+.rail video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.rail figcaption{padding:14px 2px 0;display:grid;gap:2px}
+.rail figcaption b{font-weight:600;font-size:.95rem}
+.rail figcaption span{font-size:.8125rem;color:var(--mute-d)}
 
-/* claude: três formas */
-.trio{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:clamp(8px,2vw,24px);align-items:start;margin-top:12px}
-.role{display:grid;gap:14px;justify-items:start}
-.role svg{width:clamp(90px,12vw,150px);height:auto;overflow:visible}
-.role h3{font:800 clamp(1.7rem,3vw,2.5rem)/1 var(--disp);}
-.role p{max-width:28ch}
-.role dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.95rem}
-.role dt{font-weight:600;opacity:.65}
-.link{align-self:center;margin-top:clamp(40px,6vw,76px)}
-.link svg{width:clamp(36px,5vw,64px);height:14px}
-.link path{stroke:var(--ink);stroke-width:4;fill:none;stroke-dasharray:8 8;animation:dash 1s linear infinite}
-@keyframes dash{to{stroke-dashoffset:-16}}
-.pro{display:flex;gap:22px;align-items:center;margin-top:clamp(40px,6vw,72px);padding:22px 26px;border:3px solid var(--ink);border-radius:18px;max-width:640px}
-.pro b{font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--disp);letter-spacing:-.03em}
+/* SOBRE */
+.about-g{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(40px,7vw,100px);align-items:center}
+.photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;background:var(--violet)}
+.photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);mix-blend-mode:multiply}
+.photo figcaption{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(31,12,51,.82);color:var(--paper);font-size:.8125rem;font-weight:600;backdrop-filter:blur(8px)}
+.photo figcaption svg{width:13px;height:13px;color:var(--violet)}
+.about p{color:var(--mute-l);margin-top:18px;max-width:34em}
+.quote{margin-top:30px;padding-left:20px;border-left:2px solid var(--violet);font-size:1.15rem;font-weight:600;line-height:1.4;letter-spacing:-.01em;max-width:26em}
+.quote small{display:block;font-size:.8125rem;font-weight:400;color:var(--mute-l);margin-top:8px}
+.stats{display:flex;gap:36px;margin-top:34px}
+.stats b{display:block;font-size:1.75rem;font-weight:600;letter-spacing:-.03em;line-height:1}
+.stats span{font-size:.8125rem;color:var(--mute-l)}
+.fit{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:clamp(64px,8vw,104px)}
+.fit h3{grid-column:1/-1;font-size:1.35rem;margin-bottom:10px}
+.fit div{padding:22px;border-radius:var(--r-l);background:var(--white);box-shadow:var(--sh-l)}
+.fit svg{width:28px;height:28px;margin-bottom:16px;color:var(--violet-ink)}
+.fit b{display:block;font-weight:600;margin-bottom:6px}
+.fit p{font-size:.875rem;color:var(--mute-l);line-height:1.5}
+.notfor{grid-column:1/-1;font-size:.875rem;color:var(--mute-l);margin-top:6px}
 
-/* pacote: pastas */
-.fs{display:grid;border-bottom:3px solid var(--ink)}
-.fs-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px;align-items:center;padding:clamp(18px,2.4vw,28px) 8px;border-top:3px solid var(--ink);transition:background-color .2s,padding .3s var(--ease)}
-.fs-row:hover{background:#fff;padding-left:22px}
-.fs-row b{font:800 clamp(1.7rem,4.4vw,3.4rem)/1 var(--disp);display:flex;align-items:center;gap:16px;word-break:break-word}
-.fs-row b svg{width:clamp(30px,4vw,46px);height:auto;flex:none}
-.fs-row span{font-size:clamp(1rem,1.4vw,1.2rem);font-weight:500}
-.fs-note{margin-top:28px;font-weight:600}
+/* OFERTA */
+.offer-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(40px,6vw,80px);align-items:center}
+.offer-g .h2{max-width:11em}
+.offer-g .lede{margin-top:18px}
+.exp{background:var(--night);color:var(--paper);border-radius:var(--r-xl);padding:28px;box-shadow:0 50px 90px -40px rgba(31,12,51,.75)}
+.exp-h{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line-d);margin-bottom:6px}
+.exp-h b{font-weight:600}
+.exp-h span{font-size:.75rem;color:var(--mute-d)}
+.exp dl{display:grid}
+.exp dl div{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-d);font-size:.875rem}
+.exp dt{color:var(--mute-d)}
+.price{padding:24px 0 20px;display:grid;gap:4px}
+.price .old{font-size:.875rem;color:var(--mute-d);text-decoration:line-through}
+.price .now{display:flex;align-items:flex-start;gap:6px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.price .now small{font-size:1rem;margin-top:8px;letter-spacing:0}
+.price .now b{font-size:3.5rem;font-weight:600}
+.price .inst{font-size:.875rem;color:var(--lilac)}
+.price .soon{font-size:1.15rem;font-weight:600;color:var(--lilac)}
+.exp .btn{width:100%}
+.guar{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:.8125rem;color:var(--mute-d)}
+.guar svg{flex:none;width:16px;height:16px;color:var(--violet);margin-top:2px}
 
-/* sobre */
-.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,7vw,100px);align-items:center}
-.ph-frame{position:relative;background:var(--blue);border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-width:520px}
-.ph-frame img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;filter:contrast(1.1)}
-.ph-wrap{position:relative;max-width:520px}
-.ph-wrap::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--yellow);border-radius:18px;z-index:0}
-.ph-wrap .ph-frame{position:relative;z-index:1}
-.about .d2{margin-bottom:22px}
-.about p{max-width:54ch;opacity:.9}
-.about p + p{margin-top:14px}
-.sig{margin-top:30px;padding-left:22px;border-left:6px solid var(--pink);font:800 clamp(1.3rem,2.4vw,1.9rem)/1.15 var(--disp);max-width:26em;opacity:1!important}
-.sig span{display:block;margin-top:10px;font:600 1rem var(--body);opacity:.7}
+/* FAQ */
+.faq-g{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(40px,7vw,100px)}
+.faq-g .sec-head{position:sticky;top:110px;align-self:start}
+.faq-g a{color:var(--violet-ink);font-weight:600}
+.faq details{border-bottom:1px solid var(--line-l)}
+.faq details:first-child{border-top:1px solid var(--line-l)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:600;font-size:1.02rem;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--mist);position:relative;transition:background .3s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--night);transform:translate(-50%,-50%);transition:transform .35s var(--out)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i{background:var(--violet)}
+.faq details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.faq details p{padding:0 50px 24px 0;color:var(--mute-l);max-width:40em}
 
-/* pra quem */
-.who{display:grid;border-bottom:3px solid var(--ink)}
-.who div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;align-items:start;padding:22px 0;border-top:3px solid var(--ink)}
-.who svg{width:40px;height:40px}
-.who h3{font:800 clamp(1.3rem,2.2vw,1.7rem)/1.05 var(--disp);margin-bottom:6px}
-.who p{max-width:46ch}
-.not{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:30px;font-weight:600}
-.not s{padding:5px 12px;border:2px solid var(--ink);border-radius:99px;text-decoration-thickness:2px}
+/* FINAL */
+.final{text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:50%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(175,94,255,.3),transparent 70%);z-index:-1}
+.f-star{width:76px;height:76px;margin:0 auto 34px;color:var(--violet);animation:pulse 4s var(--ease) infinite}
+@keyframes pulse{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(45deg) scale(1.08)}}
+.final .h2{font-size:clamp(2.1rem,1.4rem + 2.4vw,3.4rem);margin-bottom:18px}
+.final .lede{margin:0 auto 34px}
+.foot{background:var(--night-2);color:var(--mute-d);font-size:.8125rem;padding:28px 0}
+.foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .lg{height:22px;color:var(--violet)}
+.foot nav{display:flex;gap:22px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--paper)}
 
-/* oferta */
-.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(36px,6vw,80px);align-items:center}
-.pcard{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:12px;padding:clamp(24px,3vw,36px);box-shadow:12px 12px 0 var(--yellow);display:grid;gap:20px}
-.pcard header{display:grid;gap:2px}
-.pcard header b{font:800 1.7rem/1.05 var(--disp);}
-.pcard header span{font-weight:600;opacity:.7}
-.pcard ul{list-style:none;padding:0;display:grid;gap:12px}
-.pcard li{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start}
-.pcard li::before{content:"";width:24px;height:24px;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235be3b5' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/18px no-repeat;border-radius:4px}
-.price{display:grid;gap:4px;padding-top:18px;border-top:3px solid var(--ink)}
-.price .old{text-decoration:line-through;opacity:.6;font-weight:600}
-.price .now{font:800 3.4rem/1 var(--disp);display:flex;align-items:baseline;gap:8px}
-.price .now small{font-size:1.3rem}
-.price .soon{font:800 1.7rem/1.1 var(--disp);}
-.price .inst{font-weight:600}
-.price [hidden],.pcard [hidden]{display:none!important}
-.safe{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;font-weight:500}
-.safe svg{width:22px;height:22px;flex:none}
-
-/* faq */
-.faqg{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(36px,6vw,80px);align-items:start}
-.faqg .sec-h{position:sticky;top:96px}
-.faq summary{padding:22px 0}
-.faq a{font-weight:600}
-
-/* final */
-.final{overflow:hidden;text-align:center}
-.final h2{font:800 clamp(2.8rem,8.4vw,7.6rem)/.92 var(--disp);letter-spacing:-.035em;text-wrap:balance;margin-bottom:28px}
-.final p{font-size:clamp(1.1rem,1.7vw,1.4rem);max-width:40ch;margin:0 auto 38px;font-weight:500}
-.final .shp{position:absolute;pointer-events:none}
-.final .c1{width:clamp(60px,9vw,130px);aspect-ratio:1;background:var(--blue);border-radius:50%;left:1%;top:6%}
-.final .c2{width:clamp(60px,10vw,140px);aspect-ratio:1;background:var(--pink);right:7%;top:18%;transform:rotate(14deg)}
-.final .c3{width:clamp(70px,11vw,160px);aspect-ratio:1;background:var(--ink);clip-path:polygon(50% 4%,100% 96%,0 96%);right:14%;bottom:12%}
-.final .c4{width:clamp(40px,6vw,80px);aspect-ratio:1;background:var(--orange);border-radius:50%;left:15%;bottom:14%}
-.final .wrap{position:relative}
-
-footer{background:var(--ink);color:#fff;padding:36px 0}
-footer .wrap{display:flex;flex-wrap:wrap;gap:16px 30px;justify-content:space-between;align-items:center;font-weight:500}
-footer a{font-weight:600}
-.fcta{position:fixed;right:18px;bottom:18px;z-index:40;transform:translateY(140%);transition:transform .4s var(--ease)}
+.fcta{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;transform:translateY(140%);transition:transform .5s var(--out)}
 .fcta.on{transform:none}
+.fcta .btn{width:100%;box-shadow:0 18px 40px -10px rgba(31,12,51,.6)}
+
+/* entrada do hero (o único momento orquestrado) */
+@media (prefers-reduced-motion:no-preference){
+  .hero .in{opacity:0;transform:translateY(16px);animation:in .9s var(--out) forwards}
+  .hero .in:nth-child(2){animation-delay:.08s}.hero .in:nth-child(3){animation-delay:.16s}.hero .in:nth-child(4){animation-delay:.24s}.hero .in:nth-child(5){animation-delay:.32s}
+  .stage.in{animation-delay:.3s}
+}
+@keyframes in{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* responsivo */
-@media (max-width:980px){
-  .hero-grid,.pair,.bin,.about,.offer,.faqg{grid-template-columns:minmax(0,1fr)}
-  .faqg .sec-h{position:static}
-  .lp{grid-template-columns:minmax(0,1fr)}
-  .bin-v{order:-1}
-  .bin-v video{height:min(62vh,520px)}
-  .top nav a:not(.btn){display:none}
-  .trio{grid-template-columns:minmax(0,1fr)}
-  .link{display:none}
-  .role{grid-template-columns:auto 1fr;column-gap:20px;align-items:center}
-  .role svg{grid-row:1/4}
-  .ph-wrap{max-width:420px}
+@media (max-width:1060px){
+  .nav{display:none}
+  .hero-g,.prob-g,.offer-g{grid-template-columns:1fr}
+  .stage{max-width:600px}
+  .ez{position:static}
+  .lp{grid-template-columns:1fr}
+  .about-g{grid-template-columns:1fr}
+  .photo{max-width:440px}
+  .fit{grid-template-columns:1fr 1fr}
+  .faq-g{grid-template-columns:1fr}
+  .faq-g .sec-head{position:static}
 }
-@media (max-width:640px){
-  body{font-size:1rem}
-  .top .lockup .x span{display:none}
-  .stage{box-shadow:8px 8px 0 var(--yellow);padding:16px}
-  .tp-grid,.tp-grid.wide{grid-template-columns:minmax(0,1fr)}
-  .tp-grid .tp-vid{max-width:200px}
-  .ficha,.asks,.sk,.gen{grid-template-columns:minmax(0,1fr)}
-  .asks{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .gen-ph{max-width:170px}
-  .flow{grid-template-columns:minmax(0,1fr)}
-  .pipe{justify-content:center;padding:2px 0}
-  .pipe i{width:4px;height:22px;background:repeating-linear-gradient(0deg,var(--ink) 0 6px,transparent 6px 10px);background-size:4px 10px;animation-name:flowv}
-  @keyframes flowv{to{background-position:0 10px}}
-  .bf-row{grid-template-columns:minmax(0,1fr)}
-  .seg button{padding:8px 11px;font-size:.88rem}
-  .fs-row{grid-template-columns:minmax(0,1fr);gap:6px}
-  .errs details p{padding-left:0}
-  .rail video{height:min(52vh,380px)}
-  .role{grid-template-columns:minmax(0,1fr)}
-  .role svg{grid-row:auto}
-  .final .c1,.final .c2,.final .c3,.final .c4{display:none}
-  .lp-r{min-height:0}
+@media (max-width:760px){
+  :root{--gut:16px}
+  .top .wrap{height:62px}
+  .brand .with{display:none}
+  .facts{gap:22px}
+  .facts b{font-size:1.25rem}
+  .win-body{padding:14px;min-height:0}
+  .ai-c{grid-template-columns:132px 1fr;gap:12px}
+  .r-side{font-size:.78rem}
+  .r-side p{display:none}
+  .steps{gap:7px}
+  .msg-me{font-size:.82rem}
+  .reel{grid-template-columns:repeat(4,1fr);gap:6px}
+  .reel button{grid-template-columns:1fr;padding:5px;justify-items:center}
+  .reel img{width:100%;height:auto;aspect-ratio:3/4}
+  .reel b,.reel small{display:none}
+  .habits li{grid-template-columns:36px 1fr}
+  .habits .tag{grid-column:2;justify-self:start;margin-top:0}
+  .serie-head,.pf-head{flex-direction:column;align-items:flex-start}
+  .fan{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gut)*-1);padding-inline:var(--gut)}
+  .fan::-webkit-scrollbar{display:none}
+  .fan figure,.fan figure.on{flex:none;width:68vw;aspect-ratio:9/16;scroll-snap-align:start}
+  .fan figure:not(.on) video{filter:none}
+  .roles{grid-template-columns:1fr}
+  .flowline{display:none}
+  .req{flex-direction:column;align-items:flex-start}
+  .tl{padding:20px 16px 16px;border-radius:var(--r-l)}
+  .lp-side{padding:24px 20px}
+  .lp-ico{width:56px;height:56px}
+  .lp-main{padding:24px 18px}
+  .tp-grid,.tp-grid.wide{grid-template-columns:1fr}
+  .tp-vid{max-width:200px}.tp-grid.wide .tp-vid{max-width:none}
+  .flow{grid-template-columns:1fr;gap:8px}
+  .pipe{width:2px;height:20px;justify-self:center}
+  .pipe i{width:100%;height:40%;left:0;top:-40%;animation-name:pipev}
+  @keyframes pipev{to{top:100%}}
+  .asks{grid-template-columns:1fr 1fr}
+  .sk,.gen{grid-template-columns:1fr}
+  .gen-ph{max-width:180px}
+  .ficha div{grid-template-columns:80px 1fr}
+  .pane-head{align-items:flex-start;flex-direction:column}
+  .seg button,.pre button{padding:7px 11px;font-size:.78rem}
+  .arrows{display:none}
+  .rail .v{width:62vw}.rail .w{width:86vw}
+  .rail .fr{height:110vw;max-height:520px}
+  .rail .w .fr{height:auto;aspect-ratio:16/9}
+  .fit{grid-template-columns:1fr}
+  .stats{gap:24px}
+  .exp{padding:22px}
+  .faq details p{padding-right:0}
+  .ez-top{flex-wrap:wrap}
+  .ez-top code{white-space:nowrap}
+  .foot .wrap{flex-direction:column;align-items:flex-start}
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
+
+[hidden]{display:none!important}
 
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="star" viewBox="0 0 456.21 456.21"><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol>
-<symbol id="logo" viewBox="0 0 1200.45 456.21"><path fill="currentColor" d="M566.09,152.04c5.96-4.48,13.89-7.01,23.77-7.58l8.69-.34c7.72-.23,13.23-.74,16.53-1.53,3.29-.79,4.88-2.73,4.77-5.79-.11-3.86-1.42-6.99-3.92-9.37-2.5-2.38-7.21-3.58-14.14-3.58s-12.04,1.22-14.99,3.66c-2.95,2.44-4.77,5.76-5.45,9.97h-21.47c1.48-10.67,6.19-18.57,14.14-23.68,7.95-5.11,17.43-7.67,28.45-7.67,12.04,0,21.58,2.96,28.62,8.86,7.04,5.91,10.56,16.81,10.56,32.71v49.75h-21.81v-6.3c0-3.41.85-6.7,2.56-9.88.45-1.13.68-1.98.68-2.55,0-.68-.29-1.13-.85-1.36l-.68-.17c-.68,0-1.19.31-1.53.94-.34.63-.51,1-.51,1.11-5.34,13.06-15.67,19.59-31.01,19.59-5.57,0-10.76-1.14-15.59-3.41-4.83-2.27-8.66-5.39-11.5-9.37-2.84-3.98-4.26-8.4-4.26-13.29,0-9.31,2.98-16.21,8.94-20.7ZM610.9,156.3c-3.69.97-9.45,1.85-17.29,2.64-4.88.57-8.55,1.85-10.99,3.83-2.44,1.99-3.66,4.91-3.66,8.77,0,3.3,1.28,5.96,3.83,8.01,2.55,2.04,5.88,3.07,9.97,3.07,1.47,0,2.61-.05,3.41-.17,6.7-.91,12.29-3.8,16.78-8.69,4.49-4.88,6.79-12.44,6.9-22.66-2.27,2.5-5.25,4.23-8.94,5.2Z"/><path fill="currentColor" d="M665.33,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M758.35,128.19c3.29-6.76,7.92-12.12,13.89-16.1,5.96-3.97,12.75-5.96,20.36-5.96,12.27,0,21.75,5.45,28.45,16.36.79,1.7,1.7,2.33,2.73,1.87.57-.11.85-.57.85-1.36,0-.57-.4-1.64-1.19-3.24-1.25-2.39-1.88-5.11-1.88-8.18v-4.09h21.81v80.41c0,14.2-3.92,25.01-11.76,32.45-7.84,7.44-18.74,11.16-32.71,11.16s-23.54-3.04-30.75-9.11c-7.21-6.08-11.22-13.72-12.01-22.91h21.47c1.25,9.54,8.23,14.31,20.96,14.31,15.33,0,23-8.35,23-25.04,0-2.95.62-5.62,1.88-8.01.79-1.59,1.19-2.61,1.19-3.07,0-.57-.29-.96-.85-1.19l-.68-.17c-.68,0-1.19.25-1.53.77-.34.51-.51.82-.51.94-6.47,11.13-15.96,16.7-28.45,16.7-7.61,0-14.4-1.99-20.36-5.96-5.96-3.98-10.59-9.34-13.89-16.1-3.3-6.76-4.94-14.17-4.94-22.23s1.64-15.47,4.94-22.23ZM810.14,171.63c3.63-2.22,6.44-5.2,8.43-8.94,1.99-3.75,2.98-7.84,2.98-12.27s-.99-8.52-2.98-12.27c-1.99-3.75-4.8-6.73-8.43-8.94-3.64-2.22-7.78-3.32-12.44-3.32-7.27,0-12.84,2.33-16.7,6.99-3.86,4.66-5.79,10.51-5.79,17.55s1.93,12.89,5.79,17.55c3.86,4.66,9.43,6.99,16.7,6.99,4.66,0,8.8-1.11,12.44-3.32Z"/><path fill="currentColor" d="M867.04,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M981.27,177.51c3.01,2.84,8.09,4.26,15.25,4.26,6.59,0,11.33-.96,14.23-2.9,2.89-1.93,4.34-4.54,4.34-7.84,0-2.16-.94-3.8-2.81-4.94-1.87-1.13-4.46-2.01-7.75-2.64-3.3-.62-8.46-1.33-15.5-2.13-12.27-1.48-20.53-4.8-24.79-9.97-4.26-5.16-6.39-11.1-6.39-17.8,0-5,1.48-9.57,4.43-13.72,2.95-4.14,7.33-7.46,13.12-9.97,5.79-2.5,12.78-3.75,20.95-3.75,11.47,0,20.5,2.7,27.09,8.09,6.59,5.4,10.16,12.35,10.73,20.87h-21.47c-.34-3.41-1.79-6.25-4.34-8.52s-6.73-3.41-12.52-3.41c-10.79,0-16.18,3.07-16.18,9.2,0,1.7.43,3.13,1.28,4.26.85,1.14,2.7,2.16,5.54,3.07,2.84.91,7.04,1.65,12.61,2.22,11.93,1.25,21.21,4,27.86,8.26s9.97,10.65,9.97,19.17c0,9.43-3.55,16.7-10.65,21.81-7.1,5.11-17.24,7.67-30.41,7.67s-22.57-2.81-29.56-8.43c-6.99-5.62-10.71-13.37-11.16-23.25h21.47c.11,4.09,1.67,7.55,4.68,10.39Z"/><path fill="currentColor" d="M1079.15,126.57v41.06c0,3.64.14,6.13.43,7.5.28,1.36,1.02,2.24,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.43-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M1179.32,112.26c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.04,23.85,6.13ZM1172.42,171.46c4.14-5.05,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.06,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M592.5,268.9c-1.19.4-1.93,1.25-2.22,2.55-.29,1.31-.43,3.78-.43,7.41v3.06h24.53v19.08h-24.53v70.87h-21.81v-70.87h-13.63v-19.08h13.63v-5.11c0-7.16.94-12.72,2.81-16.7,1.88-3.97,4.74-6.79,8.6-8.43,3.86-1.65,8.92-2.47,15.16-2.47h19.76v19.08h-15.16c-3.29,0-5.54.2-6.73.6Z"/><path fill="currentColor" d="M687.31,286.71c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.05,23.85,6.13ZM680.41,345.91c4.14-5.06,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.05,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M795.15,290.28c5.79,6.48,8.69,15.96,8.69,28.45v53.15h-21.81v-45.66c0-9.77-1.31-16.53-3.92-20.27-2.61-3.75-6.87-5.62-12.78-5.62-4.2,0-8.15,1.48-11.84,4.43-3.69,2.95-6.67,7.1-8.94,12.44-2.27,5.34-3.41,11.36-3.41,18.06v36.63h-21.81v-89.95h21.81v5.62c0,2.62-.23,4.83-.68,6.64-.46,1.82-1.14,3.69-2.04,5.62-.57,1.36-.85,2.28-.85,2.73,0,1.02.45,1.59,1.36,1.7h.51c.79,0,1.48-.68,2.04-2.04,2.5-5.56,6.36-10.57,11.58-14.99,5.22-4.43,11.36-6.65,18.4-6.65,9.99,0,17.89,3.24,23.68,9.71Z"/><path fill="currentColor" d="M848.82,301.02v41.06c0,3.63.14,6.13.43,7.49.28,1.36,1.02,2.25,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.44-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M966.88,332.37h-65.42c.79,6.81,3.29,12.15,7.5,16.01,4.2,3.86,9.71,5.79,16.53,5.79,9.2,0,15.28-4.54,18.23-13.63h22.15c-2.04,9.88-6.45,17.8-13.2,23.76-6.76,5.96-15.87,8.94-27.34,8.94-9.43,0-17.55-1.98-24.36-5.96-6.81-3.98-11.98-9.46-15.5-16.44-3.52-6.99-5.28-14.96-5.28-23.94s1.82-17.46,5.45-24.45c3.63-6.99,8.83-12.38,15.59-16.18,6.76-3.81,14.68-5.71,23.76-5.71,7.38,0,14.28,1.56,20.7,4.68,6.42,3.13,11.64,8.07,15.67,14.82,4.03,6.76,6.05,15.3,6.05,25.64,0,1.82-.17,4.03-.51,6.64ZM945.58,317.37c-.45-5.68-2.38-10.28-5.79-13.8-3.41-3.52-8.12-5.28-14.14-5.28-12.95,0-20.73,6.36-23.34,19.08h43.27Z"/><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 456.21 456.21"><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol>
+<symbol id="logo" viewBox="0 0 1200.45 456.21"><path fill="currentColor" d="M566.09,152.04c5.96-4.48,13.89-7.01,23.77-7.58l8.69-.34c7.72-.23,13.23-.74,16.53-1.53,3.29-.79,4.88-2.73,4.77-5.79-.11-3.86-1.42-6.99-3.92-9.37-2.5-2.38-7.21-3.58-14.14-3.58s-12.04,1.22-14.99,3.66c-2.95,2.44-4.77,5.76-5.45,9.97h-21.47c1.48-10.67,6.19-18.57,14.14-23.68,7.95-5.11,17.43-7.67,28.45-7.67,12.04,0,21.58,2.96,28.62,8.86,7.04,5.91,10.56,16.81,10.56,32.71v49.75h-21.81v-6.3c0-3.41.85-6.7,2.56-9.88.45-1.13.68-1.98.68-2.55,0-.68-.29-1.13-.85-1.36l-.68-.17c-.68,0-1.19.31-1.53.94-.34.63-.51,1-.51,1.11-5.34,13.06-15.67,19.59-31.01,19.59-5.57,0-10.76-1.14-15.59-3.41-4.83-2.27-8.66-5.39-11.5-9.37-2.84-3.98-4.26-8.4-4.26-13.29,0-9.31,2.98-16.21,8.94-20.7ZM610.9,156.3c-3.69.97-9.45,1.85-17.29,2.64-4.88.57-8.55,1.85-10.99,3.83-2.44,1.99-3.66,4.91-3.66,8.77,0,3.3,1.28,5.96,3.83,8.01,2.55,2.04,5.88,3.07,9.97,3.07,1.47,0,2.61-.05,3.41-.17,6.7-.91,12.29-3.8,16.78-8.69,4.49-4.88,6.79-12.44,6.9-22.66-2.27,2.5-5.25,4.23-8.94,5.2Z"/><path fill="currentColor" d="M665.33,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M758.35,128.19c3.29-6.76,7.92-12.12,13.89-16.1,5.96-3.97,12.75-5.96,20.36-5.96,12.27,0,21.75,5.45,28.45,16.36.79,1.7,1.7,2.33,2.73,1.87.57-.11.85-.57.85-1.36,0-.57-.4-1.64-1.19-3.24-1.25-2.39-1.88-5.11-1.88-8.18v-4.09h21.81v80.41c0,14.2-3.92,25.01-11.76,32.45-7.84,7.44-18.74,11.16-32.71,11.16s-23.54-3.04-30.75-9.11c-7.21-6.08-11.22-13.72-12.01-22.91h21.47c1.25,9.54,8.23,14.31,20.96,14.31,15.33,0,23-8.35,23-25.04,0-2.95.62-5.62,1.88-8.01.79-1.59,1.19-2.61,1.19-3.07,0-.57-.29-.96-.85-1.19l-.68-.17c-.68,0-1.19.25-1.53.77-.34.51-.51.82-.51.94-6.47,11.13-15.96,16.7-28.45,16.7-7.61,0-14.4-1.99-20.36-5.96-5.96-3.98-10.59-9.34-13.89-16.1-3.3-6.76-4.94-14.17-4.94-22.23s1.64-15.47,4.94-22.23ZM810.14,171.63c3.63-2.22,6.44-5.2,8.43-8.94,1.99-3.75,2.98-7.84,2.98-12.27s-.99-8.52-2.98-12.27c-1.99-3.75-4.8-6.73-8.43-8.94-3.64-2.22-7.78-3.32-12.44-3.32-7.27,0-12.84,2.33-16.7,6.99-3.86,4.66-5.79,10.51-5.79,17.55s1.93,12.89,5.79,17.55c3.86,4.66,9.43,6.99,16.7,6.99,4.66,0,8.8-1.11,12.44-3.32Z"/><path fill="currentColor" d="M867.04,189.09c-5.79-6.47-8.69-15.96-8.69-28.45v-53.15h21.81v45.66c0,9.77,1.3,16.53,3.92,20.27,2.61,3.75,6.87,5.62,12.78,5.62,4.2,0,8.15-1.48,11.84-4.43,3.69-2.95,6.67-7.1,8.94-12.44,2.27-5.34,3.41-11.36,3.41-18.06v-36.63h21.81v89.95h-21.81v-5.62c0-2.5.23-4.63.68-6.39.45-1.76,1.13-3.72,2.04-5.88.57-1.47.85-2.39.85-2.73,0-1.02-.45-1.59-1.36-1.7h-.51c-.8,0-1.48.68-2.04,2.04-2.84,5.68-6.79,10.71-11.84,15.08-5.06,4.37-11.1,6.56-18.14,6.56-9.99,0-17.89-3.24-23.68-9.71Z"/><path fill="currentColor" d="M981.27,177.51c3.01,2.84,8.09,4.26,15.25,4.26,6.59,0,11.33-.96,14.23-2.9,2.89-1.93,4.34-4.54,4.34-7.84,0-2.16-.94-3.8-2.81-4.94-1.87-1.13-4.46-2.01-7.75-2.64-3.3-.62-8.46-1.33-15.5-2.13-12.27-1.48-20.53-4.8-24.79-9.97-4.26-5.16-6.39-11.1-6.39-17.8,0-5,1.48-9.57,4.43-13.72,2.95-4.14,7.33-7.46,13.12-9.97,5.79-2.5,12.78-3.75,20.95-3.75,11.47,0,20.5,2.7,27.09,8.09,6.59,5.4,10.16,12.35,10.73,20.87h-21.47c-.34-3.41-1.79-6.25-4.34-8.52s-6.73-3.41-12.52-3.41c-10.79,0-16.18,3.07-16.18,9.2,0,1.7.43,3.13,1.28,4.26.85,1.14,2.7,2.16,5.54,3.07,2.84.91,7.04,1.65,12.61,2.22,11.93,1.25,21.21,4,27.86,8.26s9.97,10.65,9.97,19.17c0,9.43-3.55,16.7-10.65,21.81-7.1,5.11-17.24,7.67-30.41,7.67s-22.57-2.81-29.56-8.43c-6.99-5.62-10.71-13.37-11.16-23.25h21.47c.11,4.09,1.67,7.55,4.68,10.39Z"/><path fill="currentColor" d="M1079.15,126.57v41.06c0,3.64.14,6.13.43,7.5.28,1.36,1.02,2.24,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.43-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M1179.32,112.26c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.04,23.85,6.13ZM1172.42,171.46c4.14-5.05,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.06,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M592.5,268.9c-1.19.4-1.93,1.25-2.22,2.55-.29,1.31-.43,3.78-.43,7.41v3.06h24.53v19.08h-24.53v70.87h-21.81v-70.87h-13.63v-19.08h13.63v-5.11c0-7.16.94-12.72,2.81-16.7,1.88-3.97,4.74-6.79,8.6-8.43,3.86-1.65,8.92-2.47,15.16-2.47h19.76v19.08h-15.16c-3.29,0-5.54.2-6.73.6Z"/><path fill="currentColor" d="M687.31,286.71c6.82,4.09,12.04,9.66,15.67,16.7,3.63,7.04,5.45,14.88,5.45,23.51s-1.82,16.47-5.45,23.51c-3.64,7.04-8.86,12.61-15.67,16.7-6.81,4.09-14.76,6.13-23.85,6.13s-17.04-2.04-23.85-6.13c-6.81-4.09-12.04-9.65-15.67-16.7-3.64-7.04-5.45-14.88-5.45-23.51s1.82-16.47,5.45-23.51c3.63-7.04,8.86-12.61,15.67-16.7,6.82-4.09,14.76-6.13,23.85-6.13s17.04,2.05,23.85,6.13ZM680.41,345.91c4.14-5.06,6.22-11.39,6.22-19s-2.07-13.94-6.22-19c-4.15-5.05-9.79-7.58-16.95-7.58s-12.81,2.53-16.95,7.58c-4.15,5.06-6.22,11.39-6.22,19s2.07,13.94,6.22,19c4.14,5.05,9.8,7.58,16.95,7.58s12.8-2.53,16.95-7.58Z"/><path fill="currentColor" d="M795.15,290.28c5.79,6.48,8.69,15.96,8.69,28.45v53.15h-21.81v-45.66c0-9.77-1.31-16.53-3.92-20.27-2.61-3.75-6.87-5.62-12.78-5.62-4.2,0-8.15,1.48-11.84,4.43-3.69,2.95-6.67,7.1-8.94,12.44-2.27,5.34-3.41,11.36-3.41,18.06v36.63h-21.81v-89.95h21.81v5.62c0,2.62-.23,4.83-.68,6.64-.46,1.82-1.14,3.69-2.04,5.62-.57,1.36-.85,2.28-.85,2.73,0,1.02.45,1.59,1.36,1.7h.51c.79,0,1.48-.68,2.04-2.04,2.5-5.56,6.36-10.57,11.58-14.99,5.22-4.43,11.36-6.65,18.4-6.65,9.99,0,17.89,3.24,23.68,9.71Z"/><path fill="currentColor" d="M848.82,301.02v41.06c0,3.63.14,6.13.43,7.49.28,1.36,1.02,2.25,2.22,2.64,1.19.4,3.43.6,6.73.6h15.16v19.08h-19.76c-6.25,0-11.3-.82-15.16-2.47-3.86-1.65-6.73-4.46-8.6-8.44-1.87-3.97-2.81-9.54-2.81-16.7v-43.27h-16.35v-19.08h16.35v-24.53h21.81v24.53h24.53v19.08h-24.53Z"/><path fill="currentColor" d="M966.88,332.37h-65.42c.79,6.81,3.29,12.15,7.5,16.01,4.2,3.86,9.71,5.79,16.53,5.79,9.2,0,15.28-4.54,18.23-13.63h22.15c-2.04,9.88-6.45,17.8-13.2,23.76-6.76,5.96-15.87,8.94-27.34,8.94-9.43,0-17.55-1.98-24.36-5.96-6.81-3.98-11.98-9.46-15.5-16.44-3.52-6.99-5.28-14.96-5.28-23.94s1.82-17.46,5.45-24.45c3.63-6.99,8.83-12.38,15.59-16.18,6.76-3.81,14.68-5.71,23.76-5.71,7.38,0,14.28,1.56,20.7,4.68,6.42,3.13,11.64,8.07,15.67,14.82,4.03,6.76,6.05,15.3,6.05,25.64,0,1.82-.17,4.03-.51,6.64ZM945.58,317.37c-.45-5.68-2.38-10.28-5.79-13.8-3.41-3.52-8.12-5.28-14.14-5.28-12.95,0-20.73,6.36-23.34,19.08h43.27Z"/><path fill="currentColor" d="M245.32,0h-34.48c0,116.27-94.59,210.86-210.84,210.86v34.48c116.25,0,210.84,94.59,210.84,210.86h34.48c0-116.27,94.57-210.86,210.84-210.86v-34.48c-116.27,0-210.84-94.59-210.84-210.86ZM228.08,365.86c-24.94-62.74-75.02-112.82-137.74-137.76,62.72-24.91,112.8-75.02,137.74-137.74,24.94,62.72,75.02,112.82,137.74,137.74-62.72,24.94-112.8,75.02-137.74,137.76Z"/><path fill="currentColor" d="M140.65,451.36c-12.48-2.91-24.48-7.11-35.82-12.48-7.37-44.72-42.78-80.13-87.5-87.48-5.34-11.36-9.57-23.34-12.48-35.82,73.75,2.5,133.28,62.03,135.8,135.78Z"/><path fill="currentColor" d="M451.36,315.58c-2.91,12.48-7.13,24.44-12.48,35.8v.02c-44.76,7.33-80.19,42.74-87.54,87.5-11.34,5.34-23.34,9.57-35.82,12.48,2.52-73.77,62.07-133.32,135.84-135.8Z"/><path fill="currentColor" d="M140.65,4.85c-2.5,73.77-62.03,133.3-135.8,135.8,2.91-12.48,7.13-24.48,12.48-35.82,44.72-7.37,80.13-42.78,87.5-87.5,11.34-5.34,23.34-9.57,35.82-12.48Z"/><path fill="currentColor" d="M451.36,140.65c-73.79-2.48-133.34-62.03-135.84-135.82,12.48,2.93,24.48,7.13,35.82,12.48,7.35,44.76,42.78,80.19,87.54,87.52,5.34,11.34,9.57,23.34,12.48,35.82Z"/></symbol></svg>
 
 <header class="top" id="top">
   <div class="wrap">
-    <a class="lockup" href="#topo" aria-label="Augusto Fonte com Claude, início">
-      <svg class="logo" viewBox="0 0 1200.45 456.21" aria-hidden="true"><use href="#logo"/></svg>
-      <i aria-hidden="true"></i>
-      <span class="x"><svg viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg><span>Claude</span></span>
-    </a>
-    <nav aria-label="Seções">
-      <a href="#motions">Motions</a>
-      <a href="#aulas">Aulas</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#duvidas">Dúvidas</a>
-      <a class="btn sm js-buy" href="#oferta">Quero o curso</a>
-    </nav>
+    <a class="brand" href="#inicio" aria-label="Augusto Fonte, início"><svg class="lg" viewBox="0 0 1200.45 456.21" aria-hidden="true"><use href="#logo"/></svg><span class="with">com Claude</span></a>
+    <nav class="nav" aria-label="Seções"><a href="#serie">Motions</a><a href="#metodo">Método</a><a href="#aulas">Aulas</a><a href="#portfolio">Portfólio</a><a href="#duvidas">Dúvidas</a></nav>
+    <a class="btn btn-p js-buy" href="#oferta">Quero o curso</a>
   </div>
 </header>
 
-<main id="topo">
-
+<main>
 <!-- HERO -->
-<section class="band on-blue hero" aria-labelledby="h1">
-  <div class="wrap hero-grid">
+<section class="band hero" id="inicio" aria-labelledby="h1">
+  <svg class="hero-bg" viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg>
+  <div class="wrap hero-g">
     <div>
-      <h1 class="d1" id="h1">Motion bom não nasce no After Effects. Nasce numa conversa.</h1>
-      <p class="lede">O meu processo pra criar motion graphics conversando com o Claude: juntar a identidade, montar a pasta, dar contexto, chamar a skill motion-studio e receber o vídeo pronto em 16:9 e 9:16, com trilha.</p>
-      <div class="cta-row">
-        <a class="btn js-buy" href="#oferta">Quero aprender o processo</a>
-        <a class="btn line" href="#aulas">Ver as aulas</a>
-      </div>
-      <div class="facts" aria-label="Números do curso">
-        <span><b>14</b> aulas curtas</span>
-        <span><b>5</b> módulos</span>
-        <span><b>16:9 e 9:16</b> em MP4</span>
-      </div>
+      <p class="kick in"><svg aria-hidden="true"><use href="#star"/></svg>Curso online de Augusto Fonte</p>
+      <h1 class="h1 in" id="h1">Motion bom nasce numa conversa.</h1>
+      <p class="lede in">Você descreve, o Claude anima. Eu te mostro o processo que uso no estúdio: identidade, pasta, briefing e a skill motion-studio, até o MP4 pronto em 16:9 e 9:16.</p>
+      <div class="cta-row in"><a class="btn btn-p js-buy" href="#oferta">Quero aprender o processo</a><a class="btn btn-g" href="#aulas">Ver as aulas</a></div>
+      <div class="facts in"><div><b class="num">14</b><span>aulas curtas</span></div><div><b class="num">5</b><span>módulos</span></div><div><b>MP4</b><span>16:9 e 9:16, com trilha</span></div></div>
     </div>
 
-    <div class="stage" id="ez" role="group" aria-label="Editor de curva de movimento">
-      <div class="st-top"><span>Curva de movimento</span><code id="ezCode">cubic-bezier(0, 0, 1, 1)</code></div>
-      <div class="st-lane" id="ezLane" aria-hidden="true"><i class="sh c"></i><i class="sh s"></i><i class="sh t"></i></div>
-      <svg class="st-curve" id="ezSvg" viewBox="0 0 240 240" aria-label="Gráfico da curva. Arraste as duas alças rosas.">
+    <div class="stage in" id="stage" aria-label="Demonstração: um pedido ao Claude vira um motion">
+      <div class="win">
+        <div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-t">Projeto Jardineiro</span><span class="model" id="sgModel"><svg aria-hidden="true"><use href="#star"/></svg><span>Opus 5.5</span></span></div>
+        <div class="win-body">
+          <p class="msg-me" id="sgMe" aria-live="polite"></p>
+          <div class="msg-ai" id="sgAi">
+            <span class="av" aria-hidden="true"><svg><use href="#star"/></svg></span>
+            <div class="ai-c">
+              <div class="r-vid" id="sgVidWrap">
+                <video id="sgVid" muted playsinline preload="none" poster="videos/jardim-r1.jpg" aria-label="Motion do Jardineiro"></video>
+                <div class="r-load" aria-hidden="true"><span id="sgLbl">Aguardando o pedido</span><i><b id="sgBar"></b></i></div>
+              </div>
+              <div class="r-side">
+                <p id="sgSay">Usei a identidade e as referências do projeto.</p>
+                <ul class="steps" id="sgSteps"><li>Identidade lida na 02-ID</li><li>Curvas de estúdio aplicadas</li><li>Trilha sincronizada</li><li>Exportado em 9:16</li></ul>
+                <div class="file" id="sgFile"><b id="sgName">jardim-01-9x16.mp4</b><span>salvo na 03-SAIDA</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reel" id="sgReel" role="group" aria-label="Escolha um motion da série"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="band light" aria-labelledby="h-prob">
+  <div class="wrap prob-g">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <h2 class="h2" id="h-prob">“Faz uma animação” vira motion genérico.</h2>
+        <p class="lede">O problema quase sempre começa antes do pedido. São quatro hábitos, e cada um tem uma aula que corrige.</p>
+      </div>
+      <ul class="habits">
+        <li><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></span><div><h3>Pedir e torcer</h3><p>Responda quatro perguntas antes: pra onde vai, qual a ideia, como quer e o que precisa fazer.</p></div><span class="tag">Aula 3.2</span></li>
+        <li><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg></span><div><h3>Explicar o estilo toda vez</h3><p>A skill guarda o seu jeito de fazer. Você chama com uma barra e um nome.</p></div><span class="tag">Aula 4.1</span></li>
+        <li><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>Usar o Opus pra tudo</h3><p>O Opus acerta a primeira peça. Depois o Sonnet faz as próximas, mais rápido e gastando menos limite.</p></div><span class="tag">Aula 1.3</span></li>
+        <li><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/></svg></span><div><h3>Copiar a referência</h3><p>A marca diz quem é, a referência diz como se move. Uma não substitui a outra.</p></div><span class="tag">Aula 2.1</span></li>
+      </ul>
+    </div>
+
+    <div class="ez" id="ez" role="group" aria-label="Editor de curva de movimento">
+      <div class="ez-top"><b>O que separa motion de estúdio</b><code id="ezCode">cubic-bezier(0, 0, 1, 1)</code></div>
+      <div class="lanes" aria-hidden="true">
+        <div class="lane"><i id="lnA"></i><span class="lb">linear</span></div>
+        <div class="lane you"><i id="lnB"></i><span class="lb">sua curva</span></div>
+      </div>
+      <svg class="ez-svg" id="ezSvg" viewBox="0 0 240 240" aria-label="Gráfico da curva. Arraste as duas alças.">
         <line class="grid" x1="30" y1="170" x2="210" y2="170"/><line class="grid" x1="30" y1="80" x2="210" y2="80"/>
         <line class="grid" x1="30" y1="40" x2="30" y2="215"/><line class="grid" x1="210" y1="40" x2="210" y2="215"/>
         <text x="120" y="233" text-anchor="middle">tempo</text>
-        <text x="14" y="130" text-anchor="middle" transform="rotate(-90 14 130)">movimento</text>
+        <text x="14" y="125" text-anchor="middle" transform="rotate(-90 14 125)">movimento</text>
         <line class="guide" id="ezG1" x1="30" y1="170" x2="30" y2="170"/><line class="guide" id="ezG2" x1="210" y1="80" x2="210" y2="80"/>
         <path class="path" id="ezPath" d=""/>
         <circle class="hd" id="ezH1" r="10" tabindex="0" role="slider" aria-label="Alça de saída da curva, use as setas do teclado"/>
         <circle class="hd" id="ezH2" r="10" tabindex="0" role="slider" aria-label="Alça de chegada da curva, use as setas do teclado"/>
       </svg>
-      <div class="st-pre" id="ezPre" role="group" aria-label="Curvas prontas"><button aria-pressed="true" data-p="robo">Robô</button><button aria-pressed="false" data-p="estudio">Estúdio</button><button aria-pressed="false" data-p="elastico">Elástico</button></div>
-      <p class="st-cap" id="ezCap" aria-live="polite">Linear: velocidade constante. Parece máquina.</p>
-      <p class="st-hint">Arraste as alças. Ou deixe a skill fazer isso por você.</p>
+      <div class="pre" id="ezPre" role="group" aria-label="Curvas prontas"><button aria-pressed="true" data-p="robo">Linear</button><button aria-pressed="false" data-p="estudio">Estúdio</button><button aria-pressed="false" data-p="elastico">Elástico</button></div>
+      <p class="ez-cap" id="ezCap" aria-live="polite">Linear: velocidade constante. Parece máquina.</p>
+      <p class="ez-hint">Arraste as alças brancas. A skill já traz as curvas de estúdio.</p>
     </div>
   </div>
 </section>
 
-<!-- DORES -->
-<section class="band on-pale" aria-labelledby="h-dor">
+<!-- SÉRIE -->
+<section class="band dark" id="serie" aria-labelledby="h-serie">
   <div class="wrap">
-    <div class="sec-h">
-      <h2 class="d2" id="h-dor">Você pede “faz uma animação” e vem um motion genérico.</h2>
-      <p class="lede">O problema quase sempre começou antes do pedido. Quatro hábitos que fazem o resultado parecer de qualquer um, e a correção de cada um.</p>
-    </div>
-    <div class="pair">
-      <div class="lanes" aria-label="Duas bolinhas percorrem a mesma distância no mesmo tempo, uma em velocidade constante e outra com curva de estúdio">
-        <div class="lb"><span>“Faz uma animação”</span><span>curva linear</span></div>
-        <div class="lane a" aria-hidden="true"><i></i></div>
-        <div class="lb"><span>Briefing + skill</span><span>curva de estúdio</span></div>
-        <div class="lane b" aria-hidden="true"><i></i></div>
-        <p>Mesma distância, mesmo tempo. Só muda o cuidado com o movimento.</p>
+    <div class="serie-head">
+      <div class="sec-head">
+        <h2 class="h2" id="h-serie">Do pedido ao motion pronto.</h2>
+        <p class="lede">A série Jardineiro nasce dentro das aulas: quatro motions, a mesma marca e a mesma skill. Toque num deles pra abrir.</p>
       </div>
-      <div class="errs">
-        <details>
-          <summary><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#af5eff" stroke="#1f0c33" stroke-width="3"/></svg>Pedir “faz uma animação” e torcer</summary>
-          <p>Responda as 4 perguntas do briefing antes de pedir: pra onde vai, qual a ideia, como quer e o que quer fazer.<span class="tag">Aula 3.2</span></p>
-        </details>
-        <details>
-          <summary><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="4" width="32" height="32" fill="#d9b3ff" stroke="#1f0c33" stroke-width="3"/></svg>Explicar o seu estilo toda vez</summary>
-          <p>A skill traz o seu jeito de fazer motion, já pronto. Você chama com uma barra e um nome.<span class="tag">Aula 4.1</span></p>
-        </details>
-        <details>
-          <summary><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l17 31H3z" fill="#ff6fae" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>Usar o Opus pra tudo</summary>
-          <p>O Opus acerta a peça-mãe. Depois de validada, o Sonnet produz as próximas, mais rápido e pesando menos no seu limite de uso.<span class="tag">Aula 1.3</span></p>
-        </details>
-        <details>
-          <summary><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 28a16 16 0 0 1 32 0z" fill="#5be3b5" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>Copiar a referência de outro estúdio</summary>
-          <p>Marca do cliente, movimento da referência. A marca diz quem é, a referência diz como se move.<span class="tag">Aula 2.1</span></p>
-        </details>
-      </div>
+      <div class="fmt"><span>Motion 01 no formato</span><div class="seg" id="fmt" role="group" aria-label="Formato"><button aria-pressed="true" data-v="9x16">9:16</button><button aria-pressed="false" data-v="4x5">4:5</button></div></div>
     </div>
+    <div class="fan" id="fan"><figure class="on" tabindex="0" role="button" aria-expanded="true" aria-label="Abrir Seu jardim pede ajuda"><video muted loop playsinline preload="none" poster="videos/jardim-r1.jpg" data-src="videos/jardim-r1.mp4" aria-hidden="true"></video><figcaption><b>Seu jardim pede ajuda</b><span>Motion 01, a peça-mãe feita com o Opus</span></figcaption></figure>
+<figure class="" tabindex="0" role="button" aria-expanded="false" aria-label="Abrir Do mato ao jardim"><video muted loop playsinline preload="none" poster="videos/jardim-r2.jpg" data-src="videos/jardim-r2.mp4" aria-hidden="true"></video><figcaption><b>Do mato ao jardim</b><span>Motion 02, antes e depois</span></figcaption></figure>
+<figure class="" tabindex="0" role="button" aria-expanded="false" aria-label="Abrir Três passos"><video muted loop playsinline preload="none" poster="videos/jardim-r3.jpg" data-src="videos/jardim-r3.mp4" aria-hidden="true"></video><figcaption><b>Três passos</b><span>Motion 03, números grandes</span></figcaption></figure>
+<figure class="" tabindex="0" role="button" aria-expanded="false" aria-label="Abrir O que a gente cuida"><video muted loop playsinline preload="none" poster="videos/jardim-r4.jpg" data-src="videos/jardim-r4.mp4" aria-hidden="true"></video><figcaption><b>O que a gente cuida</b><span>Motion 04, fecha a série</span></figcaption></figure></div>
   </div>
 </section>
 
-<!-- MOTIONS DAS AULAS -->
-<section class="band on-ink" id="motions" aria-labelledby="h-cc">
-  <div class="wrap bin">
-    <div>
-      <div class="sec-h">
-        <h2 class="d2" id="h-cc">Do pedido ao motion pronto.</h2>
-        <p class="lede">A série Jardineiro nasce nas aulas: quatro motions, o mesmo método e a mesma skill. Escolha um e veja rodando.</p>
-      </div>
-      <ul class="clips" id="clips">
-        <li><button aria-pressed="true" data-i="0"><img src="videos/jardim-r1.jpg" alt="" width="54" height="96" loading="lazy"><span><b>Seu jardim pede ajuda</b><small>Motion 01</small></span></button></li>
-        <li><button aria-pressed="false" data-i="1"><img src="videos/jardim-r2.jpg" alt="" width="54" height="96" loading="lazy"><span><b>Do mato ao jardim</b><small>Motion 02</small></span></button></li>
-        <li><button aria-pressed="false" data-i="2"><img src="videos/jardim-r3.jpg" alt="" width="54" height="96" loading="lazy"><span><b>Três passos</b><small>Motion 03</small></span></button></li>
-        <li><button aria-pressed="false" data-i="3"><img src="videos/jardim-r4.jpg" alt="" width="54" height="96" loading="lazy"><span><b>O que a gente cuida</b><small>Motion 04</small></span></button></li>
-      </ul>
-      <div class="fmt" id="fmt"><span>Mesmo pedido, outro formato:</span>
-        <div class="seg" role="group" aria-label="Formato do vídeo"><button aria-pressed="true" data-v="0">9:16 Reels</button><button aria-pressed="false" data-v="1">4:5 Feed</button></div>
-      </div>
-    </div>
-    <div class="bin-v" id="binV">
-      <video id="binVid" muted loop playsinline preload="none" poster="videos/jardim-r1.jpg" data-src="videos/jardim-r1.mp4" aria-label="Motion: Seu jardim pede ajuda"></video>
-      <span class="badge" id="binBadge">01 de 04</span>
-    </div>
-  </div>
-</section>
-
-<!-- AULAS: timeline -->
-<section class="band on-pale" id="aulas" aria-labelledby="h-aulas">
+<!-- MÉTODO -->
+<section class="band lilac" id="metodo" aria-labelledby="h-met">
   <div class="wrap">
-    <div class="sec-h">
-      <h2 class="d2" id="h-aulas">14 aulas numa linha do tempo.</h2>
-      <p class="lede">Clique numa aula pra abrir a prévia. Cada uma tem um pedaço que você pode mexer agora. O resto você vê lá dentro.</p>
+    <div class="sec-head">
+      <h2 class="h2" id="h-met">Dois modelos, uma skill e a sua direção.</h2>
+      <p class="lede">Cada um tem um papel. É isso que faz a primeira peça sair certa e as próximas saírem rápido, no mesmo padrão.</p>
     </div>
-    <div class="tl" id="tl">
-      <div class="tl-scroll" id="tlScroll"><div class="tl-in" id="tlIn" role="tablist" aria-label="Aulas do curso"><div class="ph" id="tlPh" aria-hidden="true"><i></i></div></div></div>
-      <div class="lp" id="lp">
-        <div class="lp-l">
-          <span class="lp-n" id="lpN" aria-hidden="true">1.1</span>
-          <span class="lp-m" id="lpM"></span>
-          <h3 id="lpT"></h3>
-          <p class="lp-q" id="lpQ"></p>
-          <span class="lp-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>PDF complementar</span>
-        </div>
-        <div class="lp-r" id="lpR" role="tabpanel" aria-live="polite">
+    <div class="roles">
+      <span class="flowline" aria-hidden="true"></span>
+      <article class="role"><span class="ord">1</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></span><h3>Opus 5.5</h3><p class="who">O diretor</p><p>Lê a marca e as referências, decide a arte e acerta a peça-mãe. Fica com ele até você aprovar a animação.</p></article>
+      <article class="role mid"><span class="ord">2</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 456.21 456.21"><use href="#star"/></svg></span><h3>Skill motion-studio</h3><p class="who">O manual</p><p>Guarda o meu jeito de fazer motion: direção de arte, timing, trilha e entrega. Você chama com /motion-studio.</p></article>
+      <article class="role"><span class="ord">3</span><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Sonnet 5.5</h3><p class="who">O produtor</p><p>Com a peça-mãe aprovada, faz as próximas no mesmo padrão: variações, formatos e a série inteira.</p></article>
+    </div>
+    <div class="req"><span class="pro">Claude Pro</span><p><b>Pra acompanhar, você só precisa do plano Pro e do app do Claude no computador,</b> Mac ou Windows. É no app que você conecta as pastas do projeto.</p></div>
+  </div>
+</section>
 
+<!-- AULAS -->
+<section class="band light" id="aulas" aria-labelledby="h-aulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" id="h-aulas">14 aulas numa linha do tempo.</h2>
+      <p class="lede">Escolha uma aula pra abrir a prévia. Cada uma tem um pedaço que dá pra mexer agora.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-top"><span><b>Linha do tempo do curso</b></span><span>5 módulos, 14 aulas, PDF em todas</span></div>
+      <div class="tl-scroll"><div class="tl-in" id="tlIn" role="tablist" aria-label="Aulas do curso"><span class="ph" id="ph" aria-hidden="true"></span></div></div>
+    </div>
+    <div class="lp" id="lp" role="tabpanel" aria-live="polite">
+      <div class="lp-side">
+        <div class="lp-ico" id="lpIco" aria-hidden="true"></div>
+        <span class="lp-n" id="lpN">Aula 1.1</span>
+        <h3 id="lpT">O que já dá pra fazer</h3>
+        <p id="lpH"></p>
+        <div class="lp-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Aula em vídeo + PDF complementar</div>
+        <div class="lp-nav"><button id="lpPrev" aria-label="Aula anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button id="lpNext" aria-label="Próxima aula"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button></div>
+      </div>
+      <div class="lp-main">
 
           <!-- 1.1 -->
           <div class="pane" data-pane="0">
@@ -614,10 +714,10 @@ footer a{font-weight:600}
           <div class="pane" data-pane="3" hidden>
             <div class="pane-head"><span class="q">Antes da próxima aula, deixe pronto:</span></div>
             <div class="chk" data-chk="4">
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Assinar o Claude Pro</strong><span class="d">Pelo claude.com/pricing, no navegador do computador</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Baixar o app do Claude no computador</strong><span class="d">Mac ou Windows. É nele que você conecta as pastas</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Entrar com a mesma conta da assinatura</strong><span class="d">O mesmo e-mail do plano Pro</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Abrir uma conversa de teste</strong><span class="d">E conferir que o Opus 5.5 aparece na lista de modelos</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Assinar o Claude Pro</strong><span class="d">Pelo claude.com/pricing, no navegador do computador</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Baixar o app do Claude no computador</strong><span class="d">Mac ou Windows. É nele que você conecta as pastas</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Entrar com a mesma conta da assinatura</strong><span class="d">O mesmo e-mail do plano Pro</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Abrir uma conversa de teste</strong><span class="d">E conferir que o Opus 5.5 aparece na lista de modelos</span></span></label>
             </div>
             <div class="meter"><span class="chk-txt">0 de 4 prontos</span><span class="bar"><i class="chk-bar"></i></span></div>
           </div>
@@ -626,11 +726,11 @@ footer a{font-weight:600}
           <div class="pane" data-pane="4" hidden>
             <div class="pane-head"><span class="q">Junte da marca antes de abrir o Claude:</span></div>
             <div class="chk" data-chk="5">
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Logo em SVG</strong><span class="d">Vetor: a melhor qualidade em qualquer tamanho</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Manual de marca, se tiver</strong><span class="d">Regras de uso, fontes e versões do logo</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Cores em HEX</strong><span class="d">Os códigos oficiais, como #AF5EFF</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Artes já feitas</strong><span class="d">De 3 a 5 peças que mostram o estilo da marca</span></span></label>
-              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>3 a 5 referências de movimento</strong><span class="d">Do Pinterest: a marca diz quem é, a referência diz como se move</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Logo em SVG</strong><span class="d">Vetor: a melhor qualidade em qualquer tamanho</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Manual de marca, se tiver</strong><span class="d">Regras de uso, fontes e versões do logo</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Cores em HEX</strong><span class="d">Os códigos oficiais, como #AF5EFF</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>Artes já feitas</strong><span class="d">De 3 a 5 peças que mostram o estilo da marca</span></span></label>
+              <label><input type="checkbox"><span class="box"><svg viewBox="0 0 20 20" fill="none" stroke="#1f0c33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3L15 7"/></svg></span><span><strong>3 a 5 referências de movimento</strong><span class="d">Do Pinterest: a marca diz quem é, a referência diz como se move</span></span></label>
             </div>
             <div class="meter"><span class="chk-txt">0 de 5 prontos</span><span class="bar"><i class="chk-bar"></i></span></div>
           </div>
@@ -725,175 +825,124 @@ footer a{font-weight:600}
                 <li><i>4</i><span>Sonnet 5.5 nas próximas<small>no mesmo padrão</small></span></li>
                 <li><i>5</i><span>Vídeos na 03-SAIDA<small>9:16 e 16:9 conferidos</small></span></li>
               </ol>
-              <div class="gen-ph" id="genPh"><video class="mv" muted loop playsinline preload="none" poster="videos/jardim-r2.jpg" data-src="videos/jardim-r2.mp4"></video></div>
+              <div class="gen-ph" id="genPh"><video class="mv" data-manual="1" muted loop playsinline preload="none" poster="videos/jardim-r2.jpg" data-src="videos/jardim-r2.mp4"></video></div>
             </div>
           </div>
 
-        
         </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- PORTFÓLIO -->
-<section class="band on-yellow" id="portfolio" aria-labelledby="h-pf" style="padding-inline:0">
-  <div class="wrap">
-    <div class="sec-h">
-      <h2 class="d2" id="h-pf">Motions que já saíram do meu estúdio.</h2>
-      <p class="lede">Showreel, logo animada, personagens, promo, vinhetas e transições. Arraste pro lado.</p>
+<section class="band dark" id="portfolio" aria-labelledby="h-pf">
+  <div class="wrap pf-head">
+    <div class="sec-head">
+      <h2 class="h2" id="h-pf">Motions que já saíram do meu estúdio.</h2>
+      <p class="lede">Showreel, logo animada, personagens, promo, vinhetas e transições. Todos feitos conversando com o Claude.</p>
     </div>
+    <div class="arrows"><button id="pfPrev" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button id="pfNext" aria-label="Avançar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button></div>
   </div>
-  <div class="rail" id="rail">
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/showreel.jpg" data-src="videos/showreel.mp4" aria-label="Showreel de 15 segundos"></video><figcaption><b>Showreel Augusto Fonte</b><span>Showreel</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/demo.jpg" data-src="videos/demo.mp4" aria-label="Demo da skill motion-studio"></video><figcaption><b>Demo da motion-studio</b><span>Skill</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/jiva.jpg" data-src="videos/jiva.mp4" aria-label="Logo animada JIVA"></video><figcaption><b>Logo animada JIVA</b><span>Logo animada</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/rostinho.jpg" data-src="videos/rostinho.mp4" aria-label="Motion com personagens: Puxou a quem?"></video><figcaption><b>Puxou a quem?</b><span>Personagens</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/talkmachine.jpg" data-src="videos/talkmachine.mp4" aria-label="Motion promocional da Talk Machine"></video><figcaption><b>Talk Machine</b><span>Promo</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/pedescalco.jpg" data-src="videos/pedescalco.mp4" aria-label="Animação de passos"></video><figcaption><b>Passos</b><span>Animação</span></figcaption></figure>
-    <figure class="w"><video muted loop playsinline preload="none" poster="videos/vinhetas.jpg" data-src="videos/vinhetas.mp4" aria-label="Transição: Vinhetas com Claude"></video><figcaption><b>Vinhetas com Claude</b><span>Transição</span></figcaption></figure>
-    <figure class="w"><video muted loop playsinline preload="none" poster="videos/chamada.jpg" data-src="videos/chamada.mp4" aria-label="Chamada da aula de vinhetas"></video><figcaption><b>Chamada: aula de vinhetas</b><span>Chamada</span></figcaption></figure>
-    <figure class="v"><video muted loop playsinline preload="none" poster="videos/transicao.jpg" data-src="videos/transicao.mp4" aria-label="Transição de 1 segundo"></video><figcaption><b>Transição de 1 segundo</b><span>Transição</span></figcaption></figure>
-  </div>
-  <div class="wrap ctrl"><button id="pfPrev" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button id="pfNext" aria-label="Próximos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><span>arraste ou use as setas</span></div>
+  <div class="rail" id="pfRail"><figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/showreel.jpg" data-src="videos/showreel.mp4" aria-label="Showreel de 15 segundos"></video></div><figcaption><b>Showreel Augusto Fonte</b><span>Showreel</span></figcaption></figure>
+<figure class="w"><div class="fr"><video muted loop playsinline preload="none" poster="videos/vinhetas.jpg" data-src="videos/vinhetas.mp4" aria-label="Transição: vinhetas com Claude"></video></div><figcaption><b>Vinhetas com Claude</b><span>Transição</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/demo.jpg" data-src="videos/demo.mp4" aria-label="Demo da skill motion-studio"></video></div><figcaption><b>Demo da motion-studio</b><span>Skill</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/jiva.jpg" data-src="videos/jiva.mp4" aria-label="Logo animada JIVA"></video></div><figcaption><b>Logo animada JIVA</b><span>Logo animada</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/rostinho.jpg" data-src="videos/rostinho.mp4" aria-label="Motion com personagens: Puxou a quem?"></video></div><figcaption><b>Puxou a quem?</b><span>Personagens</span></figcaption></figure>
+<figure class="w"><div class="fr"><video muted loop playsinline preload="none" poster="videos/chamada.jpg" data-src="videos/chamada.mp4" aria-label="Chamada da aula de vinhetas"></video></div><figcaption><b>Chamada da aula de vinhetas</b><span>Chamada</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/talkmachine.jpg" data-src="videos/talkmachine.mp4" aria-label="Motion promocional da Talk Machine"></video></div><figcaption><b>Talk Machine</b><span>Promo</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/pedescalco.jpg" data-src="videos/pedescalco.mp4" aria-label="Animação de passos"></video></div><figcaption><b>Passos</b><span>Animação</span></figcaption></figure>
+<figure class="v"><div class="fr"><video muted loop playsinline preload="none" poster="videos/transicao.jpg" data-src="videos/transicao.mp4" aria-label="Transição de 1 segundo"></video></div><figcaption><b>Transição de 1 segundo</b><span>Transição</span></figcaption></figure></div>
 </section>
 
-<!-- CLAUDE -->
-<section class="band on-blue" id="claude" aria-labelledby="h-oray">
+<!-- SOBRE -->
+<section class="band light" aria-labelledby="h-sobre">
   <div class="wrap">
-    <div class="sec-h">
-      <h2 class="d2" id="h-oray">Dois modelos, uma skill e a sua direção.</h2>
-      <p class="lede">O Opus 5.5 lê a marca e as referências e acerta a primeira peça. O Sonnet 5.5 produz as próximas. A skill motion-studio garante que os dois sigam o mesmo jeito de fazer motion.</p>
-    </div>
-    <div class="trio">
-      <div class="role">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5be3b5" stroke="#1f0c33" stroke-width="5"/></svg>
-        <h3>Opus 5.5</h3>
-        <dl><dt>Papel</dt><dd>o diretor</dd><dt>Faz</dt><dd>decide a arte da peça-mãe</dd><dt>Até</dt><dd>validar a animação</dd></dl>
-      </div>
-      <div class="link" aria-hidden="true"><svg viewBox="0 0 64 14"><path d="M0 7h64"/></svg></div>
-      <div class="role">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="6" y="6" width="88" height="88" fill="#d9b3ff" stroke="#1f0c33" stroke-width="5"/></svg>
-        <h3>A skill</h3>
-        <dl><dt>Papel</dt><dd>o manual</dd><dt>Faz</dt><dd>mantém o mesmo padrão</dd><dt>Chama</dt><dd>/motion-studio</dd></dl>
-      </div>
-      <div class="link" aria-hidden="true"><svg viewBox="0 0 64 14"><path d="M0 7h64"/></svg></div>
-      <div class="role">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6l46 86H4z" fill="#faf5ff" stroke="#1f0c33" stroke-width="5" stroke-linejoin="round"/></svg>
-        <h3>Sonnet 5.5</h3>
-        <dl><dt>Papel</dt><dd>o produtor</dd><dt>Faz</dt><dd>as próximas peças</dd><dt>Bom pra</dt><dd>variações e formatos</dd></dl>
+    <div class="about-g">
+      <figure class="photo"><img src="img/ph-tall.jpg" alt="Augusto Fonte sentado num banco, em estúdio" width="640" height="800" loading="lazy"><figcaption><svg aria-hidden="true"><use href="#star"/></svg>Augusto Fonte</figcaption></figure>
+      <div class="about">
+        <h2 class="h2" id="h-sobre">Designer primeiro. Motion com IA depois.</h2>
+        <p>Sou designer e diretor criativo. Trabalho com branding, identidade visual, criativos, sites, personagens 3D e motion graphics.</p>
+        <p>Comecei numa agência, criando criativo todo dia. Hoje uso o Claude como estúdio de motion, sem perder o olhar de designer: é ele que decide o que vale.</p>
+        <blockquote class="quote">Não estou te ensinando um programa. Estou te ensinando o meu jeito de fazer motion.<small>Augusto Fonte</small></blockquote>
+        <div class="stats"><div><b class="num">7 anos</b><span>de mercado</span></div><div><b class="num">13</b><span>motions na galeria</span></div><div><b>1 skill</b><span>pública no GitHub</span></div></div>
       </div>
     </div>
-    <div class="pro"><b>Pro</b><span>O plano que você precisa pra acompanhar, junto com o app do Claude no computador, Mac ou Windows.</span></div>
-  </div>
-</section>
-
-<!-- PACOTE -->
-<section class="band on-pink" aria-labelledby="h-pack">
-  <div class="wrap">
-    <div class="sec-h">
-      <h2 class="d2" id="h-pack">O que vem na sua pasta.</h2>
-    </div>
-    <div class="fs">
-      <div class="fs-row"><b><svg viewBox="0 0 48 40" aria-hidden="true"><path d="M2 6h16l4 5h24v25H2z" fill="#af5eff" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>aulas/</b><span>14 aulas em vídeo, em 5 módulos</span></div>
-      <div class="fs-row"><b><svg viewBox="0 0 48 40" aria-hidden="true"><path d="M2 6h16l4 5h24v25H2z" fill="#faf5ff" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>pdfs/</b><span>19 PDFs: um por aula e um por módulo</span></div>
-      <div class="fs-row"><b><svg viewBox="0 0 48 40" aria-hidden="true"><path d="M2 6h16l4 5h24v25H2z" fill="#5be3b5" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>skill/</b><span>motion-studio, com a instalação passo a passo</span></div>
-      <div class="fs-row"><b><svg viewBox="0 0 48 40" aria-hidden="true"><path d="M2 6h16l4 5h24v25H2z" fill="#ff6fae" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg>saida/</b><span>os seus vídeos em MP4, 16:9 e 9:16, com trilha</span></div>
-    </div>
-    <p class="fs-note">Você só precisa do plano Claude Pro e do app no computador.</p>
-  </div>
-</section>
-
-<!-- QUEM SOU -->
-<section class="band on-ink" aria-labelledby="h-sobre">
-  <div class="wrap about">
-    <div class="ph-wrap"><div class="ph-frame"><img src="img/ph-wide.jpg" alt="Augusto Fonte sentado num banco em estúdio, foto em preto e branco" width="896" height="1080" loading="lazy"></div></div>
-    <div>
-      <h2 class="d2" id="h-sobre">Designer primeiro. Motion com IA depois.</h2>
-      <p>Eu sou o Augusto, designer e diretor criativo. Trabalho com branding, identidade visual, criativos, sites, personagens 3D e motion graphics.</p>
-      <p>Comecei numa agência, criando criativo todo dia, há 7 anos. Hoje uso IA pra produzir motion sem perder o olhar de designer.</p>
-      <p class="sig">Não estou te ensinando um programa. Estou te ensinando o meu jeito de fazer motion.<span>Augusto Fonte</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- PRA QUEM -->
-<section class="band on-pale" aria-labelledby="h-fit">
-  <div class="wrap pair">
-    <div class="sec-h" style="margin-bottom:0">
-      <h2 class="d2" id="h-fit">Pra quem quer motion sem complicação.</h2>
-      <div class="not"><span>Não é pra você se procura:</span><s>VFX e motion de cinema</s><s>um curso de After Effects</s><s>só assistir, sem praticar</s></div>
-    </div>
-    <div class="who">
-      <div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#af5eff" stroke="#1f0c33" stroke-width="3"/></svg><span><h3>Designers e diretores de arte</h3><p>Motion no portfólio sem aprender mais um programa pesado.</p></span></div>
-      <div><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="4" width="32" height="32" fill="#d9b3ff" stroke="#1f0c33" stroke-width="3"/></svg><span><h3>Social medias</h3><p>Vídeos pra Reels, Stories e Status na identidade de cada cliente, toda semana.</p></span></div>
-      <div><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l17 31H3z" fill="#ff6fae" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg><span><h3>Donos de negócio</h3><p>Promo de produto ou serviço com cara profissional, sem depender de produtora.</p></span></div>
-      <div><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 28a16 16 0 0 1 32 0z" fill="#5be3b5" stroke="#1f0c33" stroke-width="3" stroke-linejoin="round"/></svg><span><h3>Quem já usa IA</h3><p>Um processo repetível, com modelo certo e skill, em vez de pedir no escuro.</p></span></div>
+    <div class="fit">
+      <h3>Pra quem é</h3>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg><b>Designers e diretores de arte</b><p>Motion no portfólio sem aprender mais um programa pesado.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><b>Social medias</b><p>Reels, Stories e Status na identidade de cada cliente, toda semana.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg><b>Donos de negócio</b><p>Promo de produto ou serviço com cara profissional, sem depender de produtora.</p></div>
+      <div><svg viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg><b>Quem já usa IA</b><p>Um processo que se repete, com o modelo certo e a skill, em vez de pedir no escuro.</p></div>
+      <p class="notfor">Não é pra você se procura VFX de cinema, um curso de After Effects ou só assistir sem praticar.</p>
     </div>
   </div>
 </section>
 
 <!-- OFERTA -->
-<section class="band on-blue" id="oferta" aria-labelledby="h-oferta">
-  <div class="wrap offer">
+<section class="band violet" id="oferta" aria-labelledby="h-oferta">
+  <div class="wrap offer-g">
     <div>
-      <h2 class="d2" id="h-oferta" style="margin-bottom:22px">Termine o primeiro motion e melhore no próximo.</h2>
+      <h2 class="h2" id="h-oferta">Termine o primeiro motion e melhore no próximo.</h2>
       <p class="lede">Separe uma marca real, monte a pasta e saia das aulas com um motion seu, nos dois formatos.</p>
     </div>
-    <div class="pcard">
-      <header><b>Motion Graphics com Claude</b><span>com Augusto Fonte</span></header>
-      <ul>
-        <li>14 aulas em vídeo, em 5 módulos</li>
-        <li>PDF complementar de cada aula e de cada módulo</li>
-        <li>Skill motion-studio: instalação e uso, do zero</li>
-        <li>Processo completo, do briefing ao MP4 em 16:9 e 9:16</li>
-      </ul>
-      <div class="price"><span class="old" id="priceOld"></span><span class="now"><small>R$</small><span id="priceNow"></span></span><span class="soon" id="priceSoon" hidden>Valor de lançamento em breve</span><span class="inst" id="priceInst"></span></div>
-      <a class="btn js-buy" href="#oferta">Quero o curso agora</a>
-      <p class="safe" id="guaranteeWrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><span id="guarantee"></span></p>
+    <div class="exp">
+      <div class="exp-h"><b>Motion Graphics com Claude</b><span>com Augusto Fonte</span></div>
+      <dl>
+        <div><dt>Aulas</dt><dd>14 em vídeo, em 5 módulos</dd></div>
+        <div><dt>PDFs</dt><dd>19: um por aula e um por módulo</dd></div>
+        <div><dt>Skill</dt><dd>motion-studio, da instalação ao uso</dd></div>
+        <div><dt>Entrega</dt><dd>MP4 em 16:9 e 9:16, com trilha</dd></div>
+      </dl>
+      <div class="price">
+        <span class="old" id="priceOld" hidden></span>
+        <div class="now" hidden><small>R$</small><b id="priceNow"></b></div>
+        <span class="inst" id="priceInst" hidden></span>
+        <span class="soon" id="priceSoon">Valor de lançamento em breve</span>
+      </div>
+      <a class="btn btn-p js-buy" href="#oferta">Quero o curso agora</a>
+      <p class="guar" id="guaranteeWrap" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span id="guarantee"></span></p>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="band on-pale" id="duvidas" aria-labelledby="h-faq">
-  <div class="wrap faqg">
-    <div class="sec-h">
-      <h2 class="d2" id="h-faq">Perguntas frequentes</h2>
-      <p>Ficou alguma outra? Me chama no Instagram, <a href="https://instagram.com/_augustofonte" target="_blank" rel="noopener">@_augustofonte</a>.</p>
+<section class="band light" id="duvidas" aria-labelledby="h-faq">
+  <div class="wrap faq-g">
+    <div class="sec-head">
+      <h2 class="h2" id="h-faq">Perguntas frequentes</h2>
+      <p class="lede">Ficou alguma outra? Me chama no Instagram, <a href="https://www.instagram.com/_augustofonte/" target="_blank" rel="noopener">@_augustofonte</a>.</p>
     </div>
     <div class="faq">
-      <details><summary>Preciso saber motion ou After Effects?</summary><p>Não. O curso não ensina um programa de animação. Você descreve, o Claude executa, e o olhar de designer entra na direção: briefing, referência e escolha do que vale.</p></details>
-      <details><summary>O que eu preciso ter pra acompanhar?</summary><p>O plano Claude Pro e o app do Claude no computador, Mac ou Windows. No navegador você não conecta as pastas do computador, e no plano grátis o limite acaba no meio da animação.</p></details>
-      <details><summary>Por que Opus 5.5 e Sonnet 5.5?</summary><p>O Opus entende o projeto e acerta a primeira peça. Depois de validar, o Sonnet produz as próximas no mesmo padrão: é mais rápido e pesa menos no seu limite de uso.</p></details>
-      <details><summary>O que é a skill motion-studio?</summary><p>É o meu jeito de fazer motion, empacotado pro Claude seguir: direção de arte, timing, trilha e entrega em MP4. Você baixa no GitHub, sobe nas configurações do Claude e chama com /motion-studio. A aula 4.2 mostra tudo.</p></details>
-      <details><summary>Em quais formatos o vídeo sai?</summary><p>Em MP4, em 16:9 e em 9:16, com trilha. Nos exemplos das aulas também aparecem versões em 4:5 pro feed.</p></details>
-      <details><summary>Preciso gravar a minha voz?</summary><p>Não. O roteiro pode ser só com animações, com texto e movimento. Se quiser narração, você grava, ou gera a voz por IA com apps como Magnific e ElevenLabs.</p></details>
-      <details><summary>Recebo material de apoio?</summary><p>Sim. Cada aula tem um PDF complementar e cada módulo tem o seu PDF, com passo a passo e checklist.</p></details>
-      <details><summary>Funciona pro meu nicho?</summary><p>O processo é o mesmo em qualquer nicho: marca, referência, briefing e skill. Nas aulas aparecem logo animada, promo de produto ou serviço, post animado com números, intro e transição.</p></details>
+      <details open><summary>Preciso saber motion ou After Effects?<i aria-hidden="true"></i></summary><p>Não. O curso não ensina um programa de animação. Você descreve, o Claude executa, e o olhar de designer entra na direção: briefing, referência e escolha do que vale.</p></details>
+      <details><summary>O que eu preciso ter pra acompanhar?<i aria-hidden="true"></i></summary><p>O plano Claude Pro e o app do Claude no computador, Mac ou Windows. No navegador você não conecta as pastas do computador, e no plano grátis o limite acaba no meio da animação.</p></details>
+      <details><summary>Por que Opus 5.5 e Sonnet 5.5?<i aria-hidden="true"></i></summary><p>O Opus entende o projeto e acerta a primeira peça. Depois de validar, o Sonnet produz as próximas no mesmo padrão: é mais rápido e pesa menos no seu limite de uso.</p></details>
+      <details><summary>O que é a skill motion-studio?<i aria-hidden="true"></i></summary><p>É o meu jeito de fazer motion, empacotado pro Claude seguir: direção de arte, timing, trilha e entrega em MP4. Você baixa no GitHub, sobe nas configurações do Claude e chama com /motion-studio. A aula 4.2 mostra tudo.</p></details>
+      <details><summary>Em quais formatos o vídeo sai?<i aria-hidden="true"></i></summary><p>Em MP4, em 16:9 e em 9:16, com trilha. Nos exemplos das aulas também aparecem versões em 4:5 pro feed.</p></details>
+      <details><summary>Preciso gravar a minha voz?<i aria-hidden="true"></i></summary><p>Não. O roteiro pode ser só com animações, com texto e movimento. Se quiser narração, você grava, ou gera a voz por IA com apps como Magnific e ElevenLabs.</p></details>
+      <details><summary>Recebo material de apoio?<i aria-hidden="true"></i></summary><p>Sim. Cada aula tem um PDF complementar e cada módulo tem o seu, com passo a passo e checklist.</p></details>
+      <details><summary>Funciona pro meu nicho?<i aria-hidden="true"></i></summary><p>O processo é o mesmo em qualquer nicho: marca, referência, briefing e skill. Nas aulas aparecem logo animada, promo de produto ou serviço, post animado com números, intro e transição.</p></details>
     </div>
   </div>
 </section>
 
 <!-- FINAL -->
-<section class="band on-yellow final" aria-labelledby="h-final">
-  <i class="shp c1" aria-hidden="true"></i><i class="shp c2" aria-hidden="true"></i><i class="shp c3" aria-hidden="true"></i><i class="shp c4" aria-hidden="true"></i>
+<section class="band dark final" aria-labelledby="h-final">
   <div class="wrap">
-    <h2 id="h-final">O motion começa na conversa.</h2>
-    <p>Aprenda o processo inteiro, na ordem certa, com quem faz isso todo dia.</p>
-    <a class="btn dark js-buy" href="#oferta">Quero aprender o processo</a>
+    <svg class="f-star" viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg>
+    <h2 class="h2" id="h-final">O próximo motion começa numa mensagem.</h2>
+    <p class="lede">Aprenda o processo inteiro, na ordem certa, com quem faz isso todo dia.</p>
+    <a class="btn btn-p js-buy" href="#oferta">Quero aprender o processo</a>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="foot">
   <div class="wrap">
-    <a class="lockup" href="#topo" aria-label="Augusto Fonte com Claude"><svg class="logo" viewBox="0 0 1200.45 456.21" aria-hidden="true"><use href="#logo"/></svg><i aria-hidden="true"></i><span class="x"><svg viewBox="0 0 456.21 456.21" aria-hidden="true"><use href="#star"/></svg><span>Claude</span></span></a>
-    <span><a href="https://augustofonte.com" target="_blank" rel="noopener">augustofonte.com</a> &nbsp; <a href="https://instagram.com/_augustofonte" target="_blank" rel="noopener">@_augustofonte</a></span>
+    <svg class="lg" viewBox="0 0 1200.45 456.21" role="img" aria-label="Augusto Fonte"><use href="#logo"/></svg>
+    <nav aria-label="Links"><a href="https://augustofonte.com" target="_blank" rel="noopener">augustofonte.com</a><a href="https://www.instagram.com/_augustofonte/" target="_blank" rel="noopener">@_augustofonte</a></nav>
   </div>
 </footer>
 
-<div class="fcta" id="fcta"><a class="btn sm js-buy" href="#oferta">Quero o curso</a></div>
 
 <script>
 /* ===== CONFIGURAÇÃO DA OFERTA: edite aqui ===== */
@@ -909,21 +958,20 @@ const OFERTA = {
 const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const wait = ms => new Promise(r => setTimeout(r, ms));
 function seg(el, cb) {
   const b = $$("button", el);
   b.forEach(x => x.addEventListener("click", () => { b.forEach(y => y.setAttribute("aria-pressed", y === x ? "true" : "false")); cb(x.dataset.v); }));
 }
+const play = v => { if (RM) return; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
 
-/* vídeos: carrega e toca só quando visível */
+/* vídeos: carregam e tocam só quando visíveis */
 const VIO = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
   const v = e.target;
-  if (e.isIntersecting) {
-    if (!v.getAttribute("src") && v.dataset.src && !v.querySelector("source")) v.src = v.dataset.src;
-    if (!RM) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
-  } else if (!v.paused) v.pause();
+  if (e.isIntersecting) { if (!v.getAttribute("src") && v.dataset.src) v.src = v.dataset.src; if (!v.dataset.manual) play(v); }
+  else if (!v.paused) v.pause();
 }), { threshold: .2 }) : null;
-const watchVideo = v => VIO && VIO.observe(v);
-$$("video").forEach(watchVideo);
+$$("video[data-src]").forEach(v => VIO && VIO.observe(v));
 
 /* oferta */
 (() => {
@@ -938,17 +986,77 @@ $$("video").forEach(watchVideo);
 
 /* topo e botão flutuante */
 (() => {
-  const top = $("#top"), f = $("#fcta"), offer = $("#oferta");
-  let offerIn = false;
-  new IntersectionObserver(es => { offerIn = es[0].isIntersecting; upd(); }).observe(offer);
-  const upd = () => { top.classList.toggle("solid", scrollY > 40); f.classList.toggle("on", scrollY > innerHeight * .8 && !offerIn); };
+  const top = $("#top");
+  const upd = () => top.classList.toggle("solid", scrollY > 30);
   addEventListener("scroll", upd, { passive: true }); upd();
 })();
 
-/* editor de curva do hero */
+/* ===== HERO: o pedido vira motion ===== */
+(() => {
+  const S = [
+    { v: "jardim-r1", n: "Motion 01", t: "Seu jardim pede ajuda", m: "Opus 5.5", say: "Usei a identidade e as referências do projeto.",
+      p: ["/motion-studio", " Motion pra vender um serviço de jardinagem. Animado e fácil de entender, 9:16. Salve na 03-SAIDA."] },
+    { v: "jardim-r2", n: "Motion 02", t: "Do mato ao jardim", m: "Sonnet 5.5", say: "Mesmo padrão da peça-mãe aprovada.",
+      p: ["", "Agora o antes e depois: do mato ao jardim, no mesmo estilo."] },
+    { v: "jardim-r3", n: "Motion 03", t: "Três passos", m: "Sonnet 5.5", say: "Números grandes, mesma trilha.",
+      p: ["", "Um com os três passos do serviço, com números grandes."] },
+    { v: "jardim-r4", n: "Motion 04", t: "O que a gente cuida", m: "Sonnet 5.5", say: "Fechei a série com a mesma assinatura.",
+      p: ["", "Fecha a série com o que a gente cuida: grama, poda e flores."] }
+  ];
+  const me = $("#sgMe"), ai = $("#sgAi"), vid = $("#sgVid"), wrap = $("#sgVidWrap"), bar = $("#sgBar"), steps = $$("#sgSteps li"),
+    file = $("#sgFile"), lbl = $("#sgLbl"), name = $("#sgName"), say = $("#sgSay"), model = $("#sgModel"), reel = $("#sgReel"), stage = $("#stage");
+  reel.innerHTML = S.map((s, i) => `<button type="button" data-i="${i}" aria-current="${i === 0}"><img src="videos/${s.v}.jpg" alt="" width="34" height="46"><span><b>${s.n}</b><small>${s.m}</small></span><i class="pg"></i></button>`).join("");
+  const btns = $$("button", reel);
+  let cur = 0, token = 0, vis = true;
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; if (!vis) vid.pause(); else if (wrap.classList.contains("ok")) play(vid); }).observe(stage);
+  const setModel = m => { $("span", model).textContent = m; model.classList.toggle("sn", m.startsWith("Sonnet")); };
+  const fill = i => {
+    const s = S[i];
+    me.innerHTML = (s.p[0] ? `<span class="sl">${s.p[0]}</span>` : "") + s.p[1];
+    ai.classList.add("on"); steps.forEach(l => l.classList.add("on")); file.classList.add("on");
+    wrap.classList.add("ok"); bar.style.width = "100%"; say.textContent = s.say; name.textContent = `jardim-0${i + 1}-9x16.mp4`; setModel(s.m);
+    vid.poster = `videos/${s.v}.jpg`; vid.src = `videos/${s.v}.mp4`;
+  };
+  const run = async i => {
+    const my = ++token; cur = i; const s = S[i];
+    btns.forEach((b, k) => { b.setAttribute("aria-current", k === i); $(".pg", b).style.transform = "scaleX(0)"; });
+    if (RM) { fill(i); return; }
+    const alive = () => my === token;
+    const hold = async ms => { const t = performance.now(); while (performance.now() - t < ms) { await wait(60); if (!alive()) return false; while (!vis) { await wait(300); if (!alive()) return false; } } return true; };
+    wrap.classList.remove("ok"); lbl.textContent = "Aguardando o pedido"; file.classList.remove("on"); steps.forEach(l => l.classList.remove("on")); bar.style.width = "0";
+    vid.pause(); setModel(s.m); me.innerHTML = "";
+    if (!(await hold(400))) return;
+    const full = s.p[0] + s.p[1];
+    for (let k = 1; k <= full.length; k++) {
+      const a = full.slice(0, k), sl = s.p[0] ? `<span class="sl">${a.slice(0, s.p[0].length)}</span>${a.slice(s.p[0].length)}` : a;
+      me.innerHTML = sl + '<span class="cur"></span>';
+      if (!(await hold(k <= s.p[0].length ? 45 : 16))) return;
+    }
+    me.innerHTML = me.innerHTML.replace('<span class="cur"></span>', "");
+    if (!(await hold(450))) return;
+    say.textContent = s.say; name.textContent = `jardim-0${i + 1}-9x16.mp4`;
+    vid.poster = `videos/${s.v}.jpg`; vid.src = `videos/${s.v}.mp4`; vid.load();
+    lbl.textContent = "Renderizando";
+    for (let k = 0; k < steps.length; k++) { if (!(await hold(380))) return; steps[k].classList.add("on"); bar.style.width = ((k + 1) / steps.length * 100) + "%"; }
+    if (!(await hold(300))) return;
+    wrap.classList.add("ok"); file.classList.add("on"); vid.currentTime = 0; play(vid);
+    const D = 9000, pg = $(".pg", btns[i]); const t0 = performance.now(); let paused = 0, last = t0;
+    for (;;) {
+      await wait(50); if (!alive()) return;
+      const now = performance.now(); if (!vis) paused += now - last; last = now;
+      const p = Math.min(1, (now - t0 - paused) / D); pg.style.transform = `scaleX(${p})`;
+      if (p >= 1) break;
+    }
+    run((i + 1) % S.length);
+  };
+  reel.addEventListener("click", e => { const b = e.target.closest("button"); if (b) run(+b.dataset.i); });
+  run(0);
+})();
+
+/* ===== editor de curva ===== */
 (() => {
   const svg = $("#ezSvg"), path = $("#ezPath"), g1 = $("#ezG1"), g2 = $("#ezG2"), H = [$("#ezH1"), $("#ezH2")];
-  const code = $("#ezCode"), cap = $("#ezCap"), lane = $("#ezLane"), shapes = $$(".sh", lane), pre = $$("#ezPre button");
+  const code = $("#ezCode"), cap = $("#ezCap"), pre = $$("#ezPre button"), A = $("#lnA"), B = $("#lnB");
   const X = u => 30 + u * 180, Y = v => 215 - (v + .5) * 90;
   const P = {
     robo: { c: [0, 0, 1, 1], t: "Linear: velocidade constante. Parece máquina." },
@@ -978,7 +1086,7 @@ $$("video").forEach(watchVideo);
     ease = bez(...h);
     H[0].setAttribute("aria-valuetext", `x ${r2(x1)}, y ${r2(y1)}`); H[1].setAttribute("aria-valuetext", `x ${r2(x2)}, y ${r2(y2)}`);
   };
-  const setCap = k => { cap.textContent = k in P ? P[k].t : "Sua curva. Gostou? A skill já guarda as curvas de estúdio."; };
+  const setCap = k => { cap.textContent = k in P ? P[k].t : "Sua curva. A skill já guarda as de estúdio pra você."; };
   const mark = k => pre.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.p === k)));
   const clampV = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
   let tw = 0;
@@ -988,7 +1096,6 @@ $$("video").forEach(watchVideo);
     tw = requestAnimationFrame(step);
   };
   pre.forEach(b => b.addEventListener("click", () => { touched = true; tween(P[b.dataset.p].c, b.dataset.p); }));
-  /* arrastar alças */
   H.forEach((el, k) => {
     const move = (u, v) => { h[k * 2] = clampV(u, 0, 1); h[k * 2 + 1] = clampV(v, -.5, 1.5); touched = true; cancelAnimationFrame(tw); render(); mark(""); setCap(""); };
     el.addEventListener("pointerdown", e => { el.setPointerCapture(e.pointerId); el.dataset.d = 1; e.preventDefault(); });
@@ -1004,109 +1111,105 @@ $$("video").forEach(watchVideo);
     });
   });
   render(); mark("robo");
-  /* animação das formas */
-  const SZ = 34, MOVE = 1800, HOLD = 500, CYC = 2 * (MOVE + HOLD);
+  const SZ = 28, MOVE = 1600, HOLD = 600, CYC = 2 * (MOVE + HOLD);
+  const pos = (a, f) => a < MOVE ? f(a / MOVE) : a < MOVE + HOLD ? 1 : a < 2 * MOVE + HOLD ? 1 - f((a - MOVE - HOLD) / MOVE) : 0;
+  const lin = x => x;
   const frame = now => {
-    const W = lane.clientWidth - SZ, el = now % CYC;
-    shapes.forEach((s, i) => {
-      const dl = i * 130; let p = 0;
-      const a = ((el - dl) + CYC) % CYC;
-      if (a < MOVE) p = ease(a / MOVE);
-      else if (a < MOVE + HOLD) p = 1;
-      else if (a < 2 * MOVE + HOLD) p = 1 - ease((a - MOVE - HOLD) / MOVE);
-      else p = 0;
-      s.style.transform = `translateX(${p * W}px) rotate(${i === 1 ? p * 180 : i === 2 ? p * 120 : 0}deg)`;
-    });
+    const W = A.parentElement.clientWidth - SZ - 16 - 70, a = now % CYC;
+    A.style.transform = `translateX(${pos(a, lin) * W}px)`;
+    B.style.transform = `translateX(${pos(a, ease) * W}px)`;
   };
-  if (RM) { const W = lane.clientWidth - SZ; shapes.forEach(s => s.style.transform = `translateX(${W * .5}px)`); }
-  else {
-    let vis = true; new IntersectionObserver(es => vis = es[0].isIntersecting).observe($("#ez"));
-    const loop = now => { if (vis) frame(now); requestAnimationFrame(loop); };
-    requestAnimationFrame(loop);
-    /* o momento: começa linear e vira curva de estúdio sozinho, se ninguém mexer */
-    setTimeout(() => { if (!touched) tween(P.estudio.c, "estudio"); }, 3200);
-  }
+  if (RM) return;
+  let vis = false; new IntersectionObserver(es => vis = es[0].isIntersecting).observe($("#ez"));
+  let armed = false;
+  const loop = now => { if (vis) { frame(now); if (!armed) { armed = true; setTimeout(() => { if (!touched) tween(P.estudio.c, "estudio"); }, 2600); } } requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
 })();
 
-/* motions: escolha e formato */
+/* ===== série Jardineiro ===== */
 (() => {
-  const M = [
-    { v: "jardim-r1", t: "Seu jardim pede ajuda", w: "jardim-r1-4x5" },
-    { v: "jardim-r2", t: "Do mato ao jardim" },
-    { v: "jardim-r3", t: "Três passos" },
-    { v: "jardim-r4", t: "O que a gente cuida" }
-  ];
-  const vid = $("#binVid"), box = $("#binV"), fmt = $("#fmt"), badge = $("#binBadge"), btns = $$("#clips button");
-  let cur = 0, wide = false;
-  const set = () => {
-    const m = M[cur], name = wide && m.w ? m.w : m.v;
-    box.classList.toggle("r45", wide && !!m.w);
-    vid.poster = `videos/${name}.jpg`; vid.src = `videos/${name}.mp4`; vid.setAttribute("aria-label", `Motion: ${m.t}`);
-    badge.textContent = `0${cur + 1} de 04${wide && m.w ? " · 4:5" : ""}`;
-    fmt.hidden = !m.w;
-    btns.forEach((b, i) => b.setAttribute("aria-pressed", String(i === cur)));
-    if (!RM) { const p = vid.play(); p && p.catch(() => {}); }
-  };
-  btns.forEach(b => b.addEventListener("click", () => { cur = +b.dataset.i; wide = false; $$("button", fmt).forEach((x, i) => x.setAttribute("aria-pressed", String(i === 0))); set(); }));
-  seg($(".seg", fmt), v => { wide = v === "1"; set(); });
+  const figs = $$("#fan figure"), first = $("video", figs[0]);
+  const open = i => figs.forEach((f, k) => { f.classList.toggle("on", k === i); f.setAttribute("aria-expanded", k === i); });
+  figs.forEach((f, i) => {
+    f.addEventListener("click", () => open(i));
+    f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(i); } });
+  });
+  seg($("#fmt"), v => {
+    const n = v === "4x5" ? "jardim-r1-4x5" : "jardim-r1";
+    first.poster = `videos/${n}.jpg`; first.src = `videos/${n}.mp4`; first.style.objectFit = v === "4x5" ? "contain" : "cover"; play(first); open(0);
+  });
 })();
 
-/* linha do tempo das aulas */
+/* ===== AULAS ===== */
 const MODS = [
-  { n: 1, name: "Boas-vindas", c: "#af5eff", f: "#1f0c33" },
-  { n: 2, name: "Preparação", c: "#d9b3ff", f: "#1f0c33" },
-  { n: 3, name: "Projeto no Claude", c: "#5be3b5", f: "#1f0c33" },
-  { n: 4, name: "Skill", c: "#ff6fae", f: "#1f0c33" },
-  { n: 5, name: "Mão na massa", c: "#1f0c33", f: "#faf5ff" }
+  { n: "Módulo 1", t: "Boas-vindas" }, { n: "Módulo 2", t: "Preparação" }, { n: "Módulo 3", t: "Projeto no Claude" }, { n: "Módulo 4", t: "Skill" }, { n: "Módulo 5", t: "Mão na massa" }
 ];
 const AULAS = [
-  { n: "1.1", t: "O que já dá pra fazer", m: 0, hook: "Os motions que eu fiz só conversando com o Claude, e como guardar tudo num lugar só." },
-  { n: "1.2", t: "Quem sou eu", m: 0, hook: "Por que designer primeiro, IA depois." },
-  { n: "1.3", t: "O método e a skill", m: 0, hook: "Quem faz o quê: o diretor, o produtor e o manual." },
-  { n: "1.4", t: "O que você precisa ter", m: 0, hook: "Duas coisas, só isso. E uma delas evita travar no meio da animação." },
-  { n: "2.1", t: "Identidade visual", m: 1, hook: "O Claude só é fiel ao que você entrega." },
-  { n: "2.2", t: "Montar a pasta no PC", m: 1, hook: "Cinco minutos organizando economizam uma hora de refação." },
-  { n: "3.1", t: "Anexar as pastas", m: 2, hook: "Input e output separados: organização de estúdio." },
-  { n: "3.2", t: "Dar contexto", m: 2, hook: "As 4 perguntas que transformam um pedido vago num briefing que acerta." },
-  { n: "4.1", t: "O que é skill", m: 3, hook: "O meu jeito de fazer motion, empacotado pro Claude seguir." },
-  { n: "4.2", t: "Instalar a skill", m: 3, hook: "Dois minutos e uma chavinha. Mas tem um detalhe que quebra tudo se você esquecer." },
-  { n: "4.3", t: "Referências da skill", m: 3, hook: "Os três lugares onde eu busco motion de verdade." },
-  { n: "4.4", t: "Como chamar a skill", m: 3, hook: "Uma barra, um nome e o pedido na mesma mensagem." },
-  { n: "5.1", t: "Gerar o roteiro", m: 4, hook: "Com ou sem narrador: de onde vem a voz do seu motion." },
-  { n: "5.2", t: "Chamar a skill e gerar", m: 4, hook: "Um motion aprovado vira uma linha de produção." }
+  { n: "1.1", m: 0, t: "O que já dá pra fazer", ico: "clap", hook: "Os motions que eu fiz só conversando com o Claude, e como guardar tudo num lugar só." },
+  { n: "1.2", m: 0, t: "Quem sou eu", ico: "me", hook: "Por que designer primeiro, IA depois." },
+  { n: "1.3", m: 0, t: "O método e a skill", ico: "duo", hook: "Quem faz o quê: o diretor, o produtor e o manual." },
+  { n: "1.4", m: 0, t: "O que você precisa ter", ico: "laptop", hook: "Duas coisas, só isso. E uma delas evita travar no meio da animação." },
+  { n: "2.1", m: 1, t: "Identidade visual", ico: "palette", hook: "O Claude só é fiel ao que você entrega." },
+  { n: "2.2", m: 1, t: "Montar a pasta no PC", ico: "folder", hook: "Cinco minutos organizando economizam uma hora de refação." },
+  { n: "3.1", m: 2, t: "Anexar as pastas", ico: "link", hook: "Input e output separados: organização de estúdio." },
+  { n: "3.2", m: 2, t: "Dar contexto", ico: "chat", hook: "As 4 perguntas que transformam um pedido vago num briefing que acerta." },
+  { n: "4.1", m: 3, t: "O que é skill", ico: "box", hook: "O meu jeito de fazer motion, empacotado pro Claude seguir." },
+  { n: "4.2", m: 3, t: "Instalar a skill", ico: "down", hook: "Dois minutos e uma chavinha. Mas tem um detalhe que quebra tudo se você esquecer." },
+  { n: "4.3", m: 3, t: "Referências da skill", ico: "eye", hook: "Os três lugares onde eu busco motion de verdade." },
+  { n: "4.4", m: 3, t: "Como chamar a skill", ico: "slash", hook: "Uma barra, um nome e o pedido na mesma mensagem." },
+  { n: "5.1", m: 4, t: "Gerar o roteiro", ico: "mic", hook: "Com ou sem narrador: de onde vem a voz do seu motion." },
+  { n: "5.2", m: 4, t: "Chamar a skill e gerar", ico: "play", hook: "Um motion aprovado vira uma linha de produção." }
 ];
+const SV = inner => `<svg class="ico" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+const ICONS = {
+  clap: SV(`<g class="a-bob"><rect x="18" y="44" width="84" height="56" rx="8"/><path d="M18 44l10-22 18 6-10 16M46 44l10-22 18 6-10 16M74 44l10-22 18 6-8 16"/></g><path d="M50 62v22l20-11z" fill="currentColor" stroke="none"/>`),
+  me: SV(`<circle class="a-bob" cx="60" cy="42" r="20"/><path d="M22 100c4-24 20-34 38-34s34 10 38 34"/><g class="a-spin" style="transform-origin:96px 24px"><path d="M96 14v20M86 24h20" stroke-width="4"/></g>`),
+  duo: SV(`<g class="a-bob"><circle cx="38" cy="60" r="22"/></g><g class="a-bob2"><circle cx="86" cy="60" r="14"/></g><path d="M58 60h12M64 54l6 6-6 6" stroke-width="4"/>`),
+  laptop: SV(`<rect x="22" y="26" width="76" height="52" rx="6"/><path d="M12 92h96"/><g class="a-bob"><path d="M60 38v24M50 52l10 10 10-10"/></g>`),
+  palette: SV(`<path d="M60 14C32 14 14 34 14 58s18 46 44 46c8 0 10-6 6-12-4-6 0-12 8-12h14c12 0 24-8 24-24C110 34 90 14 60 14z"/><g class="a-orbit" style="transform-origin:60px 60px"><circle cx="40" cy="46" r="5" fill="currentColor"/><circle cx="62" cy="34" r="5" fill="currentColor"/><circle cx="84" cy="46" r="5" fill="currentColor"/></g>`),
+  folder: SV(`<g class="a-bob"><path d="M14 34a8 8 0 0 1 8-8h24l10 12h42a8 8 0 0 1 8 8v42a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8z"/></g><path d="M34 70h52" stroke-width="4"/>`),
+  link: SV(`<g class="a-bob"><rect x="12" y="38" width="36" height="44" rx="6"/></g><g class="a-bob2"><rect x="72" y="38" width="36" height="44" rx="6"/></g><path d="M52 60h16M62 54l6 6-6 6" stroke-width="4"/>`),
+  chat: SV(`<g class="a-bob"><path d="M104 56a40 32 0 0 1-60 28L18 96l8-24a38 30 0 1 1 78-16z"/></g><path d="M50 52h28M50 66h16" stroke-width="4"/>`),
+  box: SV(`<g class="a-bob"><path d="M60 14l40 22v48L60 106 20 84V36z"/><path d="M60 60l40-24M60 60L20 36M60 60v46"/></g>`),
+  down: SV(`<path d="M18 80v18h84V80"/><g class="a-bob"><path d="M60 16v54M40 52l20 20 20-20"/></g>`),
+  eye: SV(`<path d="M8 60s20-36 52-36 52 36 52 36-20 36-52 36S8 60 8 60z"/><circle class="a-bob" cx="60" cy="60" r="16"/>`),
+  slash: SV(`<rect x="14" y="26" width="92" height="68" rx="10"/><path class="a-bob" d="M70 40L50 80" stroke-width="7"/><path d="M26 48v24" stroke-width="4"/>`),
+  mic: SV(`<g class="a-bob"><rect x="44" y="14" width="32" height="54" rx="16"/></g><path d="M28 56a32 32 0 0 0 64 0M60 88v18M44 106h32"/>`),
+  play: SV(`<circle class="a-ring" cx="60" cy="60" r="44"/><path class="a-bob" d="M48 40v40l34-20z" fill="currentColor" stroke="none"/>`)
+};
 (() => {
-  const inn = $("#tlIn"), ph = $("#tlPh"), scroller = $("#tlScroll"), lp = $("#lp"), panes = $$(".pane");
-  MODS.forEach((m, mi) => {
-    const items = AULAS.map((a, i) => ({ a, i })).filter(x => x.a.m === mi);
-    const g = document.createElement("div"); g.className = "mg";
-    g.innerHTML = `<div class="mg-l"><b>Módulo ${m.n}</b><span>${m.name}</span></div><div class="mg-c">${items.map(({ a, i }) => `<button class="clip" role="tab" id="tab${i}" aria-selected="false" aria-controls="lpR" data-i="${i}" style="--c:${m.c};--f:${m.f}"><b>${a.n}</b><span>${a.t}</span></button>`).join("")}</div>`;
-    inn.appendChild(g);
-  });
-  const clips = $$(".clip", inn);
-  let cur = -1, raf = 0;
-  const place = () => { const c = clips[cur].getBoundingClientRect(), b = inn.getBoundingClientRect(); ph.style.left = (c.left - b.left) + "px"; };
-  const follow = () => { cancelAnimationFrame(raf); const t0 = performance.now(); const f = n => { place(); if (n - t0 < 760) raf = requestAnimationFrame(f); }; raf = requestAnimationFrame(f); };
+  const tl = $("#tlIn"), ph = $("#ph"), panes = $$(".pane");
+  const ruler = `<div class="ruler" aria-hidden="true"><span style="border:0"></span>${AULAS.map((_, i) => `<span>00:${String(i * 4).padStart(2, "0")}</span>`).join("")}</div>`;
+  const rows = MODS.map((m, mi) => `<div class="trk"><span class="tn">${m.n}<small>${m.t}</small></span>${AULAS.map((a, i) => a.m === mi
+    ? `<button class="clip" role="tab" id="clip${i}" data-i="${i}" aria-selected="false" aria-controls="lp" style="grid-column:${i + 2}" title="${a.t}">${a.n}</button>` : "").join("")}</div>`).join("");
+  tl.insertAdjacentHTML("beforeend", ruler + rows);
+  const clips = $$(".clip", tl);
+  const byIdx = i => clips.find(c => +c.dataset.i === i);
+  let cur = 0;
+  const place = () => { const c = byIdx(cur), r = tl.getBoundingClientRect(), b = c.getBoundingClientRect(); ph.style.left = (b.left - r.left + b.width / 2 - 1) + "px"; };
   const show = (i, user) => {
-    if (i === cur) return; cur = (i + AULAS.length) % AULAS.length; const a = AULAS[cur], m = MODS[a.m];
-    clips.forEach((b, k) => { b.setAttribute("aria-selected", String(k === cur)); b.tabIndex = k === cur ? 0 : -1; });
+    cur = (i + AULAS.length) % AULAS.length; const a = AULAS[cur];
+    clips.forEach(c => c.setAttribute("aria-selected", String(+c.dataset.i === cur)));
     panes.forEach((p, k) => p.hidden = k !== cur);
-    lp.style.setProperty("--c", m.c); lp.style.setProperty("--f", m.f);
-    $("#lpN").textContent = a.n; $("#lpM").textContent = `Módulo ${m.n} · ${m.name}`; $("#lpT").textContent = a.t; $("#lpQ").textContent = a.hook;
-    $("#lpR").setAttribute("aria-labelledby", "tab" + cur);
-    if (RM) place(); else follow();
-    if (user) setTimeout(() => { const c = clips[cur].getBoundingClientRect(), s = scroller.getBoundingClientRect(); if (c.left < s.left + 20 || c.right > s.right - 20) scroller.scrollBy({ left: c.left - s.left - 24, behavior: RM ? "auto" : "smooth" }); }, 50);
+    $("#lpN").textContent = `Aula ${a.n} de 14, ${MODS[a.m].n.toLowerCase()}: ${MODS[a.m].t}`;
+    $("#lpT").textContent = a.t; $("#lpH").textContent = a.hook; $("#lpIco").innerHTML = ICONS[a.ico];
+    place();
+    if (user) { const c = byIdx(cur), sc = $(".tl-scroll"); const cl = c.offsetLeft - sc.clientWidth / 2; sc.scrollTo({ left: cl, behavior: "smooth" }); }
+    $$("video", panes[cur]).forEach(v => { if (!v.getAttribute("src") && v.dataset.src && !v.closest(".gen-ph")) { v.src = v.dataset.src; } if (!v.closest(".gen-ph")) play(v); });
     document.dispatchEvent(new CustomEvent("lesson", { detail: cur }));
   };
-  inn.addEventListener("click", e => { const b = e.target.closest(".clip"); if (b) show(+b.dataset.i, true); });
-  inn.addEventListener("keydown", e => {
-    const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (!d) return;
-    e.preventDefault(); const n = Math.min(AULAS.length - 1, Math.max(0, cur + d)); show(n, true); clips[n].focus();
+  tl.addEventListener("click", e => { const b = e.target.closest(".clip"); if (b) show(+b.dataset.i, true); });
+  tl.addEventListener("keydown", e => {
+    if (!e.target.classList.contains("clip")) return;
+    const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    if (d) { e.preventDefault(); show(cur + d, true); byIdx(cur).focus(); }
   });
-  addEventListener("resize", () => place());
+  $("#lpPrev").addEventListener("click", () => show(cur - 1, true));
+  $("#lpNext").addEventListener("click", () => show(cur + 1, true));
+  addEventListener("resize", place);
   show(0, false);
+  if (document.fonts) document.fonts.ready.then(place);
 })();
-
 
 /* checklists */
 $$("[data-chk]").forEach(box => {
@@ -1239,8 +1342,8 @@ $$("[data-chk]").forEach(box => {
 
 /* portfólio: setas e arraste */
 (() => {
-  const rail = $("#rail");
-  const step = () => Math.max(260, $("figure", rail).offsetWidth + 30) * (innerWidth < 700 ? 1 : 2);
+  const rail = $("#pfRail");
+  const step = () => Math.max(260, rail.clientWidth * .6);
   $("#pfPrev").addEventListener("click", () => rail.scrollBy({ left: -step(), behavior: "smooth" }));
   $("#pfNext").addEventListener("click", () => rail.scrollBy({ left: step(), behavior: "smooth" }));
   let sx = null, sl = 0;
